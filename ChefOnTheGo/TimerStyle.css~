@@ -1,9 +1,0 @@
-﻿#counter{
-  width: 100px;
-  margin: auto;
-  border: 1px dashed #999;
-  height: 40px;
-  line-height: 40px;
-  font-size: 25px;
-  font-family: sans-serif;
-}

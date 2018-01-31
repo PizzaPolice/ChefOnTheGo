@@ -1,0 +1,19 @@
+﻿<Properties StartupConfiguration="{EE3D889D-0565-4959-9766-EBCB765A5909}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Checkout.html">
+    <Files>
+      <File FileName="OrderStatus.html" Line="92" Column="1" />
+      <File FileName="OrderStatus.css" Line="3" Column="2" />
+      <File FileName="FoodOrder.html" Line="110" Column="2" />
+      <File FileName="Timer.html" Line="106" Column="1" />
+      <File FileName="CheckoutStyle.css" Line="13" Column="19" />
+      <File FileName="Checkout.html" Line="109" Column="13" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.ChefOnTheGo PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
