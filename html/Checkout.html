@@ -29,8 +29,8 @@
     }
 
     .active {
-      background-color: ##21618C;
-      color: white;
+        background-color: #21618C;
+        color: white;
     }
 
     .topnav .icon {
@@ -64,9 +64,9 @@
 
 <body>
     <div class="topnav" id="myTopnav">
-        <a href="#home" class="active">Home</a>
+        <a href="#home">Home</a>
         <a href="FoodOrder.html">Food Order</a>
-        <a href="Checkout.html">Checkout</a>
+        <a href="Checkout.html" class="active">Checkout</a>
         <a href="OrderStatus.html">Order Status</a>
         <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
     </div>
@@ -87,16 +87,11 @@
 
 
 
-
-
-
-
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-  <link rel="stylesheet" href="CheckoutStyle.css">
+  <title>Checkout</title>
+  <link rel="stylesheet" href="../css/Checkout.css">
 <meta name="robots" content="noindex,follow">
 </head>
 
@@ -118,10 +113,10 @@
                 -->
 
             <div class="payment-method">
-                <label for="card" class="method card blue-border">
+                <label for="card" class="method card">
                     <div class="card-logos">
-                        <img src="img/visa_logo.png">
-                        <img src="img/mastercard_logo.png">
+                        <img src="../img/visa_logo.png">
+                        <img src="../img/mastercard_logo.png">
                     </div>
                     <div class="radio-input">
                         <input id="card" type="radio" name="payment">
@@ -129,7 +124,7 @@
                     </div>
                 </label>
                 <label for="paypal" class="method paypal">
-                    <img src="img/paypal_logo.png">
+                    <img src="../img/paypal_logo.png">
                     <div class="radio-input">
                         <input id="paypal" type="radio" name="payment">
                         Pay $27.00 with PayPal
@@ -160,13 +155,13 @@
                         </div>
                         <div>
                             <label for="verification">CVV / CVC *</label>
-                            <input type="password" id="verification">
+                            <input type="text" id="verification">
                         </div>
 
 
                         <div class=column-3>
                             <label for="Zipcode">Zipcode</label>
-                            <input type="password" id="Zipcode"
+                            <input type="text" id="Zipcode"
                         </div>
 
                     </div>
