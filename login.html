@@ -8,11 +8,15 @@
 
 <header>Login</header>
 <p>
-	<form method ="POST" action="customize.html">
+	<form id="login_form" method ="POST" action="customize.html">
         Username:<br/>
         <input type="text" name="name"/><br/>
         Password:<br/>
-        <input type="password" name="password"><br/>
+		<input type="password" name="password"><br/>
+		<select name="type">
+			<option value="customer">Customer</option>
+			<option value="chef">Chef</option>
+		</select><br>
         <input type="submit" value="Login" />
 	</form>
 	
