@@ -13,6 +13,7 @@ body {
     margin: 0;
     background-color: #d3d3d3; /*light grey*/
 
+
 }
 
 .shopping-cart {
@@ -188,4 +189,62 @@ input:focus {
   .buttons {
     margin-right: 20px;
   }
+
 }
+
+
+/*Add bottom buttons*/
+
+/* Panel Body 
+.panel-body {
+  padding: 45px 80px 0;
+  flex: 1;
+}*/
+
+/* Panel Footer */
+.panel-footer {
+    display: flex;
+    margin-top: 20px; /* space above bottom panel */
+    width: 100%;
+    height: 96px;
+    padding: 0 80px;
+    background-color: rgb(239, 239, 239);
+    justify-content: space-between;
+    align-items: center
+
+}
+
+/* Buttons */
+.btn {
+  font-size: 16px;
+  width: 163px;
+  height: 48px;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 23px;
+}
+
+.back-btn {
+  color: #f62f5e;
+  background: #fff;
+}
+
+.next-btn {
+  color: #fff;
+  background: #f62f5e;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+
+
+
+
