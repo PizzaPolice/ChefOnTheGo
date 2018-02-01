@@ -1,0 +1,52 @@
+
+
+h2{
+  padding: 2em;
+  text-align: center;
+}
+.input{
+  border:.5em solid green;
+  text-align: center;
+}
+
+.timer{
+  width:50%;
+  margin:auto;
+  position: relative;
+  padding-top: 6em;
+  padding-bottom: 6em;
+}
+
+.timertable{
+  text-align:center;
+  background:#ddd;
+  border: 1px solid #999;
+  padding: .5em;
+  box-shadow: 0 0 5px 3px #ccc;
+
+  border: 3px solid #999;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  height:4em;
+  width: 5em;
+
+  font-size: 3em;
+}
+
+input{
+
+  margin-top:2em;
+  border: 3px solid #999;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+
+  width: 8em;
+  height: 2em;
+  font-size: 2em;
+}
