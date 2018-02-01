@@ -2,27 +2,42 @@
 <html>
 	<head>
 	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../css/login.css" media="screen" title="no title" charset="utf-8">
 	<title>Login</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body {margin:0;}
+        </style>
 	</head>
 <body>
 
-<header>Login</header>
-<p>
-	<form id="login_form" method ="POST" action="customize.html">
-        Username:<br/>
-        <input type="text" name="name"/><br/>
-        Password:<br/>
-		<input type="password" name="password"><br/>
-		<select name="type">
-			<option value="customer">Customer</option>
-			<option value="chef">Chef</option>
-		</select><br>
-        <input type="submit" value="Login" />
-	</form>
-	
-	<form method="GET" action="signup.html">
-		<input type="submit" value="New User?"/>
-	</form>
-</p>
+<div class="login-panel">
+	<div class="panel-body">
+		<h2 class="title">Login</h2>
+		<div class="input-fields">
+			<form id="login_form" method ="POST" action="customize.html">
+					<div class="input-line">
+						Username:
+						<input type="text" name="name"/>
+					</div>
+					<div class="input-line">
+							Password:
+							<input type="password" name="password"/>
+					</div>
+					<div class="radio-input">
+						<input id="customer" type="radio" name="login_type">
+						Customer
+						<input id="chef" type="radio" name="login_type">
+						Chef
+					</div>
+			</form>
+		</div>
+		<form id="signup_form" method="GET" action="signup.html"></form>
+	</div>
+	<div class="panel-footer">
+			<button class="btn back-btn" type="submit" form="signup_form" value="new user">New User?</button>
+			<button class="btn next-btn" type="submit" form="login_form" value="login">Login</button>
+	</div>
+</div>
 </body>
 </html>
