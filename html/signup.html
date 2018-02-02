@@ -1,26 +1,41 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<meta charset="UTF-8">
-	<title>Signup</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/signup.css" media="screen" title="no title" charset="utf-8">
+	<title>Sign up</title>
 	</head>
 <body>
 
-<header>Signup</header>
-<p>
-	<form id="signup_form" method ="POST" action="login.html">
-        Username:<br>
-        <input type="text" name="name"/><br>
-        Password:<br>
-        <input type="password" name="password"><br>
-        Re-enter Password:<br>
-        <input type="password" name="check-password"><br>
-        <select name="type">
-            <option value="customer">Customer</option>
-            <option value="chef">Chef</option>
-        </select><br>
-        <input type="submit" value="Sign up" />
-	</form>
-</p>
+<div class="signup-panel">
+    <div class="panel-body">
+        <h2 class="title">Sign up</h2>
+        <div class="input-fields">
+            <form id="signup_form" method ="POST" action="login.html">
+                <div class="input-line">
+                    Username:
+                    <input type="text" name="name"/>
+                </div>
+                <div class="input-line">
+                    Password:
+                    <input type="password" name="password">
+                </div>
+                <div class="input-line">
+                        Re-enter Password:
+                        <input type="password" name="check-password">
+                </div>
+                <div class="radio-input">
+                        <input id="customer" type="radio" name="login_type">
+                        Customer
+                        <input id="chef" type="radio" name="login_type">
+                        Chef
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="panel-footer">
+			<button class="btn next-btn" type="submit" form="signup_form" value="sign up">Sign up</button>
+	</div>
+</div>
 </body>
 </html>

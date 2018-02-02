@@ -2,35 +2,49 @@
 <html>
 	<head>
 	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../css/customize.css" media="screen" title="no title" charset="utf-8">
 	<title>Customize</title>
 	</head>
 <body>
 
-<header>Customize</header>
-<p>
-	<form id="customize_form" method="POST" action="list_chefs.html">
-		Food Type:<br>
-		<select name="foodtype">
-			<option value="chinese">Chinese</option>
-			<option value="greek">Greek</option>
-			<option value="italian">Italian</option>
-			<option value="japanese">Japanese</option>
-			<option value="mediterranean">Mediterranean</option>
-			<option value="burgers">Burgers</option>
-			<option value="dessert">Dessert</option>
-		</select>
-		<br>Location:<br>
-		<input type="text" name="location"/>
-		<br>Time:<br>
-		<input type="time" name="time"/>
-		<br>Telephone:<br>
-		<input type="tel" name="telephone"/>
-		<br>
-        <input type="submit" value="Submit"/>
-	</form>
-	<form method="POST" action="login.html">
-		<input type="submit" value="Logout"/>
-	</form>
-</p>
+	<div class="customize-panel">
+		<div class="panel-body">
+			<h2 class="title">Customize</h2>
+			<div class="input-fields">
+				<form id="customize_form" method="POST" action="list_chefs.html">
+					<div class="input-line">
+						Food Type:
+						<select name="foodtype">
+							<option value="chinese">Chinese</option>
+							<option value="greek">Greek</option>
+							<option value="italian">Italian</option>
+							<option value="japanese">Japanese</option>
+							<option value="mediterranean">Mediterranean</option>
+							<option value="burgers">Burgers</option>
+							<option value="dessert">Dessert</option>
+						</select>
+					</div>
+					<div class="input-line">
+						Location:
+						<input type="text" name="location"/>
+					</div>
+					<div class="input-line">
+						Time:
+						<input type="time" name="time"/>
+					</div>
+					<div class="input-line">
+						Telephone:
+						<input type="tel" name="telephone"/>
+					</div>
+				<br>
+			</form>
+			<form id="logout_form" method="POST" action="login.html"></form>
+		</div>
+	</div>
+		<div class="panel-footer">
+				<button class="btn back-btn" type="submit" form="logout_form" value="logout">Logout</button>
+				<button class="btn next-btn" type="submit" form="customize_form" value="submit">Submit</button>
+		</div>
+	</div>
 </body>
 </html>
