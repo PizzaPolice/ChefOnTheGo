@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 
-<link rel="stylesheet" href="../css/active_chef.css"> 
-
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        head {margin:0;}
+  <title>Active Chef</title>
+  <link rel="stylesheet" href="../css/active_chef.css"> 
 
-        .topnav {
-          overflow: hidden;
-          background-color: #333;
-        }
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
 
         .topnav a {
           float: left;
@@ -29,7 +29,7 @@
         }
 
         .active {
-          background-color: ##21618C;
+          background-color: #21618C;
           color: white;
         }
 
@@ -60,23 +60,24 @@
           }
 
         }
-    </style>
-    <div class="topnav" id="myTopnav">
-        <a href="#home" class="active">Home</a>
-        <a href="FoodOrder.html">Food Order</a>
-        <a href="Checkout.html">Checkout</a>
-        <a href="OrderStatus.html">Order Status</a>
-    </div>
-    <div style="padding-left:16px">
-    </div>
-    </head>
+  </style>
+  <div class="topnav" id="myTopnav">
+    <a href="#home" class="active">Home</a>
+    <a href="FoodOrder.html">Food Order</a>
+    <a href="Checkout.html">Checkout</a>
+    <a href="OrderStatus.html">Order Status</a>
+  </div>
+  <div style="padding-left:16px">
+  </div>
 
-  <h2>You are currently inactive</h2>
+
+
   <section class="timer">
+    <h2>You are currently inactive</h2>
     <!-- TODO SET UP JS TO MAKE TIME DISPLAY-->
     <table class="timertable">
       <tr class="info">
-        <td colspan="4">You will be active for: </td>
+        <td colspan="3">You will be active for: </td>
       </tr>
       <!-- Values of the times (day,sec,etc)-->
       <tr>
@@ -91,10 +92,9 @@
         <td>Seconds</td>
       </tr>
     </table>
-    </br>
   </section>
 
 
-    <input type="submit" value="Stop Serving">
+  <input type="submit" value="Stop Serving">
 </html>
 
