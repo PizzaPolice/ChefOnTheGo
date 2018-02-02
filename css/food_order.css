@@ -12,16 +12,13 @@ body {
     padding: 10px;
     margin: 0;
     background-color: #d3d3d3; /*light grey*/
-<<<<<<< HEAD
 
 
-=======
->>>>>>> d347c7825ce8d0fd044646045daac5db284c550d
 }
 
 .shopping-cart {
   width: 850px;
-  height: 650px;
+  height: 766px;
   margin: 50px auto; /*very top margin*/
   background: #FFFFFF;
   box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
@@ -30,6 +27,13 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+/* Panel Body */
+.panel-body {
+  padding: 45px 80px 0;
+  flex: 1;
+}
+
 
 .title {
   height: 60px;
@@ -138,6 +142,7 @@ body {
   font-weight: 300;
 }
 
+/*
 button[class*=btn] {
   width: 30px;
   height: 30px;
@@ -145,7 +150,8 @@ button[class*=btn] {
   border-radius: 6px;
   border: none;
   cursor: pointer;
-}
+} */
+
 .minus-btn img {
   margin-bottom: 3px;
 }
@@ -198,18 +204,13 @@ input:focus {
 
 /*Add bottom buttons*/
 
-/* Panel Body 
-.panel-body {
-  padding: 45px 80px 0;
-  flex: 1;
-}*/
 
 /* Panel Footer */
 .panel-footer {
     display: flex;
     margin-top: 20px; /* space above bottom panel */
     width: 100%;
-    height: 96px;
+    height: 270px;
     padding: 0 80px;
     background-color: rgb(239, 239, 239);
     justify-content: space-between;
