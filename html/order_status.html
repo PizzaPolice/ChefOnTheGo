@@ -1,11 +1,13 @@
 ﻿<!DOCTYPE html>
-<html>
-    <head>
-        <title>Your Order Has Been Placed!</title>
+ <!-- Import CSS file -->
 
-        <!-- Top Navigation -->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <style>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/order_status.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.js" charset="utf-8"></script>
+    <title>Your Order Has Been Placed!</title>
+    <style>
             body {margin:0;}
 
             .topnav {
@@ -62,8 +64,9 @@
         </style>
     </head>
 
-    <body>
-        <div class="topnav" id="myTopnav">
+<body>
+    <!--
+    <div class="topnav" id="myTopnav">
             <a href="#home">Home</a>
             <a href="food_order.html">Food Order</a>
             <a href="checkout.html">Checkout</a>
@@ -82,23 +85,7 @@
             }
         }
         </script>
-    </body>
-</html>
-
-
- <!-- Import CSS file -->
-
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../css/order_status.css" media="screen" title="no title" charset="utf-8">
-    <script src="https://code.jquery.com/jquery-2.2.4.js" charset="utf-8"></script>
-    <meta name="robots" content="noindex,follow">
-</head>
-
-
-<body>
+    -->
     <h2 class="title">Your Order Has Been Placed!</h2>
     <table class="countdownContainer">
         <tr class="info">
@@ -119,7 +106,7 @@
             <td> Seconds</td>
         </tr>
     </table>
-    <script type="text/javascript">
+    <script>
 
         function countdown(){
         var now = new Date();

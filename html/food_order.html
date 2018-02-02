@@ -7,7 +7,6 @@
         <title>Shopping List</title>
         <link rel="stylesheet" href="../css/food_order.css">
         <script src="https://code.jquery.com/jquery-2.2.4.js" charset="utf-8"></script>
-        <meta name="robots" content="noindex,follow">
         <style>
             body {margin:0;}
         
@@ -65,28 +64,26 @@
     </head>
 
 <body>
+    <!--
     <div class="topnav" id="myTopnav">
             <a href="#home">Home</a>
             <a href="food_order.html" class="active">Food Order</a>
             <a href="checkout.html">Checkout</a>
             <a href="order_status.html">Order Status</a>
             <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
-        </div>
-    
-        <div style="padding-left:16px">
-    
-        </div>
-    
-        <script>
-            function myFunction() {
-                var x = document.getElementById("myTopnav");
-                if (x.className === "topnav") {
-                    x.className += " responsive";
-                } else {
-                    x.className = "topnav";
-                }
+    </div>
+    <div style="padding-left:16px"></div>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
             }
-        </script>
+        }
+    </script>
+    -->
     <div class="shopping-cart">
         <!-- Title -->
         <div class="title">
@@ -183,10 +180,6 @@
 
 
         </div>
-
-
-        <!-- Bottom Buttons -->
-
 
     <form id="list_chefs_form" method="GET" action="list_chefs.html"></form>
     <form id="checkout_form" method="POST" action="checkout.html"></form>
