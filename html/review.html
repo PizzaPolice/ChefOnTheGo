@@ -3,6 +3,76 @@
 <link rel="stylesheet" href="../css/review.css"> 
 <html>
 
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        head {margin:0;}
+
+        .topnav {
+          overflow: hidden;
+          background-color: #333;
+        }
+
+        .topnav a {
+          float: left;
+          display: block;
+          color: #f2f2f2;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-size: 17px;
+        }
+
+        .topnav a:hover {
+          background-color: #ddd;
+          color: black;
+        }
+
+        .active {
+          background-color: ##21618C;
+          color: white;
+        }
+
+        .topnav .icon {
+          display: none;
+        }
+
+        @media screen and (max-width: 600px) {
+          .topnav a:not(:first-child) {display: none;}
+          .topnav a.icon {
+            float: right;
+            display: block;
+          }
+        }
+
+        @media screen and (max-width: 600px) {
+          .topnav.responsive {position: relative;
+          }
+          .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+          }
+          .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+          }
+
+        }
+    </style>
+    <div class="topnav" id="myTopnav">
+        <a href="#home" class="active">Home</a>
+        <a href="food_order.html">Food Order</a>
+        <a href="checkout.html">Checkout</a>
+        <a href="order_status.html">Order Status</a>
+    </div>
+    <div style="padding-left:16px">
+    </div>
+    </head>
+
+
+
   <h1>Thank you for using Chef on the Go!</h1>
   <h2>Please let us know about your experience Below</h2>
 
@@ -16,7 +86,7 @@
       <input type="radio" name="star" value="5">Amazing!
     </form>
 
-    <textarea name="How was your experience?" rows="10" cols="70">Enter your review here!</textarea>
+    <textarea name="How was your experience?" rows="10" cols="70">Enter your review here! Be sure to be descriptive, "It was good" tells fellow connoisseurs almost nothing about the chef.</textarea>
 
     </br>
 

@@ -1,34 +1,15 @@
 h2{
-  margin-left:8em;
-  padding-left: 0em;
-  padding: 2em;
+  margin: 2em;
   text-align: center;
-}
-.navbar{
-  overflow-x:hidden; /*No horizontal Scroll */
-  background-color: #111; /*Black */
-  position: fixed;
-  top:0;
-  left:0;
-  height: 100%;
-  width: 8em;
-  margin: 0;
-  padding-top: 1em;
+  font-size: 3em;
 }
 
-.navbar a{
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-}
-/* Change color when hovering over nav bar elements*/
-.navbar a:hover {
-    color: #f1f1f1;/* White */
+h3{
+  font-size: 2em;
 }
 .input{
-  margin-left:8em;
-  border:.5em solid green;
+  padding: 2em;
+  /*border:.5em solid green;*/ /* Border for debugging*/
   text-align: center;
+
 }
