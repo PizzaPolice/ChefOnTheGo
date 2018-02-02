@@ -1,11 +1,12 @@
 ﻿<!DOCTYPE html>
 
-
-<!-- Top Navigation -->
-<html>
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
+  <meta charset="UTF-8">
+  <title>Checkout</title>
+  <link rel="stylesheet" href="../css/checkout.css">
+  <meta name="robots" content="noindex,follow">
+  <style>
     body {margin:0;}
 
     .topnav {
@@ -61,7 +62,6 @@
     }
     </style>
 </head>
-
 <body>
     <div class="topnav" id="myTopnav">
         <a href="#home">Home</a>
@@ -82,69 +82,39 @@
             }
         }
     </script>
-</body>
-</html>
-
-
-
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Checkout</title>
-  <link rel="stylesheet" href="../css/checkout.css">
-<meta name="robots" content="noindex,follow">
-</head>
-<body>
-
     <div class="checkout-panel">
         <div class="panel-body">
             <h2 class="title">Checkout</h2>
 
-
-            <!-- Top Navigation 
-            <div class="progress-bar">
-                <div class="step active"></div>
-                <div class="step active"></div>
-                <div class="step"></div>
-                <div class="step"></div>
-            </div>
-                -->
-
             <div class="payment-method">
                 <label for="card" class="method card">
-                    <div class="card-logos">
-                        <img src="../img/visa_logo.png">
-                        <img src="../img/mastercard_logo.png">
-                    </div>
-                    <div class="radio-input">
+                    <span class="card-logos">
+                        <img src="../img/visa_logo.png" alt="">
+                        <img src="../img/mastercard_logo.png" alt="">
+                    </span>
+                    <span class="radio-input">
                         <input id="card" type="radio" name="payment">
                         Pay $27.00 with credit card
-                    </div>
+                    </span>
                 </label>
                 <label for="paypal" class="method paypal">
-                    <img src="../img/paypal_logo.png">
-                    <div class="radio-input">
+                    <img src="../img/paypal_logo.png" alt="">
+                    <span class="radio-input">
                         <input id="paypal" type="radio" name="payment">
                         Pay $27.00 with PayPal
-                    </div>
+                    </span>
                 </label>
             </div>
 
-
             <div class="input-fields">
-
-
                 <div class="column-1">
                     <label for="cardholder">Cardholder's Name</label>
                     <input type="text" id="cardholder">
-
-
 
                     <div class="column-2">
                         <label for="cardnumber">Card Number</label>
                         <input type="password" id="cardnumber">
                     </div>
-
 
                     <div class="small-inputs">
                         <div>
@@ -155,36 +125,20 @@
                             <label for="verification">CVV / CVC *</label>
                             <input type="text" id="verification">
                         </div>
-
-
                         <div class=column-3>
                             <label for="Zipcode">Zipcode</label>
-                            <input type="text" id="Zipcode"</input>
+                            <input type="text" id="Zipcode"/>
                         </div>
-
                     </div>
                 </div>
-
             </div>
         </div>
+        <form id="food_order_form" method="GET" action="food_order.html"></form>
+        <form id="order_status_form" method="POST" action="order_status.html"></form>
+        <div class="panel-footer">
+            <button class="btn back-btn" form="food_order_form" type="submit">Back</button>
+            <button class="btn next-btn" form="order_status_form" type="submit">Checkout</button>
+        </div>
     </div>
-
-   
-    <div class="panel-footer">
-      <button class="btn back-btn">Back</button>
-      <button class="btn next-btn">Checkout</button>
-      <!--<button href="order_status.html" class="btn next-btn">Next Step</button>
--->
-    </div>
-
-
-<!--
- <div class="panel-footer">
-            <button class="btn next-btn" type="submit" form="checkout_form" value="checkout">Checkout</button>
-    </div>
--->
-
-
-</div>
 </body>
 </html>
