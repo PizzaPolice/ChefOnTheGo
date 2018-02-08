@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
   <link rel="stylesheet" href="../css/chat.css">
 
+  <script src="../js/chat.js"></script>
   <title>Chat</title>
   <!-- Top Navigation -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
 
 .topnav {
   overflow: hidden;
@@ -59,42 +60,32 @@
               }
 
             }
-    </style>
-  
-    <div class="topnav" id="myTopnav">
-      <a href="#home" class="active">Home</a>
-      <a href="food_order.html">Food Order</a>
-      <!-- <a href="checkout.html">Checkout</a>
+  </style>
+
+  <div class="topnav" id="myTopnav">
+    <a href="#home" class="active">Home</a>
+    <a href="food_order.html">Food Order</a>
+    <!-- <a href="checkout.html">Checkout</a>
       <a href="order_status.html">Order Status</a> -->
-    </div>
-  
+  </div>
 
-  <section class="chatboxleft">
-    <p class="name">NAME GOES HEREEEEEEE</p>
-    <p class="message">HOW ARE YOU DOING THIS FINE DAY</p>
-  </section>
+  <section class="chatmessages">
+    <section class="chatboxleft">
+      <p class="name">user_name</p>
+      <p class="message">HOW ARE YOU DOING THIS FINE DAY</p>
+    </section>
 
-  <section class="chatboxright">
-    <p class="name">NAME GOES HEREEEEEEE</p>
-    <p class="message">I AM STILL ALIVE. HOW ARE YOU DOING</p>
-  </section>
-  <section class="chatboxleft">
-    <p class="name">NAME GOES HEREEEEEEE</p>
-    <p class="message">STILL MOSTLY ALIVE</p>
-  </section>
-  <section class="chatboxright">
-    <p class="name">NAME GOES HEREEEEEEE</p>
-    <p class="message"> I ARE MESSAGING</p>
-  </section>
-  <section class="chatboxleft">
-    <p class="name">NAME GOES HEREEEEEEE</p>
-    <p class="message"> I ARE MESSAGING</p>
+    <section class="chatboxright">
+      <p class="name">chef_name</p>
+      <p class="message">I AM STILL ALIVE. HOW ARE YOU DOING</p>
+    </section>
   </section>
 
 
 
-  <form class="chatinput" name="chatinput" method="post">
-    <textarea cols="100" rows="10" name="chatbox"> </textarea><br>
-    <input type="submit" value="SendTextMessage"> <br>
-  </form>
+  <div class="chatinput" name="chatinput">
+    <h3>Enter your chat message here</h6>
+    <textarea cols="100" rows="10" class="chatbox"> </textarea><br>
+    <button onclick="chat()">Chat!</button><br>
+  </div>
 </html>
