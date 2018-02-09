@@ -6,7 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Shopping List</title>
         <link rel="stylesheet" href="../css/food_order.css">
-        <script src="https://code.jquery.com/jquery-2.2.4.js" charset="utf-8"></script>
+        
+        <script src="../js/food_order.js"></script>
+        
         <style>
             body {margin:0;}
         
@@ -107,14 +109,27 @@
             </div>
 
             <div class="quantity">
+
+
+            
                 <button class="plus-btn" type="button" name="button">
                     <img src="../img/plus.svg" alt="" />
                 </button>
+            
+
                 <input type="text" name="name" value="1">
+                
+
+
+
                 <button class="minus-btn" type="button" name="button">
                     <img src="../img/minus.svg" alt="" />
                 </button>
+
+
+
             </div>
+
 
             <div class="total-price">$8.50</div>
         </div>
@@ -189,45 +204,14 @@
     </div>
 </div>
 
- <!-- Javascript --> 
 
-    <script>
 
-      $('.minus-btn').on('click', function(e) {
-            e.preventDefault();
-            var $this = $(this);
-            var $input = $this.closest('div').find('input');
-            var value = parseInt($input.val());
 
-            if (value > 1) {
-                value = value - 1;
-            } else {
-                value = 0;
-            }
 
-        $input.val(value);
 
-        });
 
-        $('.plus-btn').on('click', function(e) {
-            e.preventDefault();
-            var $this = $(this);
-            var $input = $this.closest('div').find('input');
-            var value = parseInt($input.val());
 
-            if (value < 100) {
-            value = value + 1;
-            } else {
-                value =100;
-            }
 
-            $input.val(value);
-        });
-
-      $('.like-btn').on('click', function() {
-        $(this).toggleClass('is-active');
-      });
-        </script>
 </body>
 </html>
 
