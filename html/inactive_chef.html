@@ -73,9 +73,12 @@
 
 
   <h2>You are currently inactive</h2>
-  <form class="input" action="active_chef.html" method="post">
+  <form class="input" action="active_chef.html" method="GET">
     <h3>How long do you want to be active until?</h3>
-    <input type="time" name="active_time">
+    <input type="number" name="hour">
+    <b>Hours</b>
+    <input type="number" name="minute">
+    <b>Minutes</b></br>
     <input type="submit" value="Start Serving!">
   </form>
 
