@@ -1,22 +1,22 @@
 // Set counter default to zero
-var counter = 0
+//var value = 0
 
 // Display total
-$("#counter").text(counter);
+$("#value").text(value);
 
 // When button is clicked
 $("#plus-btn").click(function(){
-  //Add 10 to counter
-  counter = counter + 1;
+  //Add 1 to counter
+  value = value + 1;
 	// Display total
-	$("#counter").text(counter);
+	$("#value").text(value);
 });
 
 
 //Subtract
 $("#minus-btn").click(function(){
-  counter = counter - 1;
-  $("#counter").text(counter);
+  value = value - 1;
+  $("#value").text(value);
 });
 
 
