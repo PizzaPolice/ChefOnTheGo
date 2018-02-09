@@ -105,34 +105,29 @@
 
             <div class="description">
                 <span>Tortilla Soup</span>
-               
             </div>
 
             <div class="quantity">
-
-
-            
-                <button class="plus-btn" type="button" name="button">
-                    <img src="../img/plus.svg" alt="" />
-                </button>
-            
-
-                <input type="text" name="name" value="1">
-                
-
-
-
-                <button class="minus-btn" type="button" name="button">
-                    <img src="../img/minus.svg" alt="" />
-                </button>
-
-
-
+            <div class="container">
+            <input type="button" onclick="decrementValue()" value="-" />
+            <input type="text" name="quantity" value="1" maxlength="2" max="10" size="1" id="number" />
+            <input type="button" onclick="incrementValue()" value="+" />
             </div>
 
+            <!--</button>
+            <button class="plus-btn" type="button" name="button">
+                <img src="../img/plus.svg" alt="" />
+            <input type="text" name="name" value="1">
+            <button class="minus-btn" type="button" name="button">
+                    <img src="../img/minus.svg" alt="" />
+            </button>
+            -->
 
+            </div>
             <div class="total-price">$8.50</div>
         </div>
+
+
 
         <!-- Product #2 -->
         <div class="item">
@@ -149,7 +144,19 @@
                 <span>Pineapple Fajitas</span>
             </div>
 
+
             <div class="quantity">
+            <div class="container">
+
+            <input type="button" onclick="decrementValue()" value="-" />
+
+            <input type="text" name="quantity" value="1" maxlength="2" max="10" size="1" id="number" />
+
+            <input type="button" onclick="incrementValue()" value="+" />
+            </div>
+
+
+<!--
                 <button class="plus-btn" type="button" name="button">
                     <img src="../img/plus.svg" alt="" />
                 </button>
@@ -157,8 +164,10 @@
                 <button class="minus-btn" type="button" name="button">
                     <img src="../img/minus.svg" alt="" />
                 </button>
-            </div>
 
+-->
+
+            </div>
             <div class="total-price">$13.50</div>
         </div>
 
@@ -178,6 +187,13 @@
             </div>
 
             <div class="quantity">
+            <div class="container">
+            <input type="button" onclick="decrementValue()" value="-" />
+            <input type="text" name="quantity" value="1" maxlength="2" max="10" size="1" id="number" />
+            <input type="button" onclick="incrementValue()" value="+" />
+            </div>
+
+<!--
                 <button class="plus-btn" type="button" name="button">
                     <img src="../img/plus.svg" alt="" />
                 </button>
@@ -185,6 +201,9 @@
                 <button class="minus-btn" type="button" name="button">
                     <img src="../img/minus.svg" alt="" />
                 </button>
+
+-->
+
             </div>
 
             <div class="total-price">$4.50</div>
