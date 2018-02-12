@@ -94,13 +94,9 @@
         </div>
 
         <!-- Product #1 -->
-        <div class="item">
+        <div class="item" id="item1">
             <div class="buttons">
-
-                
-                <button onclick="clearBox('item')" class="delete-btn"></button>
-
-
+                <button onclick="clearBox('item1')" class="delete-btn"></button>
                 <span class="like-btn"></span>
             </div>
 
@@ -115,28 +111,16 @@
             <div class="quantity">
 
             <div class="container">
-            <input type="button" onclick="decrementValue()" value="-" />
-            <input type="text" name="quantity" value="1" maxlength="2" max="10" size="1" id="P" />
-            <input type="button" onclick="incrementValue()" value="+" />
+            <input type="button" onclick="decrementValue(1)" value="-" />
+            <input type="text" name="quantity" value="1" maxlength="2" max="10" size="1" id="1"/>
+            <input type="button" onclick="incrementValue(1)" value="+" />
             </div>
-
-            <!--</button>
-            <button class="plus-btn" type="button" name="button">
-                <img src="../img/plus.svg" alt="" />
-            <input type="text" name="name" value="1">
-            <button class="minus-btn" type="button" name="button">
-                    <img src="../img/minus.svg" alt="" />
-            </button>
-            -->
-
             </div>
             <div class="total-price">$8.50</div>
         </div>
 
-
-
         <!-- Product #2 -->
-        <div class="item">
+        <div class="item" id="item2">
             <div class="buttons">
                 <span class="delete-btn"></span>
                 <span class="like-btn"></span>
@@ -153,9 +137,9 @@
 
             <div class="quantity">
             <div class="container">
-            <input type="button" onclick="decrementValue()" value="-" />
-            <input type="text" name="quantity" value="1" maxlength="2" max="10" size="1" id="P" />
-            <input type="button" onclick="incrementValue()" value="+" />
+            <input type="button" onclick="decrementValue(2)" value="-" />
+            <input type="text" name="quantity" value="1" maxlength="2" max="10" size="1" id="2"/>
+            <input type="button" onclick="incrementValue(2)" value="+" />
             </div>
 
 
@@ -175,7 +159,7 @@
         </div>
 
         <!-- Product #3 -->
-        <div class="item">
+        <div class="item" id="item3">
             <div class="buttons">
                 <span class="delete-btn"></span>
                 <span class="like-btn"></span>
@@ -191,9 +175,9 @@
 
             <div class="quantity">
             <div class="container">
-            <input type="button" onclick="decrementValue()" value="-" />
-            <input type="text" name="quantity" value="1" maxlength="2" max="10" size="1" id="P" />
-            <input type="button" onclick="incrementValue()" value="+" />
+                <input type="button" onclick="decrementValue(3)" value="-" />
+                <input type="text" name="quantity" value="1" maxlength="2" max="10" size="1" id="3"/>
+                <input type="button" onclick="incrementValue(3)" value="+" />
             </div>
 
 <!--
