@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="../css/food_order.css">
         
         <script src="../js/food_order.js"></script>
+         <script src="../js/food_order2.js"></script>
         
         <style>
             body {margin:0;}
@@ -95,7 +96,11 @@
         <!-- Product #1 -->
         <div class="item">
             <div class="buttons">
-                <span class="delete-btn"></span>
+
+                
+                <button onclick="clearBox('item')" class="delete-btn"></button>
+
+
                 <span class="like-btn"></span>
             </div>
 
@@ -108,9 +113,10 @@
             </div>
 
             <div class="quantity">
+
             <div class="container">
             <input type="button" onclick="decrementValue()" value="-" />
-            <input type="text" name="quantity" value="1" maxlength="2" max="10" size="1" id="number" />
+            <input type="text" name="quantity" value="1" maxlength="2" max="10" size="1" id="P" />
             <input type="button" onclick="incrementValue()" value="+" />
             </div>
 
@@ -147,11 +153,8 @@
 
             <div class="quantity">
             <div class="container">
-
             <input type="button" onclick="decrementValue()" value="-" />
-
-            <input type="text" name="quantity" value="1" maxlength="2" max="10" size="1" id="number" />
-
+            <input type="text" name="quantity" value="1" maxlength="2" max="10" size="1" id="P" />
             <input type="button" onclick="incrementValue()" value="+" />
             </div>
 
@@ -189,7 +192,7 @@
             <div class="quantity">
             <div class="container">
             <input type="button" onclick="decrementValue()" value="-" />
-            <input type="text" name="quantity" value="1" maxlength="2" max="10" size="1" id="number" />
+            <input type="text" name="quantity" value="1" maxlength="2" max="10" size="1" id="P" />
             <input type="button" onclick="incrementValue()" value="+" />
             </div>
 
