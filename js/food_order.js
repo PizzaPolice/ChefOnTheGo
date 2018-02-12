@@ -23,11 +23,8 @@ function decrementValue(id)
 
 }
 
-
-
 function clearBox(id)
 {
   document.getElementById(id).innerHTML = ""
   listOfItems = document.getElementsByClassName("item")
 }
-
