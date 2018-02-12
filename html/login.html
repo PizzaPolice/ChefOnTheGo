@@ -16,7 +16,7 @@
 	<div class="panel-body">
 		<h2 class="title">Login</h2>
 		<div class="input-fields">
-			<form id="login_form" method ="POST" onsubmit="return checkLogin()" action="customize.html">
+			<form id="login_form" method ="POST" onsubmit="return checkLogin()" action="login.html">
 					<div class="input-line">
 						Username:
 						<input type="text" name="name"/>
@@ -26,9 +26,9 @@
 							<input type="password" name="password"/>
 					</div>
 					<div class="radio-input">
-						<input id="customer" type="radio" name="login_type">
+						<input id="customer" type="radio" name="login_type" value="customer">
 						Customer
-						<input id="chef" type="radio" name="login_type">
+						<input id="chef" type="radio" name="login_type" value="chef">
 						Chef
 					</div>
 			</form>
