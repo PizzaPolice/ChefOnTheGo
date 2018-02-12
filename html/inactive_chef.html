@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Inactive Chef</title>
   <link rel="stylesheet" href="../css/inactive_chef.css"> 
-
+  <script src="../js/inactive_chef.js?"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
@@ -73,11 +73,11 @@
 
 
   <h2>You are currently inactive</h2>
-  <form class="input" action="active_chef.html" method="GET">
+  <form class="input" action="active_chef.html" name="timeinput"  onsubmit="return validateTime()" method="GET">
     <h3>How long do you want to be active until?</h3>
-    <input type="number" name="hour">
+    <input type="number" name="hour" value="0">
     <b>Hours</b>
-    <input type="number" name="minute">
+    <input type="number" name="minute" value ="0">
     <b>Minutes</b></br>
     <input type="submit" value="Start Serving!">
   </form>
