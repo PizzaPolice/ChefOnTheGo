@@ -3,6 +3,7 @@
 	<head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="../css/login.css">
+	<script src="../js/credentials.js"></script>
 	<title>Login</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
@@ -15,7 +16,7 @@
 	<div class="panel-body">
 		<h2 class="title">Login</h2>
 		<div class="input-fields">
-			<form id="login_form" method ="POST" action="customize.html">
+			<form id="login_form" method ="POST" onsubmit="return checkLogin()" action="customize.html">
 					<div class="input-line">
 						Username:
 						<input type="text" name="name"/>

@@ -3,6 +3,7 @@
 	<head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../css/list_chefs.css">
+    <script src="../js/credentials.js"></script>
 	<title>List of Chefs</title>
 	</head>
 <body>
@@ -11,7 +12,7 @@
         <div class="panel-body">
             <h2 class="title">List of Chefs</h2>
             <div class="input-fields">
-                <form id="list_form" method="POST" action="chat.html">
+                <form id="list_form" method="POST" onsubmit="return checkChefs()" action="chat.html">
                 <div class="radio-input">
                     <input type="radio" name="chef" value="Jae"> <br>
                     Name: Jae <br>

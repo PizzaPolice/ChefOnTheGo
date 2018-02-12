@@ -3,6 +3,7 @@
 	<head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../css/signup.css">
+    <script src="../js/credentials.js"></script>
 	<title>Sign up</title>
 	</head>
 <body>
@@ -11,7 +12,7 @@
     <div class="panel-body">
         <h2 class="title">Sign up</h2>
         <div class="input-fields">
-            <form id="signup_form" method ="POST" action="login.html">
+            <form id="signup_form" method ="POST" onsubmit="return checkSignup()" action="login.html">
                 <div class="input-line">
                     Username:
                     <input type="text" name="name"/>
@@ -22,7 +23,7 @@
                 </div>
                 <div class="input-line">
                         Re-enter Password:
-                        <input type="password" name="check-password">
+                        <input type="password" name="check_password">
                 </div>
                 <div class="input-line">
                         Email:
