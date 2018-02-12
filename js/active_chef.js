@@ -1,5 +1,6 @@
 //Parse the timer when the timer starts
 window.onload = startTime;
+//Tick every second, updating the timer each second
 window.setInterval(timerTick,1000);
 
 function startTime()
