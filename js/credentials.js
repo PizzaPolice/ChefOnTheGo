@@ -3,6 +3,16 @@ function checkLogin()
     var name = document.forms["login_form"]["name"].value;
     var password = document.forms["login_form"]["password"].value;
     var login_type = document.forms["login_form"]["login_type"].value;
+
+    if (login_type != null && login_type == "chef")
+    {
+        document.forms["login_form"].action = "inactive_chef.html"
+    }
+    else if(login_type != null && login_type == "customer")
+    {
+        document.forms["login_form"].action = "customize.html"
+    }
+
     if (name == null || name.trim() == "" || password == null || password.trim() == "" || login_type == null || login_type == "")
     {
         alert("Please Fill All Required Field");
