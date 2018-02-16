@@ -16,7 +16,7 @@ function decrementValue(id)
 
 
     value = isNaN(value) ? 0 : value;
-    if(value>1){
+    if(value >= 1){
         value--;
             document.getElementById(id).value = value;
     }

@@ -62,31 +62,10 @@
     </style>
 </head>
 <body>
-    <!--
-    <div class="topnav" id="myTopnav">
-        <a href="#home">Home</a>
-        <a href="food_order.html">Food Order</a>
-        <a href="checkout.html" class="active">Checkout</a>
-        <a href="order_status.html">Order Status</a>
-        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
-    </div>
-    <div style="padding-left:16px">
-    </div>
-    <script>
-        function myFunction() {
-            var x = document.getElementById("myTopnav");
-            if (x.className === "topnav") {
-                x.className += " responsive";
-            } else {
-                x.className = "topnav";
-            }
-        }
-    </script>
-    -->
     <div class="checkout-panel">
         <div class="panel-body">
             <h2 class="title">Checkout</h2>
-
+            <form id="order_status_form" onsubmit="return checkout()" method="POST" action="order_status.html">
             <div class="payment-method">
                 <label for="card" class="method card">
                     <span class="card-logos">
@@ -110,38 +89,38 @@
             <div class="input-fields">
                 <div class="column-1">
                     <label for="cardholder">Cardholder's Name</label>
-                    <input type="text" id="cardholder">
+                    <input type="text" id="cardholder" name="cardholder">
 
                     <div class="column-2">
                         <label for="cardnumber">Card Number</label>
-                        <input type="password" id="cardnumber">
+                        <input type="password" id="cardnumber" name="cardnumber">
                     </div>
 
                     <div class="small-inputs">
                         <div>
                             <label for="date">Exp Date</label>
-                            <input type="text" id="date" placeholder="MM / YY">
+                            <input type="text" id="date" placeholder="MM / YY" name="date">
                         </div>
                         <div>
                             <label for="verification">CVV / CVC *</label>
-                            <input type="text" id="verification">
+                            <input type="text" id="verification" name="verifcation">
                         </div>
                         <div class=column-3>
                             <label for="Zipcode">Zipcode</label>
-                            <input type="text" id="Zipcode"/>
+                            <input type="text" id="Zipcode" name="zipcode" />
                         </div>
                     </div>
                 </div>
             </div>
+            </form>
         </div>
         <form id="food_order_form" method="GET" action="food_order.html"></form>
-        <form id="order_status_form" method="POST" action="order_status.html"></form>
         <div class="panel-footer">
             <button class="btn back-btn" form="food_order_form" type="submit">Back</button>
             <button class="btn next-btn" form="order_status_form" type="submit">Checkout</button>
         </div>
     </div>
 
-     <script src="checkout.js"></script>
+     <script src="../js/checkout.js"></script>
 </body>
 </html>
