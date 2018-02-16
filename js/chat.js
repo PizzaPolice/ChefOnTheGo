@@ -1,3 +1,28 @@
+window.onload = populateChat;
+function populateChat()
+{
+  var queryString = location.search;
+  if (queryString !== "" && queryString !== "?chef=")
+  {
+    //Get the chef name from the query string
+    var chef = queryString.split("=")[1];
+    //Grab all chat boxes by the chef
+    chefBoxes = document.getElementsByClassName("chatboxright");
+    //Iterate through, find the chef_name box, and replace with selected chef
+    for (var y = 0; y < chefBoxes.length; y ++)
+    {
+      for (var x = 0; x < chefBoxes[y].childNodes.length; x ++)
+      {
+        if (chefBoxes[y].childNodes[x].className == "name")
+        {
+          chefBoxes[y].childNodes[x].innerHTML = chef;
+
+        }
+      }
+    }
+  }
+}
+
 function chat()
 {
   //Get text in the chat box
