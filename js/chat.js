@@ -6,6 +6,7 @@ function chat()
   if (msg !== "")
   {
     //Create the new chat message and put it in the list
+    //All below is assembling the p's that compose the new "chat msg box"
     var newMessage = document.createElement("SECTION");
 
     var name = document.createElement("p");
@@ -23,10 +24,11 @@ function chat()
 
     newMessage.setAttribute("class","chatboxleft");
 
+    //Update the html to have the new text box
     var messages = document.getElementsByClassName("chatmessages")[0];
     messages.appendChild(newMessage);
 
-    //Empty the text bos
+    //Empty the text box
     var message = document.getElementsByClassName("chatbox")[0].value = "";
   }
 }
