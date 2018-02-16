@@ -1,6 +1,7 @@
-function countdown(){
+function countdown()
+{
         var now = new Date();
-        var eventDate = new  Date(2018, 1, 10);
+        var eventDate = new  Date(2018, 2, 16);
 
         var currentTiime = now.getTime();
         var eventTime = eventDate.getTime();
@@ -28,7 +29,6 @@ function countdown(){
         document.getElementById("seconds").textContent = s;
 
         setTimeout(countdown, 1000);
-
         }
 
         countdown();

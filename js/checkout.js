@@ -1,26 +1,23 @@
-$(document).ready(function() {
+function checkout()
+{
+    var payment = document.forms["order_status_form"]["payment"].value;
+    var cardholder = document.forms["order_status_form"]["cardholder"].value;
+    var cardnumber = document.forms["order_status_form"]["cardnumber"].value;
+    var date = document.forms["order_status_form"]["date"].value;
+    var verification = document.forms["order_status_form"]["verification"].value;
+    var zipcode = document.forms["order_status_form"]["zipcode"].value;
 
-  // Radio box border
-  $('.method').on('click', function() {
-    $('.method').removeClass('blue-border');
-    $(this).addClass('blue-border');
-  });
+    if (payment == null || cardholder == null || cardnumber == null || 
+    date == null || verification == null || zipcode == null)
+    {
+        alert("Please fill out the form");
+        return false;
+    }
 
-  // Validation
-  var $cardInput = $('.input-fields input');
-
-  $('.btn next-btn').on('click', function(e) {
-
-    $cardInput.removeClass('warning');
-
-    $cardInput.each(function() {
-       var $this = $(this);
-
-       if (!$this.val()) {
-         $this.addClass('warning');
-       }
-    });
-
-  });
-
-});
+    if (payment.trim() == "" || cardholder.trim() == "" || cardnumber.trim() == "" || 
+        date.trim() == "" || verification.trim() == "" || zipcode.trim() == "")
+        {
+            alert("Please fill out the form");
+            return false;
+        }
+}
