@@ -15,7 +15,7 @@ function checkLogin()
 
     if (name == null || name.trim() == "" || password == null || password.trim() == "" || login_type == null || login_type == "")
     {
-        alert("Please Fill All Required Field");
+        alert("Please Fill All Required Fields");
         return false;
     }
 }
