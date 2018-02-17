@@ -81,6 +81,7 @@ function newDish()
   //Get the name of the dish and its description
   var dishName = document.getElementById("dish_name").value;
   var dishDesc = document.getElementById("dish_desc").value;
+  var dishPrice = document.getElementById("dish_price").value;
 
   //get the name of the current chef
   currUser = window.sessionStorage.getItem("currentUser");
@@ -102,7 +103,7 @@ function newDish()
   }
 
   //Add the current dish to this chef's dish list and store it in local storage
-  dishes.push({"chef_name":currUser, "dish_name": dishName, "dish_desc": dishDesc});
+  dishes.push({"chef_name":currUser, "dish_name": dishName, "dish_price": dishPrice, "dish_desc": dishDesc});
   localStorage.setItem("dishes",JSON.stringify(dishes));
 
   //Re load the list of dishes
