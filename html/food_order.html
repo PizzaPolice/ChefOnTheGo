@@ -5,10 +5,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Shopping List</title>
-        <link rel="stylesheet" href="../css/food_order.css">
-        
-        <script src="../js/food_order.js"></script>
-        
+        <link rel="stylesheet" href="../css/food_order.css">        
         <style>
             body {margin:0;}
         
@@ -66,27 +63,8 @@
     </head>
 
 <body>
-    <!--
-    <div class="topnav" id="myTopnav">
-            <a href="#home">Home</a>
-            <a href="food_order.html" class="active">Food Order</a>
-            <a href="checkout.html">Checkout</a>
-            <a href="order_status.html">Order Status</a>
-            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
-    </div>
-    <div style="padding-left:16px"></div>
-    <script>
-        function myFunction() {
-            var x = document.getElementById("myTopnav");
-            if (x.className === "topnav") {
-                x.className += " responsive";
-            } else {
-                x.className = "topnav";
-            }
-        }
-    </script>
-    -->
-    <div class="shopping-cart">
+    <form id="checkout_form" method="POST" action="checkout.html">
+    <div class="shopping-cart" id="shopping_cart">
         <!-- Title -->
         <div class="title">
             Food Order
@@ -94,129 +72,61 @@
 
         <!-- Product #1 -->
         <div class="item" id="item1">
-            <div class="buttons">
-                <span onclick="clearBox('item1')" class="delete-btn"></button>
-                <span class="like-btn"></span>
-            </div>
-
-            <div class="image">
-                <img src="../img/tortilla_soup.png" alt="" />
-            </div>
-
             <div class="description">
                 <span>Tortilla Soup</span>
             </div>
 
             <div class="quantity">
-
-            <div class="container">
-            <input type="button" onclick="decrementValue(1)" value="-" />
-            <input type="text" name="quantity" value="1" maxlength="2" max="10" size="1" id="1"/>
-            <input type="button" onclick="incrementValue(1)" value="+" />
-            </div>
+                <div class="container">
+                    <input type="button" onclick="decrementValue(1)" value="-" />
+                    <input type="text" name="quantity" value="1" maxlength="2" max="10" size="1" id="1"/>
+                    <input type="button" onclick="incrementValue(1)" value="+" />
+                </div>
             </div>
             <div class="total-price">$8.50</div>
         </div>
 
         <!-- Product #2 -->
         <div class="item" id="item2">
-            <div class="buttons">
-                <span onclick="clearBox('item2')"  class="delete-btn"></span>
-                <span class="like-btn"></span>
-            </div>
-
-            <div class="image">
-                <img src="../img/pineapple_fajitas.png" alt="" />
-            </div>
-
             <div class="description">
                 <span>Pineapple Fajitas</span>
             </div>
 
-
             <div class="quantity">
-            <div class="container">
-            <input type="button" onclick="decrementValue(2)" value="-" />
-            <input type="text" name="quantity" value="1" maxlength="2" max="10" size="1" id="2"/>
-            <input type="button" onclick="incrementValue(2)" value="+" />
-            </div>
-
-
-<!--
-                <button class="plus-btn" type="button" name="button">
-                    <img src="../img/plus.svg" alt="" />
-                </button>
-                <input type="text" name="name" value="1">
-                <button class="minus-btn" type="button" name="button">
-                    <img src="../img/minus.svg" alt="" />
-                </button>
-
--->
-
+                <div class="container">
+                    <input type="button" onclick="decrementValue(2)" value="-" />
+                    <input type="text" name="quantity" value="1" maxlength="2" max="10" size="1" id="2"/>
+                    <input type="button" onclick="incrementValue(2)" value="+" />
+                </div>
             </div>
             <div class="total-price">$13.50</div>
         </div>
 
         <!-- Product #3 -->
         <div class="item" id="item3">
-            <div class="buttons">
-                <span onclick="clearBox('item3')" class="delete-btn"></span>
-                <span class="like-btn"></span>
-            </div>
-
-            <div class="image">
-                <img src="../img/guac.png" alt="" />
-            </div>
-
             <div class="description">
                 <span>Guacamole</span>
             </div>
 
             <div class="quantity">
-            <div class="container">
-                <input type="button" onclick="decrementValue(3)" value="-" />
-                <input type="text" name="quantity" value="1" maxlength="2" max="10" size="1" id="3"/>
-                <input type="button" onclick="incrementValue(3)" value="+" />
-            </div>
-
-<!--
-                <button class="plus-btn" type="button" name="button">
-                    <img src="../img/plus.svg" alt="" />
-                </button>
-                <input type="text" name="name" value="1">
-                <button class="minus-btn" type="button" name="button">
-                    <img src="../img/minus.svg" alt="" />
-                </button>
-
--->
-
+                <div class="container">
+                    <input type="button" onclick="decrementValue(3)" value="-" />
+                    <input type="text" name="quantity" value="1" maxlength="2" max="10" size="1" id="3"/>
+                    <input type="button" onclick="incrementValue(3)" value="+" />
+                </div>
             </div>
 
             <div class="total-price">$4.50</div>
-
-
-   <!-- <form id="checkout_form" method="GET" action="checkout.html"></form>
-   -->
-
-
         </div>
 
     <form id="list_chefs_form" method="GET" action="list_chefs.html"></form>
-    <form id="checkout_form" method="POST" action="checkout.html"></form>
+    <script src="../js/food_order.js"></script>
     <div class="panel-footer">
         <button class="btn back-btn" type="submit" form="list_chefs_form" value="back">Back</button>
         <button class="btn next-btn" type="submit" form="checkout_form" value="submit_order">Submit Order</button>
     </div>
 </div>
-
-
-
-
-
-
-
-
-
+</form>
 </body>
 </html>
 

@@ -19,7 +19,7 @@ function checkLogin()
         return false;
     }
 
-    window.localStorage.setItem("currentUser", name);
+    window.sessionStorage.setItem("currentUser", name);
 }
 
 function checkSignup()

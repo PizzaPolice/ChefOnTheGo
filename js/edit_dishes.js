@@ -4,7 +4,7 @@ function getDishes()
 {
 
   //get the name of the current chef
-  currUser = window.localStorage.getItem("currentUser");
+  currUser = window.sessionStorage.getItem("currentUser");
 
   //Load the list of all dishes
   all_dishes = JSON.parse(window.localStorage.getItem("dishes"));
@@ -16,7 +16,7 @@ function getDishes()
   //List of all dishes only from this sheft
   chef_dishes = []
   //Filter so that only those from this chef are displayed
-  for (var x = 0; x < all_dishes.length; x ++)
+  for (var x = 0; x < all_dishes.length; x++)
   {
     if (all_dishes[x]["chef_name"] === currUser)
     {
@@ -58,7 +58,6 @@ function loadDishes()
     var desc_text = document.createTextNode(dishDesc);
     dishDescSection.appendChild(desc_text);
     dishDescSection.setAttribute("class","dish_desc");
-
 
     var deleteBox = document.createElement("input");
     deleteBox.setAttribute("type","checkbox");

@@ -24,7 +24,7 @@ function populateChat()
 
 function chat()
 {
-  var currentUser = window.localStorage.getItem("currentUser");
+  var currentUser = window.sessionStorage.getItem("currentUser");
   //Get text in the chat box
   var message = document.getElementsByClassName("chatbox")[0].value;
   //Check if the string is non-empty
