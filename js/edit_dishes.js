@@ -45,6 +45,7 @@ function loadDishes()
   {
     var dishName = chef_dishes[x]["dish_name"];
     var dishDesc = chef_dishes[x]["dish_desc"];
+    var dishPrice = chef_dishes[x]["dish_price"];
 
     var newSection = document.createElement("SECTION");
 
@@ -53,6 +54,11 @@ function loadDishes()
     dishSection.appendChild(dishNameText);
     dishSection.setAttribute("class","dish_name");
     newSection.setAttribute("id",dishName);
+
+  var dishPriceSection = document.createElement("p");
+    var dish_price = document.createTextNode("$" + dishPrice);
+    dishPriceSection.appendChild(dish_price);
+    dishPriceSection.setAttribute("class","dish_price");
 
     var dishDescSection = document.createElement("p");
     var desc_text = document.createTextNode(dishDesc);
@@ -63,7 +69,10 @@ function loadDishes()
     deleteBox.setAttribute("type","checkbox");
     deleteBox.setAttribute("class","delete_box");
 
+     
+
     newSection.appendChild(dishSection);
+    newSection.appendChild(dishPriceSection);
     newSection.appendChild(dishDescSection);
     newSection.appendChild(deleteBox);
 
