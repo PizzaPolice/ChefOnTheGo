@@ -21,7 +21,6 @@ function decrementValue(id)
 
 }
 
-
 function calculatePrice()
 {
     var sessionStorage = window.sessionStorage;

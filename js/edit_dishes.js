@@ -13,7 +13,7 @@ function getDishes()
     all_dishes = [];
   }
 
-  //List of all dishes only from this sheft
+  //List of all dishes only from this chef
   chef_dishes = []
   //Filter so that only those from this chef are displayed
   for (var x = 0; x < all_dishes.length; x++)
@@ -55,10 +55,29 @@ function loadDishes()
     dishSection.setAttribute("class","dish_name");
     newSection.setAttribute("id",dishName);
 
-  var dishPriceSection = document.createElement("p");
-    var dish_price = document.createTextNode("$" + dishPrice);
-    dishPriceSection.appendChild(dish_price);
-    dishPriceSection.setAttribute("class","dish_price");
+    //var dishPriceSection = document.createElement("p");
+    //var dish_price = document.createTextNode("$" + dishPrice);
+    //dishPriceSection.appendChild(dish_price);
+    //dishPriceSection.setAttribute("class","dish_price");
+
+    
+    var dishPriceForm = document.createElement("form");
+    dishPriceForm.id = "dish_form";
+    dishPriceForm.method = "GET";
+    dishPriceForm.action = "edit_dishes.html";
+    dishPriceForm.setAttribute("onsubmit", "return updatePrice(" + dishName + ")");
+
+    var dishPriceSection = document.createElement("input");
+    dishPriceSection.setAttribute("type", "text");
+    dishPriceSection.setAttribute("class", "update_price");
+    dishPriceSection.setAttribute("value", dishPrice);
+    var dishPriceButton = document.createElement("button");
+    dishPriceButton.innerText = "Update Price";
+    dishPriceButton.value = "update";
+    dishPriceButton.type = "submit";
+    dishPriceButton.setAttribute("form", "dish_form");
+
+    dishPriceForm.appendChild(dishPriceSection);
 
     var dishDescSection = document.createElement("p");
     var desc_text = document.createTextNode(dishDesc);
@@ -69,10 +88,10 @@ function loadDishes()
     deleteBox.setAttribute("type","checkbox");
     deleteBox.setAttribute("class","delete_box");
 
-     
-
     newSection.appendChild(dishSection);
-    newSection.appendChild(dishPriceSection);
+    //newSection.appendChild(dishPriceSection);
+    newSection.appendChild(dishPriceForm);
+    newSection.appendChild(dishPriceButton);
     newSection.appendChild(dishDescSection);
     newSection.appendChild(deleteBox);
 
@@ -81,7 +100,6 @@ function loadDishes()
     //Append the dish description to the list
     dishList.appendChild(newSection);
   }
-
 }
 
 /* Called when creating a new dish, stores it and puts it in the list*/
@@ -117,6 +135,24 @@ function newDish()
 
   //Re load the list of dishes
   loadDishes(); 
+}
+
+function updatePrice(dishName)
+{
+  var new_name = dishName.getElementsByClassName("dish_name").item(0).innerText;
+  var new_price = dishName.getElementsByClassName("update_price").item(0).value;
+
+  var chefDishes = getDishes();
+  for (var i = 0; i < chefDishes.length; i++)
+  {
+    if (chefDishes[i]["dish_name"] == new_name)
+    {
+      chefDishes[i]["dish_price"] = new_price;
+      break;
+    }
+  }
+
+  localStorage.setItem("dishes", JSON.stringify(chefDishes));
 }
 
 function deleteDish()
