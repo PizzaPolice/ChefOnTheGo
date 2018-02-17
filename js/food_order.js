@@ -21,21 +21,24 @@ function decrementValue(id)
 
 }
 
-/*
+
 function calculatePrice()
 {
-    var localStorage = window.localStorage;
+    var sessionStorage = window.sessionStorage;
+    var shopping_cart = document.getElementById("shopping_cart");
+    var final_cost = 0.0;
 
-    var q1 = document.getElementById(1).value;
-    var q2 = document.getElementById(2).value;
-    var q3 = document.getElementById(3).value;
+    for (var i = 0; i < shopping_cart.getElementsByClassName("item").length; i++)
+    {
+        var child = shopping_cart.getElementsByClassName("item")[i];
+        var quantity = document.getElementById(i).value;
+        var price = child.children.item(2).innerHTML.substring(1);
+        final_cost += quantity * price;
+    }
 
-    var prices = document.getElementsByClassName("total-price");
-
-    var finalPrices = q1*prices[0].innerHTML.substring(1) + q2*prices[1].innerHTML.substring(1) + q3*prices[2].innerHTML.substring(1);
-    localStorage.setItem("cost", finalPrices+0.00);
+    sessionStorage.setItem("cost", final_cost.toFixed(2));
 }
-*/
+
 
 function listFood()
 {
@@ -47,8 +50,6 @@ function listFood()
         console.log("help");
         return;
     }
-    console.log(document.getElementById("checkout_form"));
-
     for (var i = 0; i < dishes.length; i++)
     {
         var dish = dishes[i];
@@ -62,14 +63,16 @@ function listFood()
         descriptionDiv.appendChild(descriptionSpan);
 
         var quantity = document.createElement("div");
+        quantity.setAttribute("class", "quantity");
         var container = document.createElement("div");
+        container.setAttribute("class", "container");
         var decButton = document.createElement("input");
         decButton.setAttribute("type", "button");
-        decButton.setAttribute("onclick", "decrementValue(1)");
+        decButton.setAttribute("onclick", "decrementValue(" + i + ")");
         decButton.setAttribute("value", "-");
         var incButton = document.createElement("input");
         incButton.setAttribute("type", "button");
-        incButton.setAttribute("onclick", "incrementValue(1)");
+        incButton.setAttribute("onclick", "incrementValue(" + i + ")");
         incButton.setAttribute("value", "+");
         var text = document.createElement("input");
         text.setAttribute("type", "text");
@@ -79,6 +82,10 @@ function listFood()
         text.setAttribute("size", "1");
         text.setAttribute("id", i);
         text.setAttribute("value", "1");
+
+        var total_price = document.createElement("div");
+        total_price.setAttribute("class", "total-price");
+        total_price.innerHTML = "$" + dish.dish_price;
         
         container.appendChild(decButton);
         container.appendChild(text);
@@ -87,6 +94,7 @@ function listFood()
 
         div.appendChild(descriptionDiv);
         div.appendChild(quantity);
+        div.appendChild(total_price);
 
         document.getElementById("shopping_cart").appendChild(div);
     }

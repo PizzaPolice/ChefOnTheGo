@@ -58,7 +58,7 @@ function createUser(type, name, email)
         users = []
     }
     users.push({"name": name, "email": email})
-    localStorage.setItem(type, JSON.stringify(chefs));
+    localStorage.setItem(type, JSON.stringify(users));
 }
 
 function checkCustomize()

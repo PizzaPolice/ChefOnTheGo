@@ -24,8 +24,8 @@ function checkout()
 
 function populatePrice()
 {
-    var localStorage = window.localStorage;
-    document.getElementById("cardspan").innerHTML = "Pay $" + localStorage.getItem("cost")  +  " with credit card";
-    document.getElementById("paypalspan").innerHTML = "Pay $" + localStorage.getItem("cost") + " with credit card";
+    var sessionStorage = window.sessionStorage;
+    document.getElementById("cardspan").innerHTML = "Pay $" + sessionStorage.getItem("cost")  +  " with credit card";
+    document.getElementById("paypalspan").innerHTML = "Pay $" + sessionStorage.getItem("cost") + " with credit card";
 } 
 populatePrice();

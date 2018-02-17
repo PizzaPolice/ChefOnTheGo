@@ -1,7 +1,7 @@
 function listChefs()
 {
     var localStorage = window.localStorage;
-    var listOfChefs = JSON.parse(localStorage.getItem("chefs"));
+    var listOfChefs = JSON.parse(localStorage.getItem("chef"));
 
     listOfChefs.forEach(element => {
         document.getElementById("list_form").innerHTML += 

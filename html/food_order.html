@@ -4,8 +4,8 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Shopping List</title>
-        <link rel="stylesheet" href="../css/food_order.css">        
+        <link rel="stylesheet" href="../css/food_order.css">
+        <title>Shopping List</title>        
         <style>
             body {margin:0;}
         
@@ -63,70 +63,20 @@
     </head>
 
 <body>
-    <form id="checkout_form" method="POST" action="checkout.html">
+    <form id="checkout_form" method="POST" onsubmit="return calculatePrice()" action="checkout.html">
     <div class="shopping-cart" id="shopping_cart">
         <!-- Title -->
         <div class="title">
             Food Order
         </div>
-
-        <!-- Product #1 -->
-        <div class="item" id="item1">
-            <div class="description">
-                <span>Tortilla Soup</span>
-            </div>
-
-            <div class="quantity">
-                <div class="container">
-                    <input type="button" onclick="decrementValue(1)" value="-" />
-                    <input type="text" name="quantity" value="1" maxlength="2" max="10" size="1" id="1"/>
-                    <input type="button" onclick="incrementValue(1)" value="+" />
-                </div>
-            </div>
-            <div class="total-price">$8.50</div>
+        <script src="../js/food_order.js"></script>
+        <div class="panel-footer">
+            <button class="btn back-btn" type="submit" form="list_chefs_form" value="back">Back</button>
+            <button class="btn next-btn" type="submit" form="checkout_form" value="submit_order">Submit Order</button>
         </div>
-
-        <!-- Product #2 -->
-        <div class="item" id="item2">
-            <div class="description">
-                <span>Pineapple Fajitas</span>
-            </div>
-
-            <div class="quantity">
-                <div class="container">
-                    <input type="button" onclick="decrementValue(2)" value="-" />
-                    <input type="text" name="quantity" value="1" maxlength="2" max="10" size="1" id="2"/>
-                    <input type="button" onclick="incrementValue(2)" value="+" />
-                </div>
-            </div>
-            <div class="total-price">$13.50</div>
-        </div>
-
-        <!-- Product #3 -->
-        <div class="item" id="item3">
-            <div class="description">
-                <span>Guacamole</span>
-            </div>
-
-            <div class="quantity">
-                <div class="container">
-                    <input type="button" onclick="decrementValue(3)" value="-" />
-                    <input type="text" name="quantity" value="1" maxlength="2" max="10" size="1" id="3"/>
-                    <input type="button" onclick="incrementValue(3)" value="+" />
-                </div>
-            </div>
-
-            <div class="total-price">$4.50</div>
-        </div>
-
-    <form id="list_chefs_form" method="GET" action="list_chefs.html"></form>
-    <script src="../js/food_order.js"></script>
-    <div class="panel-footer">
-        <button class="btn back-btn" type="submit" form="list_chefs_form" value="back">Back</button>
-        <button class="btn next-btn" type="submit" form="checkout_form" value="submit_order">Submit Order</button>
     </div>
-</div>
-</form>
+    </form>
+    <form id="list_chefs_form" method="GET" action="list_chefs.html"></form>
 </body>
 </html>
 
