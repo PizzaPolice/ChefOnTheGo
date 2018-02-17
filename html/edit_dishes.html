@@ -4,15 +4,23 @@
   <meta charset="UTF-8">
   <title>Edit Dishes</title>
   <link rel="stylesheet" href="../css/edit_dishes.css">
+  <script src="../js/edit_dishes.js"></script>
+
+
+  <h1>Create a new dish!</h1>
+  <form class="new_dish">
+    <h3>Dish name</h3>
+    <input id="dish_name" type="text">
+    <h3>Description</h3>
+    <textarea id="dish_desc" rows="10" cols="70">Enter a description of your dish</textarea></br>
+    <input type="button" onclick="newDish()" value="Create your dish!">
+  </form>
 
 
   <h1>Edit your offerings</h1>
-  <form class="new_dish">
-    <h3>Dish name</h3>
-    <input type="text">
-    <h3>Description</h3>
-    <textarea rows="10" cols="70">Enter a description of your dish</textarea></br>
-    <input type="button" class="submit_dish" value="Create your dish!">
-  </form>
+  <div id="current_dishes">
+
+  </div>
+  
 
 </html>
