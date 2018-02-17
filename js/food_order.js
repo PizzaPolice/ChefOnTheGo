@@ -39,3 +39,8 @@ function calculatePrice()
     var finalPrices = q1*prices[0].innerHTML.substring(1) + q2*prices[1].innerHTML.substring(1) + q3*prices[2].innerHTML.substring(1);
     localStorage.setItem("cost", finalPrices);
 }
+
+function listFood()
+{
+    
+}
