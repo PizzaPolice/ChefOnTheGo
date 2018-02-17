@@ -83,7 +83,7 @@ function newDish()
   var dishDesc = document.getElementById("dish_desc").value;
 
   //get the name of the current chef
-  currUser = window.localStorage.getItem("currentUser");
+  currUser = window.sessionStorage.getItem("currentUser");
 
   //Check for valid input (dish name and description are not blank
   if (dishName == "" || dishDesc == "")
