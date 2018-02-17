@@ -54,15 +54,9 @@ function loadDishes()
     dishSection.appendChild(dishNameText);
     dishSection.setAttribute("class","dish_name");
     newSection.setAttribute("id",dishName);
-
-    //var dishPriceSection = document.createElement("p");
-    //var dish_price = document.createTextNode("$" + dishPrice);
-    //dishPriceSection.appendChild(dish_price);
-    //dishPriceSection.setAttribute("class","dish_price");
-
     
     var dishPriceForm = document.createElement("form");
-    dishPriceForm.id = "dish_form";
+    dishPriceForm.id = "dish_form_" + dishName;
     dishPriceForm.method = "GET";
     dishPriceForm.action = "edit_dishes.html";
     dishPriceForm.setAttribute("onsubmit", "return updatePrice(" + dishName + ")");
@@ -75,7 +69,7 @@ function loadDishes()
     dishPriceButton.innerText = "Update Price";
     dishPriceButton.value = "update";
     dishPriceButton.type = "submit";
-    dishPriceButton.setAttribute("form", "dish_form");
+    dishPriceButton.setAttribute("form", "dish_form_" + dishName);
 
     dishPriceForm.appendChild(dishPriceSection);
 
