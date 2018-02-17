@@ -1,159 +1,159 @@
 ﻿<!DOCTYPE html>
 
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Shopping List</title>
-        <link rel="stylesheet" href="../css/food_order.css">
-        
-        <script src="../js/food_order.js"></script>
-        
-        <style>
-            body {margin:0;}
-        
-            .topnav {
-                overflow: hidden;
-                background-color: #333;
-            }
-        
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shopping List</title>
+    <link rel="stylesheet" href="../css/food_order.css">
+
+    <script src="../js/food_order.js"></script>
+
+    <style>
+body {margin:0;}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
             .topnav a {
-                float: left;
-                display: block;
-                color: #f2f2f2;
-                text-align: center;
-                padding: 14px 16px;
-                text-decoration: none;
-                font-size: 17px;
+              float: left;
+              display: block;
+              color: #f2f2f2;
+              text-align: center;
+              padding: 14px 16px;
+              text-decoration: none;
+              font-size: 17px;
             }
-        
+
             .topnav a:hover {
-                background-color: #ddd;
-                color: black;
+              background-color: #ddd;
+              color: black;
             }
-        
+
             .active {
-                background-color: #21618C;
-                color: white;
+              background-color: #21618C;
+              color: white;
             }
-        
+
             .topnav .icon {
-                display: none;
+              display: none;
             }
-        
+
             @media screen and (max-width: 600px) {
-                .topnav a:not(:first-child) {display: none;}
-                .topnav a.icon {
+              .topnav a:not(:first-child) {display: none;}
+              .topnav a.icon {
                 float: right;
                 display: block;
-                }
+              }
             }
-        
+
             @media screen and (max-width: 600px) {
-                .topnav.responsive {position: relative;}
-                .topnav.responsive .icon {
+              .topnav.responsive {position: relative;}
+              .topnav.responsive .icon {
                 position: absolute;
                 right: 0;
                 top: 0;
-                }
-                .topnav.responsive a {
+              }
+              .topnav.responsive a {
                 float: none;
                 display: block;
                 text-align: left;
-                }
+              }
             }
-         </style>
-    </head>
+    </style>
+  </head>
 
-<body>
+  <body>
     <form id="checkout_form" onsubmit="return calculatePrice()" method="POST" action="checkout.html">
-    <div class="shopping-cart">
+      <div class="shopping-cart">
         <!-- Title -->
         <div class="title">
-            Food Order
+          Food Order
         </div>
         <!-- Product #1 -->
         <div class="item" id="item1">
-            
 
-            <div class="image">
-                <img src="../img/tortilla_soup.png" alt="" />
-            </div>
 
-            <div class="description">
-                <span>Tortilla Soup</span>
-            </div>
+          <div class="image">
+            <img src="../img/tortilla_soup.png" alt="" />
+          </div>
 
-            <div class="quantity">
-                <div class="container">
-                    <input type="button" onclick="decrementValue(1)" value="-" />
-                    <input type="text" name="quantity" value="1" maxlength="2" max="10" size="1" id="1"/>
-                    <input type="button" onclick="incrementValue(1)" value="+" />
-                </div>
+          <div class="description">
+            <span>Tortilla Soup</span>
+          </div>
+
+          <div class="quantity">
+            <div class="container">
+              <input type="button" onclick="decrementValue(1)" value="-" />
+              <input type="text" name="quantity" value="1" maxlength="2" max="10" size="1" id="1"/>
+              <input type="button" onclick="incrementValue(1)" value="+" />
             </div>
-            <div class="total-price">$8.50</div>
+          </div>
+          <div class="total-price">$8.50</div>
         </div>
 
         <!-- Product #2 -->
         <div class="item" id="item2">
 
-            <div class="image">
-                <img src="../img/pineapple_fajitas.png" alt="" />
-            </div>
+          <div class="image">
+            <img src="../img/pineapple_fajitas.png" alt="" />
+          </div>
 
-            <div class="description">
-                <span>Pineapple Fajitas</span>
-            </div>
+          <div class="description">
+            <span>Pineapple Fajitas</span>
+          </div>
 
 
-            <div class="quantity">
+          <div class="quantity">
             <div class="container">
-            <input type="button" onclick="decrementValue(2)" value="-" />
-            <input type="text" name="quantity" value="1" maxlength="2" max="10" size="1" id="2"/>
-            <input type="button" onclick="incrementValue(2)" value="+" />
+              <input type="button" onclick="decrementValue(2)" value="-" />
+              <input type="text" name="quantity" value="1" maxlength="2" max="10" size="1" id="2"/>
+              <input type="button" onclick="incrementValue(2)" value="+" />
             </div>
-            </div>
-            <div class="total-price">$13.50</div>
+          </div>
+          <div class="total-price">$13.50</div>
         </div>
 
         <!-- Product #3 -->
         <div class="item" id="item3">
-            <div class="image">
-                <img src="../img/guac.png" alt="" />
-            </div>
+          <div class="image">
+            <img src="../img/guac.png" alt="" />
+          </div>
 
-            <div class="description">
-                <span>Guacamole</span>
-            </div>
+          <div class="description">
+            <span>Guacamole</span>
+          </div>
 
-            <div class="quantity">
+          <div class="quantity">
             <div class="container">
-                <input type="button" onclick="decrementValue(3)" value="-" />
-                <input type="text" name="quantity" value="1" maxlength="2" max="10" size="1" id="3"/>
-                <input type="button" onclick="incrementValue(3)" value="+" />
+              <input type="button" onclick="decrementValue(3)" value="-" />
+              <input type="text" name="quantity" value="1" maxlength="2" max="10" size="1" id="3"/>
+              <input type="button" onclick="incrementValue(3)" value="+" />
             </div>
-<!--
-                <button class="plus-btn" type="button" name="button">
-                    <img src="../img/plus.svg" alt="" />
-                </button>
-                <input type="text" name="name" value="1">
-                <button class="minus-btn" type="button" name="button">
-                    <img src="../img/minus.svg" alt="" />
-                </button>
--->
-            </div>
-            <div class="total-price">$4.50</div>
+            <!--
+              <button class="plus-btn" type="button" name="button">
+              <img src="../img/plus.svg" alt="" />
+              </button>
+              <input type="text" name="name" value="1">
+              <button class="minus-btn" type="button" name="button">
+              <img src="../img/minus.svg" alt="" />
+              </button>
+            -->
+          </div>
+          <div class="total-price">$4.50</div>
         </div>      
     </form>
     <form id="list_chefs_form" method="GET" action="list_chefs.html"></form>
     <div class="panel-footer">
-        <button class="btn back-btn" type="submit" form="list_chefs_form" value="back">Back</button>
-        <button class="btn next-btn" type="submit" form="checkout_form" value="submit_order">Submit Order</button>
+      <button class="btn back-btn" type="submit" form="list_chefs_form" value="back">Back</button>
+      <button class="btn next-btn" type="submit" form="checkout_form" value="submit_order">Submit Order</button>
     </div>
-</div>
-</div>
+      </div>
+      </div>
 
-</body>
+  </body>
 </html>
 
 
