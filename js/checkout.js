@@ -21,3 +21,11 @@ function checkout()
             return false;
         }
 }
+
+function populatePrice()
+{
+    var localStorage = window.localStorage;
+    document.getElementById("cardspan").innerHTML = "Pay $" + localStorage.getItem("cost")  +  " with credit card";
+    document.getElementById("paypalspan").innerHTML = "Pay $" + localStorage.getItem("cost") + " with credit card";
+} 
+populatePrice();

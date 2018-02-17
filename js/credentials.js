@@ -18,6 +18,8 @@ function checkLogin()
         alert("Please Fill All Required Fields");
         return false;
     }
+
+    window.localStorage.setItem("currentUser", name);
 }
 
 function checkSignup()
@@ -43,6 +45,20 @@ function checkSignup()
         alert("Password does not match");
         return false;
     }
+
+    createUser(login_type, name, email);
+}
+
+function createUser(type, name, email)
+{
+    var localStorage = window.localStorage;
+    var users = JSON.parse(localStorage.getItem(type));
+    if (users == null || users.length == 0)
+    {
+        users = []
+    }
+    users.push({"name": name, "email": email})
+    localStorage.setItem(type, JSON.stringify(chefs));
 }
 
 function checkCustomize()

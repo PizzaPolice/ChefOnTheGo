@@ -16,7 +16,6 @@ function populateChat()
         if (chefBoxes[y].childNodes[x].className == "name")
         {
           chefBoxes[y].childNodes[x].innerHTML = chef;
-
         }
       }
     }
@@ -25,17 +24,18 @@ function populateChat()
 
 function chat()
 {
+  var currentUser = window.localStorage.getItem("currentUser");
   //Get text in the chat box
   var message = document.getElementsByClassName("chatbox")[0].value;
   //Check if the string is non-empty
-  if (msg !== "")
+  if (message !== "")
   {
     //Create the new chat message and put it in the list
     //All below is assembling the p's that compose the new "chat msg box"
     var newMessage = document.createElement("SECTION");
 
     var name = document.createElement("p");
-    var name_text = document.createTextNode("user_name");
+    var name_text = document.createTextNode(currentUser);
     name.setAttribute("class","name");
     name.appendChild(name_text);
 
