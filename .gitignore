@@ -2,3 +2,6 @@
 *.swo
 .DS_Store
 node_modules
+build
+public/bundle*
+package-lock.json
