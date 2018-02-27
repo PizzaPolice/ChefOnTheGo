@@ -3,10 +3,12 @@ import { render } from 'react-dom';
 // Import routing components
 import {Router, Route, IndexRoute, browserHistory} from 'react-router';
 
-class Home extends Component {
-    render(){
-        return (<h1>Hi</h1>);
-    }
-}
+//Import components
+import Login from './components/login.jsx'
 
-render(<Home />, document.getElementById('container'));
+render(
+    <Router history={browserHistory}>
+        <Route path="/" component={Login}/>
+    </Router>,
+    document.getElementById('container')
+);
