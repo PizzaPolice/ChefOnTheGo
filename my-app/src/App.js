@@ -15,14 +15,17 @@ class App extends Component {
               <Link to="/">Login</Link>
             </li>
             <li>
-              <Link to="/login">Login</Link>
+              <Link to="/review">Review</Link>
+            </li>
+            <li>
+              <Link to="/chat">Chat</Link>
             </li>
           </ul>
           <hr/>
           <Route exact path="/" component={Login} />
           <Route path="/login" component={Login} />
-          <Route path="review" component={Review}/>
-          <Route path="chat" component={Chat}/>
+          <Route path="/review" component={Review}/>
+          <Route path="/chat" component={Chat}/>
         </div>
       </Router>
     );
