@@ -14,17 +14,27 @@ class Login extends Component {
     }
 
     handleSubmit(event) {
-        Object.keys(this.state.items).map(function (key) {
-            var value = this.state.items[key]
-            if (value === '') {
-                alert('Please fill out the login form');
-                event.preventDefault();
+        for (var key in this.state) {
+            if (this.state[key] === '') {
+                alert('Please completely fill out your form');
+                return false;
             }
-        });
-        
+        }
+        const data = new FormData(event.target);
+
         if (this.state.login_type === 'customer')
         {
-            
+            fetch('customize', {
+                method: 'POST',
+                body: data
+            });
+        }
+        else if (this.state.login_type === 'chef')
+        {
+            fetch('inactive_chef', {
+                method: 'POST',
+                body: data
+            });
         }
     }
 
@@ -38,16 +48,16 @@ class Login extends Component {
     }
 
 
-    render(){
+    render() {
         return (
             <div className="outer-panel">
 	            <div className="panel-body">
 		            <h2 className="title">Login</h2>
 		            <div className="input-fields">
-			            <form id="login_form" method ="POST" onSubmit={this.handleSubmit}>
+			            <form id="login_form" onSubmit={this.handleSubmit}>
 					        <div className="input-line">
 						        Username:
-						        <input type="text" name="name" onChange={this.handleChange}/>
+						        <input type="text" name="username" onChange={this.handleChange}/>
 					        </div>
 					        <div className="input-line">
 							    Password:
@@ -63,7 +73,7 @@ class Login extends Component {
 					        </div>
 			            </form>
 		            </div>
-		            <form id="signup_form" method="GET" action="signup.html"></form>
+		            <form id="signup_form" method="GET" action="signup"></form>
 	            </div>
                 <div className="panel-footer">
                         <button className="btn back-btn" type="submit" form="signup_form" value="new user">New User?</button>
