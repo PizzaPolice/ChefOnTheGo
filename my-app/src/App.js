@@ -6,6 +6,7 @@ import Login from './components/login.js';
 import Signup from './components/signup.js'
 import Chat from './components/chat.jsx';
 import Review from './components/review.jsx';
+import EditDishes from './components/edit_dishes.jsx';
 
 class App extends Component {
   render() {
@@ -16,6 +17,10 @@ class App extends Component {
             <li>
               <Link to="/chat">Chat</Link>
             </li>
+
+            <li>
+              <Link to="/edit_dishes">Edit Dishes</Link>
+            </li>
           </ul>
           <hr/>
           <Route exact path="/" component={Login} />
@@ -23,7 +28,8 @@ class App extends Component {
           <Route path="/signup" component={Signup} />
           <Route path="/review" component={Review}/>
           <Route path="/chat" component={Chat}/>
-        </div>
+          <Route path="/edit_dishes" component={EditDishes}/>
+      </div>
       </Router>
     );
   }
