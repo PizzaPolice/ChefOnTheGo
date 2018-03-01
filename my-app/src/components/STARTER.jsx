@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 
-class InactiveChef extends Component
+class ClassName extends Component
 {
   render()
   {
@@ -8,4 +8,4 @@ class InactiveChef extends Component
     );
   }
 }
-export default InactiveChef
+export default ClassName
