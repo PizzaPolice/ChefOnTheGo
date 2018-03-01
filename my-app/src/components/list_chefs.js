@@ -31,7 +31,7 @@ class ListChefs extends Component {
             <div className="panel-body">
                 <h2 className="title">List of Chefs</h2>
                 <div className="input-fields">
-                    <ChefList list={this.state.chefs} />
+          {/*<ChefList list={this.state.chefs} />*/}
                 </div>
             </div>
             <div className="panel-footer">
