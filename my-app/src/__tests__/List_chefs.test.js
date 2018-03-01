@@ -3,11 +3,13 @@ import ReactDOM from 'react-dom';
 import { shallow, mount, render } from 'enzyme';
 import ListChefs from '../components/list_chefs.js'
 
+/*
 it('ListChefs component renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(<ListChefs />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
+*/
 
 // This test is shallow rendering our ListChefs component
 describe('ListChefs Component', () => {
