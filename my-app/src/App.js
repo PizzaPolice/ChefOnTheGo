@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter, Route, Link } from "react-router-dom";
 
 import Login from './components/login.js';
 import Signup from './components/signup.js'
@@ -11,11 +11,12 @@ import Review from './components/review.jsx';
 import EditDishes from './components/edit_dishes.jsx';
 import InactiveChef from './components/inactive_chef.jsx';
 import ActiveChef from './components/active_chef.jsx';
+import FoodOrder from './components/food_order.jsx';
 
 class App extends Component {
   render() {
     return (
-      <Router>
+      <BrowserRouter>
         <div>
           <ul>
             <li>
@@ -29,6 +30,9 @@ class App extends Component {
               <Link to="/edit_dishes">Edit Dishes</Link>
             </li>
 
+            <li>
+              <Link to="/food_order">Food Order</Link>
+            </li>
             <li>
               <Link to="/active_chef">Active Chef</Link>
             </li>
@@ -44,8 +48,9 @@ class App extends Component {
           <Route path="/edit_dishes" component={EditDishes}/>
           <Route path="/chat" component={Chat}/>
           <Route path="/active_chef" component={ActiveChef}/>
+          <Route path="/food_order" component={FoodOrder}/>
       </div>
-      </Router>
+      </BrowserRouter>
     );
   }
 }
