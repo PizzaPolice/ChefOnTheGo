@@ -16,7 +16,7 @@ class Chat extends Component
 
       <div className="chatinput" name="chatinput">
       <h3>Enter your chat message here</h3>
-      <textarea cols="100" rows="10" class="chatbox"> </textarea>
+      <textarea cols="100" rows="10" className="chatbox"></textarea>
       <button onClick={this.chat}>Chat!</button>
       </div>
       </div>

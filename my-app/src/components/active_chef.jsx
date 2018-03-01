@@ -10,8 +10,9 @@ class ActiveChef extends Component
   <section className="timer">
     <h2>You are currently inactive</h2>
     <table className="timertable">
+      <tbody>
       <tr className="info">
-        <td colspan="3">You will be active for: </td>
+        <td colSpan="3">You will be active for: </td>
       </tr>
       <tr>
         <td id="hours">HOURS</td>
@@ -23,6 +24,7 @@ class ActiveChef extends Component
         <td>Minutes</td>
         <td>Seconds</td>
       </tr>
+      </tbody>
     </table>
   </section>
 

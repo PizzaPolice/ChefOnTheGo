@@ -14,7 +14,7 @@ class EditDishes extends Component
     <h3>Price</h3>
     <input type="number" id="dish_price"></input>
     <h3>Description</h3>
-    <textarea id="dish_desc" rows="10" cols="70">Enter a description of your dish</textarea>
+    <textarea id="dish_desc" rows="10" cols="70" defaultValue="Enter a description of your dish"></textarea>
     <input type="button" onClick={this.newDish} value="Create your dish!"></input>
   </form>
 

@@ -35,7 +35,7 @@ class Review extends Component{
       </label>
       </form>
 
-      <textarea name="How was your experience?" rows="10" cols="70">Enter your review here! Be sure to be descriptive, "It was good" tells fellow connoisseurs almost nothing about the chef.</textarea>
+      <textarea name="How was your experience?" rows="10" cols="70" defaultValue="Enter your review here! Be sure to be descriptive, It was good tells fellow connoisseurs almost nothing about the chef"></textarea>
 
       <div>
       <form onSubmit = {this.handleSubmit}>
