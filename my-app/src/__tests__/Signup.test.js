@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow, mount, render } from 'enzyme';
-import Login from './components/login.js'
+import Signup from '../components/signup.js'
 
 
-describe('Login Component', () => {
+describe('Signup Component', () => {
     it('should render without throwing an error', () => {
-        expect(shallow(<Login />).exists(<form className='Login'></form>)).toBe(true)
+        expect(shallow(<Signup />).exists(<form className='Signup'></form>)).toBe(true)
       })
     });
