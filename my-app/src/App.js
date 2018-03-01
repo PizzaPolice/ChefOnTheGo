@@ -12,6 +12,7 @@ import EditDishes from './components/edit_dishes.jsx';
 import InactiveChef from './components/inactive_chef.jsx';
 import ActiveChef from './components/active_chef.jsx';
 import FoodOrder from './components/food_order.jsx';
+import Checkout from './components/checkout.jsx';
 
 class App extends Component {
   render() {
@@ -36,6 +37,9 @@ class App extends Component {
             <li>
               <Link to="/active_chef">Active Chef</Link>
             </li>
+            <li>
+              <Link to="/checkout">Checkout</Link>
+            </li>
           </ul>
           <hr/>
           <Route exact path="/" component={Login}/>
@@ -49,6 +53,7 @@ class App extends Component {
           <Route path="/chat" component={Chat}/>
           <Route path="/active_chef" component={ActiveChef}/>
           <Route path="/food_order" component={FoodOrder}/>
+          <Route path="/checkout" component={Checkout}/>
       </div>
       </BrowserRouter>
     );
