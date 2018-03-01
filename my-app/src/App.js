@@ -13,7 +13,7 @@ import InactiveChef from './components/inactive_chef.jsx';
 import ActiveChef from './components/active_chef.jsx';
 import FoodOrder from './components/food_order.jsx';
 import Checkout from './components/checkout.jsx';
-
+import OrderStatus from './components/order_status.jsx';
 class App extends Component {
   render() {
     return (
@@ -40,6 +40,9 @@ class App extends Component {
             <li>
               <Link to="/checkout">Checkout</Link>
             </li>
+            <li>
+              <Link to="/order_status">Order Status</Link>
+            </li>
           </ul>
           <hr/>
           <Route exact path="/" component={Login}/>
@@ -54,6 +57,7 @@ class App extends Component {
           <Route path="/active_chef" component={ActiveChef}/>
           <Route path="/food_order" component={FoodOrder}/>
           <Route path="/checkout" component={Checkout}/>
+          <Route path="/order_status" component={OrderStatus}/>
       </div>
       </BrowserRouter>
     );
