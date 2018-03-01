@@ -52,16 +52,13 @@ body {
 }
 
 input[type='radio'] {
-  display: inline-block;
+  display: block;
 }
 
 .radio-input {
   margin-top: 20px;
 }
 
-input[type='radio'] {
-  display: inline-block;
-}
 
 /* Input Fields */
 .input-fields {

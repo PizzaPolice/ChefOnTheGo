@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Link } from "react-router-dom";
+
 
 class Signup extends Component {
     constructor(props) {
@@ -11,25 +13,26 @@ class Signup extends Component {
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange(event) {
+        const name = event.target.name;
+        const value = event.target.value;
+
+        this.setState({
+            [name]: value
+        });
     }
 
     handleSubmit(event) {
-        for (var key in event.target) {
-            
-        }
-
         for (var key in this.state) {
             if (this.state[key] === '') {
                 alert('Please completely fill out your form');
                 event.preventDefault();
-                return false;
+                break;
             }
         }
-
-        fetch('login', {
-            method: 'GET',
-            body: ''
-        });
     }
 
     render() {
@@ -38,34 +41,34 @@ class Signup extends Component {
             <div className="panel-body">
                 <h2 className="title">Sign up</h2>
                 <div className="input-fields">
-                    <form id="signup_form" onSubmit={this.handleSubmit}>
-                        <div className="input-line">
-                            Username:
-                            <input type="text" name="username" onChange={this.handleChange}/>
-                        </div>
-                        <div className="input-line">
-                            Password:
-                            <input type="password" name="password" onChange={this.handleChange}/>
-                        </div>
-                        <div className="input-line">
-                                Re-enter Password:
-                                <input type="password" name="check_password" onChange={this.handleChange}/>
-                        </div>
-                        <div className="input-line">
-                                Email:
-                                <input type="text" name="email"/>
-                        </div>
-                        <div className="radio-input">
-                                <input id="customer" value="customer" type="radio" name="login_type" onChange={this.handleChange}/>
-                                Customer
-                                <input id="chef" value="chef" type="radio" name="login_type" onChange={this.handleChange}/>
-                                Chef
-                        </div>
-                    </form>
+                    <div className="input-line">
+                        Username:
+                        <input type="text" name="username" onChange={this.handleChange}/>
+                    </div>
+                    <div className="input-line">
+                        Password:
+                        <input type="password" name="password" onChange={this.handleChange}/>
+                    </div>
+                    <div className="input-line">
+                            Re-enter Password:
+                            <input type="password" name="check_password" onChange={this.handleChange}/>
+                    </div>
+                    <div className="input-line">
+                            Email:
+                            <input type="text" name="email" onChange={this.handleChange}/>
+                    </div>
+                    <div className="radio-input">
+                            <label htmlFor="customer">Customer</label>
+                            <input id="customer" value="customer" type="radio" name="login_type" onChange={this.handleChange}/>
+                            <label htmlFor="chef">Chef</label>
+                            <input id="chef" value="chef" type="radio" name="login_type" onChange={this.handleChange}/>
+                    </div>
                 </div>
             </div>
             <div className="panel-footer">
-                    <button className="btn next-btn" type="submit" form="signup_form" value="sign up">Sign up</button>
+                <Link onClick={this.handleSubmit} to="login">
+                    <button className="btn next-btn">Sign up</button>
+                </Link>
             </div>
         </div>
         );

@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Link } from "react-router-dom";
+
 
 class Login extends Component {
     constructor(props) {
@@ -6,7 +8,8 @@ class Login extends Component {
         this.state = {
             username: '',
             password: '',
-            login_type: ''
+            login_type: '',
+            next_page: 'login'
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -17,24 +20,9 @@ class Login extends Component {
         for (var key in this.state) {
             if (this.state[key] === '') {
                 alert('Please completely fill out your form');
-                return false;
+                event.preventDefault();
+                break;
             }
-        }
-        const data = new FormData(event.target);
-
-        if (this.state.login_type === 'customer')
-        {
-            fetch('customize', {
-                method: 'POST',
-                body: data
-            });
-        }
-        else if (this.state.login_type === 'chef')
-        {
-            fetch('inactive_chef', {
-                method: 'POST',
-                body: data
-            });
         }
     }
 
@@ -44,9 +32,20 @@ class Login extends Component {
 
         this.setState({
             [name]: value
+        }, () => {
+            if (this.state.login_type === 'customer')
+            {
+                this.setState({next_page: 'customize'});
+            }
+            else if (this.state.login_type === 'chef')
+            {
+                this.setState({next_page: 'inactive_chef'});
+            }
+            else {
+                this.setState({next_page: 'login'});
+            }
         });
     }
-
 
     render() {
         return (
@@ -54,30 +53,31 @@ class Login extends Component {
 	            <div className="panel-body">
 		            <h2 className="title">Login</h2>
 		            <div className="input-fields">
-			            <form id="login_form" onSubmit={this.handleSubmit}>
-					        <div className="input-line">
-						        Username:
-						        <input type="text" name="username" onChange={this.handleChange}/>
-					        </div>
-					        <div className="input-line">
-							    Password:
-							    <input type="password" name="password" onChange={this.handleChange}/>
-					        </div>
-					        <div className="radio-input">
-                                <label htmlFor="customer">Customer</label>
-                                <input id="customer" type="radio" name="login_type" value="customer" 
-                                            onChange={this.handleChange}/>
-                                <label htmlFor="chef">Chef</label>
-                                <input id="chef" type="radio" name="login_type" value="chef" 
-                                            onChange={this.handleChange}/>
-					        </div>
-			            </form>
+                        <div className="input-line">
+                            Username:
+                            <input type="text" name="username" onChange={this.handleChange}/>
+                        </div>
+                        <div className="input-line">
+                            Password:
+                            <input type="password" name="password" onChange={this.handleChange}/>
+                        </div>
+                        <div className="radio-input">
+                            <label htmlFor="customer">Customer</label>
+                            <input id="customer" type="radio" name="login_type" value="customer" 
+                                        onChange={this.handleChange}/>
+                            <label htmlFor="chef">Chef</label>
+                            <input id="chef" type="radio" name="login_type" value="chef" 
+                                        onChange={this.handleChange}/>
+                        </div>
 		            </div>
-		            <form id="signup_form" method="GET" action="signup"></form>
 	            </div>
                 <div className="panel-footer">
-                        <button className="btn back-btn" type="submit" form="signup_form" value="new user">New User?</button>
-                        <button className="btn next-btn" type="submit" form="login_form" value="login">Login</button>
+                    <Link to="signup">
+                        <button className="btn back-btn">New User?</button>
+                    </Link>
+                    <Link onClick={this.handleSubmit} to={this.state.next_page}>
+                        <button className="btn next-btn">Login</button>
+                    </Link>
                 </div>
             </div>
         );
