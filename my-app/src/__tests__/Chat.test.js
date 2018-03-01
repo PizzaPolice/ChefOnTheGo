@@ -4,7 +4,7 @@ import { shallow, mount, render } from 'enzyme';
 import Chat from '../components/chat.jsx'
 
 
-it('ActiveChef component renders without crashing', () => {
+it('Chat component renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(<Chat />, div);
     ReactDOM.unmountComponentAtNode(div);
