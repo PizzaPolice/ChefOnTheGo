@@ -16,8 +16,7 @@ describe('Signup Component', () => {
         expect(component.getElements()).toMatchSnapshot();
         })
     });
-
-
+    
     describe('Login Button', () => {
         it('should be defined', () => {
           expect(Signup).toBeDefined();
