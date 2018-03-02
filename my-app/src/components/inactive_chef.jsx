@@ -6,8 +6,8 @@ class InactiveChef extends Component
     super(props);
     this.state=
     {
-      minutes: "",
-      hours: ""
+      minutes: "0",
+      hours: "0"
     }
   }
 
@@ -63,7 +63,7 @@ class InactiveChef extends Component
     {
       this.props.history.push({
         pathname: '/active_chef',
-        state:{minutes:this.minutes,hours:this.hours}
+        state:{minutes:this.state.minutes,hours:this.state.hours}
       });
     }
   }
