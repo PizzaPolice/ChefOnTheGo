@@ -4,8 +4,6 @@ import { MemoryRouter } from 'react-router';
 import { shallow, mount, render } from 'enzyme';
 import Signup from '../components/signup.js'
 
-
-
 // This test is shallow rendering our Signup component
 describe('Signup Component', () => {
     it('Signup should render without throwing an error', () => {
@@ -28,12 +26,9 @@ describe('Signup Component', () => {
           );
           expect(button).toMatchSnapshot();
         });
-
        });
 
-
-
-    /*
+/*
 jest.mock('../App');
 
 it('Signup component renders without crashing', () => {
