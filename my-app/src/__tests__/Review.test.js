@@ -14,4 +14,8 @@ describe('Review Component', () => {
     it('Review should render without throwing an error', () => {
         expect(shallow(<Review />).exists(<form className='Review'></form>)).toBe(true)
       })
+      it("should render initial layout", () => {
+        const component = shallow(<Review />);
+        expect(component.getElements()).toMatchSnapshot();
+        })
     });

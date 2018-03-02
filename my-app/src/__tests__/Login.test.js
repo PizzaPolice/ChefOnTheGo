@@ -16,4 +16,8 @@ describe('Login Component', () => {
     it('Login should render without throwing an error', () => {
         expect(shallow(<Login />).exists(<form className='Login'></form>)).toBe(true)
       })
+      it("should render initial layout", () => {
+        const component = shallow(<Login />);
+        expect(component.getElements()).toMatchSnapshot();
+        })
     });

@@ -16,4 +16,8 @@ describe('Customize Component', () => {
     it('Customize should render without throwing an error', () => {
         expect(shallow(<Customize />).exists(<form className='Customize'></form>)).toBe(true)
       })
+      it("should render initial layout", () => {
+        const component = shallow(<Customize />);
+        expect(component.getElements()).toMatchSnapshot();
+        })
     });

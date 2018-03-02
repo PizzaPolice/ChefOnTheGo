@@ -15,4 +15,8 @@ describe('ActiveChef Component', () => {
     it('ActiveChef should render without throwing an error', () => {
         expect(shallow(<Chat />).exists(<form className='Chat'></form>)).toBe(true)
       })
+      it("should render initial layout", () => {
+        const component = shallow(<Chat />);
+        expect(component.getElements()).toMatchSnapshot();
+        })
     });

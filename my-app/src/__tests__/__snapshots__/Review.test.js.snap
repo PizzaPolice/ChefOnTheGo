@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Review Component should render initial layout 1`] = `
+Array [
+  <div>
+    <h1>
+        Thank you for using Chef on the Go!
+    </h1>
+    <h2>
+        Please let us know about your experience Below
+    </h2>
+    <div
+        className="rating"
+    >
+        <form>
+            <h4>
+                My Experience was ...
+            </h4>
+            <label>
+                Absolutely Terrible
+                <input
+                    name="star"
+                    type="radio"
+                    value="1"
+                />
+            </label>
+            <label>
+                Sub-par
+                <input
+                    name="star"
+                    type="radio"
+                    value="2"
+                />
+            </label>
+            <label>
+                Good
+                <input
+                    name="star"
+                    type="radio"
+                    value="3"
+                />
+            </label>
+            <label>
+                Very Good
+                <input
+                    name="star"
+                    type="radio"
+                    value="4"
+                />
+            </label>
+            <label>
+                Amazing
+                <input
+                    name="star"
+                    type="radio"
+                    value="5"
+                />
+            </label>
+        </form>
+        <textarea
+            cols="70"
+            defaultValue="Enter your review here! Be sure to be descriptive, It was good tells fellow connoisseurs almost nothing about the chef"
+            name="How was your experience?"
+            rows="10"
+        />
+        <div>
+            <form
+                onSubmit={[Function]}
+            >
+                <input
+                    className="review"
+                    type="submit"
+                    value="Submit"
+                />
+                <input
+                    className="noreview"
+                    type="submit"
+                    value="I don't want to leave a review"
+                />
+            </form>
+        </div>
+    </div>
+</div>,
+]
+`;

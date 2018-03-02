@@ -16,4 +16,8 @@ describe('ListChefs Component', () => {
     it('ListChefs should render without throwing an error', () => {
         expect(shallow(<ListChefs />).exists(<form className='ListChefs'></form>)).toBe(true)
       })
+      it("should render initial layout", () => {
+        const component = shallow(<ListChefs />);
+        expect(component.getElements()).toMatchSnapshot();
+        })
     });

@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Signup Component should render initial layout 1`] = `
+Array [
+  <div
+    className="outer-panel"
+>
+    <div
+        className="panel-body"
+    >
+        <h2
+            className="title"
+        >
+            Sign up
+        </h2>
+        <div
+            className="input-fields"
+        >
+            <div
+                className="input-line"
+            >
+                Username:
+                <input
+                    name="username"
+                    onChange={[Function]}
+                    type="text"
+                />
+            </div>
+            <div
+                className="input-line"
+            >
+                Password:
+                <input
+                    name="password"
+                    onChange={[Function]}
+                    type="password"
+                />
+            </div>
+            <div
+                className="input-line"
+            >
+                Re-enter Password:
+                <input
+                    name="check_password"
+                    onChange={[Function]}
+                    type="password"
+                />
+            </div>
+            <div
+                className="input-line"
+            >
+                Email:
+                <input
+                    name="email"
+                    onChange={[Function]}
+                    type="text"
+                />
+            </div>
+            <div
+                className="radio-input"
+            >
+                <label
+                    htmlFor="customer"
+                >
+                    Customer
+                </label>
+                <input
+                    id="customer"
+                    name="login_type"
+                    onChange={[Function]}
+                    type="radio"
+                    value="customer"
+                />
+                <label
+                    htmlFor="chef"
+                >
+                    Chef
+                </label>
+                <input
+                    id="chef"
+                    name="login_type"
+                    onChange={[Function]}
+                    type="radio"
+                    value="chef"
+                />
+            </div>
+        </div>
+    </div>
+    <div
+        className="panel-footer"
+    >
+        <Link
+            onClick={[Function]}
+            replace={false}
+            to="login"
+        >
+            <button
+                className="btn next-btn"
+            >
+                Sign up
+            </button>
+        </Link>
+    </div>
+</div>,
+]
+`;

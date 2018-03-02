@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ActiveChef Component should render initial layout 1`] = `
+Array [
+  <div>
+    <section
+        className="chatmessages"
+    >
+        <section
+            className="chatboxright"
+        >
+            <p
+                className="name"
+            >
+                chef_name
+            </p>
+            <p
+                className="message"
+            >
+                I am your chef today. What can i do for you
+            </p>
+        </section>
+    </section>
+    <div
+        className="chatinput"
+        name="chatinput"
+    >
+        <h3>
+            Enter your chat message here
+        </h3>
+        <textarea
+            className="chatbox"
+            cols="100"
+            rows="10"
+        />
+        <button
+            onClick={[Function]}
+        >
+            Chat!
+        </button>
+    </div>
+</div>,
+]
+`;

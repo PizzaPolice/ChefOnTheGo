@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App renders without crashing should render initial layout 1`] = `
+Array [
+  <Unknown>
+    <div>
+        <ul>
+            <li>
+                <Link
+                    replace={false}
+                    to="/chat"
+                >
+                    Chat
+                </Link>
+            </li>
+            <li>
+                <Link
+                    replace={false}
+                    to="/inactive_chef"
+                >
+                    Inactive Chef
+                </Link>
+            </li>
+            <li>
+                <Link
+                    replace={false}
+                    to="/edit_dishes"
+                >
+                    Edit Dishes
+                </Link>
+            </li>
+            <li>
+                <Link
+                    replace={false}
+                    to="/food_order"
+                >
+                    Food Order
+                </Link>
+            </li>
+            <li>
+                <Link
+                    replace={false}
+                    to="/active_chef"
+                >
+                    Active Chef
+                </Link>
+            </li>
+            <li>
+                <Link
+                    replace={false}
+                    to="/checkout"
+                >
+                    Checkout
+                </Link>
+            </li>
+            <li>
+                <Link
+                    replace={false}
+                    to="/order_status"
+                >
+                    Order Status
+                </Link>
+            </li>
+        </ul>
+        <hr />
+        <Route
+            component={[Function]}
+            exact={true}
+            path="/"
+        />
+        <Route
+            component={[Function]}
+            path="/login"
+        />
+        <Route
+            component={[Function]}
+            path="/signup"
+        />
+        <Route
+            component={[Function]}
+            path="/customize"
+        />
+        <Route
+            component={[Function]}
+            path="/list_chefs"
+        />
+        <Route
+            component={[Function]}
+            path="/review"
+        />
+        <Route
+            component={[Function]}
+            path="/inactive_chef"
+        />
+        <Route
+            component={[Function]}
+            path="/edit_dishes"
+        />
+        <Route
+            component={[Function]}
+            path="/chat"
+        />
+        <Route
+            component={[Function]}
+            path="/active_chef"
+        />
+        <Route
+            component={[Function]}
+            path="/food_order"
+        />
+        <Route
+            component={[Function]}
+            path="/checkout"
+        />
+        <Route
+            component={[Function]}
+            path="/order_status"
+        />
+    </div>
+</Unknown>,
+]
+`;

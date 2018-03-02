@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InactiveChef Component should render initial layout 1`] = `
+Array [
+  <div>
+    <title>
+        Inactive Chef
+    </title>
+    <h2>
+        You are currently inactive
+    </h2>
+    <form
+        className="input"
+        onSubmit={[Function]}
+    >
+        <h3>
+            How long do you want to be active until
+        </h3>
+        <input
+            defaultValue="0"
+            name="hour"
+            onChange={[Function]}
+            type="number"
+        />
+        <b>
+            Hours
+        </b>
+        <input
+            defaultValue="0"
+            name="minute"
+            onChange={[Function]}
+            type="number"
+        />
+        <b>
+            Minutes
+        </b>
+        <input
+            type="submit"
+            value="Start Serving!"
+        />
+    </form>
+</div>,
+]
+`;

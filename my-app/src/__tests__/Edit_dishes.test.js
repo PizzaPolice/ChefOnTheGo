@@ -15,4 +15,8 @@ describe('EditDishes Component', () => {
     it('EditDishes should render without throwing an error', () => {
         expect(shallow(<EditDishes />).exists(<form className='EditDishes'></form>)).toBe(true)
       })
+      it("should render initial layout", () => {
+        const component = shallow(<EditDishes />);
+        expect(component.getElements()).toMatchSnapshot();
+        })
     });

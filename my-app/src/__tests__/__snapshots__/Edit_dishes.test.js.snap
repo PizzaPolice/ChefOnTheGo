@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EditDishes Component should render initial layout 1`] = `
+Array [
+  <div>
+    <title>
+        Edit Dishes
+    </title>
+    <h1>
+        Create a new dish!
+    </h1>
+    <form
+        className="new_dish"
+    >
+        <h3>
+            Dish name
+        </h3>
+        <input
+            id="dish_name"
+            type="text"
+        />
+        <h3>
+            Price
+        </h3>
+        <input
+            id="dish_price"
+            type="number"
+        />
+        <h3>
+            Description
+        </h3>
+        <textarea
+            cols="70"
+            defaultValue="Enter a description of your dish"
+            id="dish_desc"
+            rows="10"
+        />
+        <input
+            onClick={[Function]}
+            type="button"
+            value="Create your dish!"
+        />
+    </form>
+    <h1>
+        Edit your offerings
+    </h1>
+    <h2>
+        Check the checkbox below a dish to select it for deletion
+    </h2>
+    <input
+        onClick={[Function]}
+        type="button"
+        value="Delete selected dishes"
+    />
+    <div
+        id="current_dishes"
+    />
+</div>,
+]
+`;

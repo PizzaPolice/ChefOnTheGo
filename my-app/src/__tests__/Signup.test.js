@@ -15,10 +15,13 @@ it('Signup component renders without crashing', () => {
   });
 */
 
-
 // This test is shallow rendering our Signup component
 describe('Signup Component', () => {
     it('Signup should render without throwing an error', () => {
         expect(shallow(<Signup />).exists(<form className='Signup'></form>)).toBe(true)
       })
+      it("should render initial layout", () => {
+        const component = shallow(<Signup />);
+        expect(component.getElements()).toMatchSnapshot();
+        })
     });
