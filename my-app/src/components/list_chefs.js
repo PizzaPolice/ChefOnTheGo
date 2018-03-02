@@ -21,16 +21,15 @@ const const_chefs = [
 
 function ChefList(props) {
     const chefs = props.chefs;
-    console.log(chefs)
     const listItems = chefs.map((chef) => 
-        <li key={chef.name}>
-            Name: {chef.name}
-            Bio: {chef.bio}
+        <div key={chef.name} className="radio-input">
+            <input name="chefs" type="radio"/>
+            Name: {chef.name} <br/>
+            Bio: {chef.bio} <br/>
             Rating: {chef.rating}
-        </li>
+        </div>
     );
-    console.log(listItems);
-    return (<div className="radio-input">{listItems}</div>)
+    return (<div>{listItems}</div>);
 }
   
 class ListChefs extends Component {
@@ -39,11 +38,16 @@ class ListChefs extends Component {
         this.state = {
             chefs: const_chefs
         };
+    }
 
+    componentDidMount() {
         var storage = window.localStorage;
         if (storage !== undefined && storage !== null) {
             var chefs = storage.getItem("chefs");
             var chefList = JSON.parse(chefs);
+            if (chefList !== null && chefList !== undefined) {
+                this.setState({chefs: chefList});
+            }
         }
     }
     
