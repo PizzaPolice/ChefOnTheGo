@@ -1,5 +1,4 @@
 import React,{Component} from 'react';
-
 class InactiveChef extends Component
 {
   constructor(props)
@@ -20,7 +19,7 @@ class InactiveChef extends Component
   <title>Inactive Chef</title>
 
   <h2>You are currently inactive</h2>
-  <form className="input" onSubmit={this.validateTime}>
+  <form className="input" onSubmit={this.validateTime.bind(this)}>
     <h3>How long do you want to be active until</h3>
     <input type="number" name="hour" onChange={this.updateHours.bind(this)}defaultValue="0"></input>
     <b>Hours</b>
@@ -34,29 +33,39 @@ class InactiveChef extends Component
       
     );
   }
+  /* Update the minutes state when it is modified*/
   updateMinute(e)
   {
-    this.setState({
-      minutes:e.target.value
+    var min = e.target.value
+    this.setState(function(){
+      return {minutes:min}
     });
-    alert("MINUTES");
+  }
+
+  /* Update hours when it is modified */
+  updateHours(e)
+  {
+    var hour = e.target.value
+    this.setState(function() {
+      return {hours:hour}
+    });
     
   }
 
-  updateHours(e)
-  {
-    this.setState({
-      minutes:e.target.value
-    });
-  }
+  /* Make sure that the time is non-negative */
   validateTime()
   {
-    alert("VALIDATINGSDFS");
     if (this.state.minutes < 0 || this.state.hours < 0 )
     {
-      alert("BAD VALUES");
+      alert("Please make sure your time is non-negative");
     }
-    alert("VALIDATING TIME");
+    else
+    {
+      this.props.history.push({
+        pathname: '/active_chef',
+        state:{minutes:this.minutes,hours:this.hours}
+      });
+    }
   }
 }
 export default InactiveChef
