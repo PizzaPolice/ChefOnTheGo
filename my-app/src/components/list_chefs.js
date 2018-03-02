@@ -39,6 +39,12 @@ class ListChefs extends Component {
         this.state = {
             chefs: const_chefs
         };
+
+        var storage = window.localStorage;
+        if (storage !== undefined && storage !== null) {
+            var chefs = storage.getItem("chefs");
+            var chefList = JSON.parse(chefs);
+        }
     }
     
     render() {
