@@ -1,11 +1,26 @@
 import React,{Component} from 'react';
-
+import {Link} from 'react-router-dom';
 class ActiveChef extends Component
 {
+  constructor(props)
+  {
+    super(props);
+    console.log(props);
+    var hour=this.props.location.state.hours;
+    var min = this.props.location.state.minutes;
+      this.state = 
+      {
+        hours:hour,
+        minutes:min,
+        seconds:"0"
+      }; 
+    
+  }
+
   render()
   {
     return(
-<div>
+  <div>
 
   <section className="timer">
     <h2>You are currently inactive</h2>
@@ -15,9 +30,9 @@ class ActiveChef extends Component
         <td colSpan="3">You will be active for: </td>
       </tr>
       <tr>
-        <td id="hours">HOURS</td>
-        <td id="minutes">MINUTES</td>
-        <td id="seconds">SECONDS</td>
+        <td id="hours">{this.state.hours}</td>
+        <td id="minutes">{this.state.minutes}</td>
+        <td id="seconds">{this.state.seconds}</td>
       </tr>
       <tr>
         <td>Hours</td>
@@ -28,10 +43,10 @@ class ActiveChef extends Component
     </table>
   </section>
 
-  <form className="stopserve" action="inactive_chef.html" method="post">
-    <input type="submit" value="Stop Serving"></input>
+  <form className="stopserve">
+    <Link to="/inactive_chef" value="Stop Serving">Stop Serving</Link>
   </form>
-      </div>
+  </div>
     );
   }
 }
