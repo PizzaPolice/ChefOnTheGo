@@ -5,10 +5,15 @@ class ActiveChef extends Component
   constructor(props)
   {
     super(props);
-
-    //Hour and minute passed from inactive_chef
-    var hour= this.props.location.state.hours;
-    var min = this.props.location.state.minutes;
+    
+    var hour = "0";
+    var min = "0";
+    
+    if (typeof(this.props.location) !== 'undefined' && typeof(this.props.location.state) === 'object')
+    {
+      hour = this.props.location.state.hours;
+      min = this.props.location.state.minutes;
+    }
     this.state = 
       {
         hours:hour,
@@ -45,7 +50,9 @@ class ActiveChef extends Component
       </section>
 
       <form className="stopserve">
-      <Link to="/inactive_chef" value="Stop Serving">Stop Serving</Link>
+      <Link to="/inactive_chef">
+        <button>Stop Serving</button>
+      </Link>
       </form>
       </div>
     );
@@ -94,7 +101,6 @@ class ActiveChef extends Component
       mins = 0;
       seconds = 0;
     }
-    console.log(hours);
 
     this.setState(function (){
       return {
