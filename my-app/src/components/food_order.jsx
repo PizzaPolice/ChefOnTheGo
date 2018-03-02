@@ -1,28 +1,87 @@
 import React,{Component} from 'react';
+import { Link } from "react-router-dom";
+
+const const_foods = [
+    {
+        name: "food1",
+        price: "100"
+    },
+    {
+        name: "food2",
+        price: "101"
+    }
+];
+
+function decrementValue(id) {
+    console.log(id)
+    console.log(document.getElementById(id));
+    //document.getElementById(id).value = --curr_val;
+}
+
+function FoodList(props) {
+    const foods = props.foods;
+    const listItems = foods.map((food) => 
+        <div key={food.name} className="item">
+            <div className="description">
+                <span>{food.name}</span>
+            </div>
+            <div className="quantity">
+                <div className="container">
+                    <button onClick={decrementValue(food.name)}/>
+                    <button onClick={() => console.log('increment')}/>
+                    <input type="text" onChange={() => console.log("change")} defaultValue="1"/> 
+                </div>
+            </div>
+            <div className="total-price">
+                <span>${food.price}</span>
+            </div>
+        </div>
+    );
+    return (<div>{listItems}</div>);
+}
 
 class FoodOrder extends Component
 {
-  render()
-  {
+    constructor(props) {
+        super(props);
+        this.state = {
+            foods: const_foods
+        };
+    }
+
+    componentDidMount() {
+        var storage = window.localStorage;
+        if (storage !== undefined && storage !== null) {
+            var foods = storage.getItem("foods");
+            var foodList = JSON.parse(foods);
+            if (foodList !== null && foodList !== undefined) {
+                this.setState({foods: foodList});
+            }
+        }
+    }
+
+    render()
+    {
     return(
-     
-<div>
-    <form id="checkout_form" method="POST" onsubmit="return calculatePrice()" action="checkout.html">
-    <div className="shopping-cart" id="shopping_cart">
-        <div className="title">
-            Food Order
+        <div className="outer-panel">
+            <div className="panel-body">
+                <div className="title">
+                    Food Order
+                </div>
+                <div className="shopping-cart" id="shopping_cart">
+                    <FoodList foods={this.state.foods}/>
+                    <div className="panel-footer">
+                        <Link to="list_chefs">
+                            <button className="btn back-btn">Back</button>
+                        </Link>
+                        <Link to="checkout">
+                            <button className="btn next-btn">Submit Order</button>
+                        </Link>
+                    </div>
+                </div>
+            </div>
         </div>
-        <script src="../js/food_order.js"></script>
-        <div className="panel-footer">
-            <button className="btn back-btn" type="submit" form="list_chefs_form" value="back">Back</button>
-            <button className="btn next-btn" type="submit" form="checkout_form" value="submit_order">Submit Order</button>
-        </div>
-    </div>
-    </form>
-    <form id="list_chefs_form" method="GET" action="list_chefs.html"></form>
-</div>
-      
     );
-  }
+    }
 }
 export default FoodOrder
