@@ -14,8 +14,6 @@ describe('Login Component', () => {
         })
     });
 
-
-
     describe('Submit Button', () => {
         it('should be defined', () => {
           expect(Checkout).toBeDefined();

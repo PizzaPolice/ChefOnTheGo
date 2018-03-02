@@ -11,12 +11,24 @@ it('Chat component renders without crashing', () => {
   });
 
 // This test is shallow rendering our Chat component
-describe('ActiveChef Component', () => {
-    it('ActiveChef should render without throwing an error', () => {
+describe('Chat Component', () => {
+    it('Chat should render without throwing an error', () => {
         expect(shallow(<Chat />).exists(<form className='Chat'></form>)).toBe(true)
-      })
+      });
       it("should render initial layout", () => {
         const component = shallow(<Chat />);
         expect(component.getElements()).toMatchSnapshot();
-        })
+        });
     });
+
+    describe('Chat Button', () => {
+        it('should be defined', () => {
+          expect(Chat).toBeDefined();
+        });
+        it('should render correctly', () => {
+          const button = shallow(
+            <Chat chat='' />
+          );
+          expect(button).toMatchSnapshot();
+        });
+       });
