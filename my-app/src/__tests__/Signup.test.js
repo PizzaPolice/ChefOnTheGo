@@ -5,15 +5,6 @@ import { shallow, mount, render } from 'enzyme';
 import Signup from '../components/signup.js'
 
 
-jest.mock('../App');
-
-/*
-it('Signup component renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<Signup />, div);
-    ReactDOM.unmountComponentAtNode(div);
-  });
-*/
 
 // This test is shallow rendering our Signup component
 describe('Signup Component', () => {
@@ -25,3 +16,30 @@ describe('Signup Component', () => {
         expect(component.getElements()).toMatchSnapshot();
         })
     });
+
+
+    describe('Login Button', () => {
+        it('should be defined', () => {
+          expect(Signup).toBeDefined();
+        });
+
+        it('should render correctly', () => {
+          const button = shallow(
+            <Signup name='btn next-btn' />
+          );
+          expect(button).toMatchSnapshot();
+        });
+
+       });
+
+
+
+    /*
+jest.mock('../App');
+
+it('Signup component renders without crashing', () => {
+    const div = document.createElement('div');
+    ReactDOM.render(<Signup />, div);
+    ReactDOM.unmountComponentAtNode(div);
+  });
+*/
