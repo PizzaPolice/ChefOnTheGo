@@ -21,3 +21,18 @@ describe('Login Component', () => {
         expect(component.getElements()).toMatchSnapshot();
         })
     });
+
+
+
+    describe('Login Button', () => {
+        it('should be defined', () => {
+          expect(Login).toBeDefined();
+        });
+
+        it('should render correctly', () => {
+          const button = shallow(
+            <Login name='btn next-btn' />
+          );
+          expect(button).toMatchSnapshot();
+        });
+       });

@@ -1,5 +1,1025 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Login Button should render correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Login
+    name="btn next-btn"
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="panel-body"
+>
+          <h2
+                    className="title"
+          >
+                    Login
+          </h2>
+          <div
+                    className="input-fields"
+          >
+                    <div
+                              className="input-line"
+                    >
+                              Username:
+                              <input
+                                        name="username"
+                                        onChange={[Function]}
+                                        type="text"
+                              />
+                    </div>
+                    <div
+                              className="input-line"
+                    >
+                              Password:
+                              <input
+                                        name="password"
+                                        onChange={[Function]}
+                                        type="password"
+                              />
+                    </div>
+                    <div
+                              className="radio-input"
+                    >
+                              <label
+                                        htmlFor="customer"
+                              >
+                                        Customer
+                              </label>
+                              <input
+                                        id="customer"
+                                        name="login_type"
+                                        onChange={[Function]}
+                                        type="radio"
+                                        value="customer"
+                              />
+                              <label
+                                        htmlFor="chef"
+                              >
+                                        Chef
+                              </label>
+                              <input
+                                        id="chef"
+                                        name="login_type"
+                                        onChange={[Function]}
+                                        type="radio"
+                                        value="chef"
+                              />
+                    </div>
+          </div>
+</div>,
+        <div
+          className="panel-footer"
+>
+          <Link
+                    replace={false}
+                    to="signup"
+          >
+                    <button
+                              className="btn back-btn"
+                    >
+                              New User?
+                    </button>
+          </Link>
+          <Link
+                    onClick={[Function]}
+                    replace={false}
+                    to="login"
+          >
+                    <button
+                              className="btn next-btn"
+                    >
+                              Login
+                    </button>
+          </Link>
+</div>,
+      ],
+      "className": "outer-panel",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h2
+              className="title"
+>
+              Login
+</h2>,
+            <div
+              className="input-fields"
+>
+              <div
+                            className="input-line"
+              >
+                            Username:
+                            <input
+                                          name="username"
+                                          onChange={[Function]}
+                                          type="text"
+                            />
+              </div>
+              <div
+                            className="input-line"
+              >
+                            Password:
+                            <input
+                                          name="password"
+                                          onChange={[Function]}
+                                          type="password"
+                            />
+              </div>
+              <div
+                            className="radio-input"
+              >
+                            <label
+                                          htmlFor="customer"
+                            >
+                                          Customer
+                            </label>
+                            <input
+                                          id="customer"
+                                          name="login_type"
+                                          onChange={[Function]}
+                                          type="radio"
+                                          value="customer"
+                            />
+                            <label
+                                          htmlFor="chef"
+                            >
+                                          Chef
+                            </label>
+                            <input
+                                          id="chef"
+                                          name="login_type"
+                                          onChange={[Function]}
+                                          type="radio"
+                                          value="chef"
+                            />
+              </div>
+</div>,
+          ],
+          "className": "panel-body",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Login",
+              "className": "title",
+            },
+            "ref": null,
+            "rendered": "Login",
+            "type": "h2",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="input-line"
+>
+                  Username:
+                  <input
+                                    name="username"
+                                    onChange={[Function]}
+                                    type="text"
+                  />
+</div>,
+                <div
+                  className="input-line"
+>
+                  Password:
+                  <input
+                                    name="password"
+                                    onChange={[Function]}
+                                    type="password"
+                  />
+</div>,
+                <div
+                  className="radio-input"
+>
+                  <label
+                                    htmlFor="customer"
+                  >
+                                    Customer
+                  </label>
+                  <input
+                                    id="customer"
+                                    name="login_type"
+                                    onChange={[Function]}
+                                    type="radio"
+                                    value="customer"
+                  />
+                  <label
+                                    htmlFor="chef"
+                  >
+                                    Chef
+                  </label>
+                  <input
+                                    id="chef"
+                                    name="login_type"
+                                    onChange={[Function]}
+                                    type="radio"
+                                    value="chef"
+                  />
+</div>,
+              ],
+              "className": "input-fields",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "Username:",
+                    <input
+                      name="username"
+                      onChange={[Function]}
+                      type="text"
+/>,
+                  ],
+                  "className": "input-line",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Username:",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "name": "username",
+                      "onChange": [Function],
+                      "type": "text",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "input",
+                  },
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "Password:",
+                    <input
+                      name="password"
+                      onChange={[Function]}
+                      type="password"
+/>,
+                  ],
+                  "className": "input-line",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Password:",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "name": "password",
+                      "onChange": [Function],
+                      "type": "password",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "input",
+                  },
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <label
+                      htmlFor="customer"
+>
+                      Customer
+</label>,
+                    <input
+                      id="customer"
+                      name="login_type"
+                      onChange={[Function]}
+                      type="radio"
+                      value="customer"
+/>,
+                    <label
+                      htmlFor="chef"
+>
+                      Chef
+</label>,
+                    <input
+                      id="chef"
+                      name="login_type"
+                      onChange={[Function]}
+                      type="radio"
+                      value="chef"
+/>,
+                  ],
+                  "className": "radio-input",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Customer",
+                      "htmlFor": "customer",
+                    },
+                    "ref": null,
+                    "rendered": "Customer",
+                    "type": "label",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "id": "customer",
+                      "name": "login_type",
+                      "onChange": [Function],
+                      "type": "radio",
+                      "value": "customer",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "input",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Chef",
+                      "htmlFor": "chef",
+                    },
+                    "ref": null,
+                    "rendered": "Chef",
+                    "type": "label",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "id": "chef",
+                      "name": "login_type",
+                      "onChange": [Function],
+                      "type": "radio",
+                      "value": "chef",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "input",
+                  },
+                ],
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <Link
+              replace={false}
+              to="signup"
+>
+              <button
+                            className="btn back-btn"
+              >
+                            New User?
+              </button>
+</Link>,
+            <Link
+              onClick={[Function]}
+              replace={false}
+              to="login"
+>
+              <button
+                            className="btn next-btn"
+              >
+                            Login
+              </button>
+</Link>,
+          ],
+          "className": "panel-footer",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": <button
+                className="btn back-btn"
+>
+                New User?
+</button>,
+              "replace": false,
+              "to": "signup",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "New User?",
+                "className": "btn back-btn",
+              },
+              "ref": null,
+              "rendered": "New User?",
+              "type": "button",
+            },
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": <button
+                className="btn next-btn"
+>
+                Login
+</button>,
+              "onClick": [Function],
+              "replace": false,
+              "to": "login",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Login",
+                "className": "btn next-btn",
+              },
+              "ref": null,
+              "rendered": "Login",
+              "type": "button",
+            },
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="panel-body"
+>
+            <h2
+                        className="title"
+            >
+                        Login
+            </h2>
+            <div
+                        className="input-fields"
+            >
+                        <div
+                                    className="input-line"
+                        >
+                                    Username:
+                                    <input
+                                                name="username"
+                                                onChange={[Function]}
+                                                type="text"
+                                    />
+                        </div>
+                        <div
+                                    className="input-line"
+                        >
+                                    Password:
+                                    <input
+                                                name="password"
+                                                onChange={[Function]}
+                                                type="password"
+                                    />
+                        </div>
+                        <div
+                                    className="radio-input"
+                        >
+                                    <label
+                                                htmlFor="customer"
+                                    >
+                                                Customer
+                                    </label>
+                                    <input
+                                                id="customer"
+                                                name="login_type"
+                                                onChange={[Function]}
+                                                type="radio"
+                                                value="customer"
+                                    />
+                                    <label
+                                                htmlFor="chef"
+                                    >
+                                                Chef
+                                    </label>
+                                    <input
+                                                id="chef"
+                                                name="login_type"
+                                                onChange={[Function]}
+                                                type="radio"
+                                                value="chef"
+                                    />
+                        </div>
+            </div>
+</div>,
+          <div
+            className="panel-footer"
+>
+            <Link
+                        replace={false}
+                        to="signup"
+            >
+                        <button
+                                    className="btn back-btn"
+                        >
+                                    New User?
+                        </button>
+            </Link>
+            <Link
+                        onClick={[Function]}
+                        replace={false}
+                        to="login"
+            >
+                        <button
+                                    className="btn next-btn"
+                        >
+                                    Login
+                        </button>
+            </Link>
+</div>,
+        ],
+        "className": "outer-panel",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h2
+                className="title"
+>
+                Login
+</h2>,
+              <div
+                className="input-fields"
+>
+                <div
+                                className="input-line"
+                >
+                                Username:
+                                <input
+                                                name="username"
+                                                onChange={[Function]}
+                                                type="text"
+                                />
+                </div>
+                <div
+                                className="input-line"
+                >
+                                Password:
+                                <input
+                                                name="password"
+                                                onChange={[Function]}
+                                                type="password"
+                                />
+                </div>
+                <div
+                                className="radio-input"
+                >
+                                <label
+                                                htmlFor="customer"
+                                >
+                                                Customer
+                                </label>
+                                <input
+                                                id="customer"
+                                                name="login_type"
+                                                onChange={[Function]}
+                                                type="radio"
+                                                value="customer"
+                                />
+                                <label
+                                                htmlFor="chef"
+                                >
+                                                Chef
+                                </label>
+                                <input
+                                                id="chef"
+                                                name="login_type"
+                                                onChange={[Function]}
+                                                type="radio"
+                                                value="chef"
+                                />
+                </div>
+</div>,
+            ],
+            "className": "panel-body",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Login",
+                "className": "title",
+              },
+              "ref": null,
+              "rendered": "Login",
+              "type": "h2",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="input-line"
+>
+                    Username:
+                    <input
+                                        name="username"
+                                        onChange={[Function]}
+                                        type="text"
+                    />
+</div>,
+                  <div
+                    className="input-line"
+>
+                    Password:
+                    <input
+                                        name="password"
+                                        onChange={[Function]}
+                                        type="password"
+                    />
+</div>,
+                  <div
+                    className="radio-input"
+>
+                    <label
+                                        htmlFor="customer"
+                    >
+                                        Customer
+                    </label>
+                    <input
+                                        id="customer"
+                                        name="login_type"
+                                        onChange={[Function]}
+                                        type="radio"
+                                        value="customer"
+                    />
+                    <label
+                                        htmlFor="chef"
+                    >
+                                        Chef
+                    </label>
+                    <input
+                                        id="chef"
+                                        name="login_type"
+                                        onChange={[Function]}
+                                        type="radio"
+                                        value="chef"
+                    />
+</div>,
+                ],
+                "className": "input-fields",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "Username:",
+                      <input
+                        name="username"
+                        onChange={[Function]}
+                        type="text"
+/>,
+                    ],
+                    "className": "input-line",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "Username:",
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "name": "username",
+                        "onChange": [Function],
+                        "type": "text",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "input",
+                    },
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "Password:",
+                      <input
+                        name="password"
+                        onChange={[Function]}
+                        type="password"
+/>,
+                    ],
+                    "className": "input-line",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "Password:",
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "name": "password",
+                        "onChange": [Function],
+                        "type": "password",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "input",
+                    },
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <label
+                        htmlFor="customer"
+>
+                        Customer
+</label>,
+                      <input
+                        id="customer"
+                        name="login_type"
+                        onChange={[Function]}
+                        type="radio"
+                        value="customer"
+/>,
+                      <label
+                        htmlFor="chef"
+>
+                        Chef
+</label>,
+                      <input
+                        id="chef"
+                        name="login_type"
+                        onChange={[Function]}
+                        type="radio"
+                        value="chef"
+/>,
+                    ],
+                    "className": "radio-input",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Customer",
+                        "htmlFor": "customer",
+                      },
+                      "ref": null,
+                      "rendered": "Customer",
+                      "type": "label",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "id": "customer",
+                        "name": "login_type",
+                        "onChange": [Function],
+                        "type": "radio",
+                        "value": "customer",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "input",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Chef",
+                        "htmlFor": "chef",
+                      },
+                      "ref": null,
+                      "rendered": "Chef",
+                      "type": "label",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "id": "chef",
+                        "name": "login_type",
+                        "onChange": [Function],
+                        "type": "radio",
+                        "value": "chef",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "input",
+                    },
+                  ],
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <Link
+                replace={false}
+                to="signup"
+>
+                <button
+                                className="btn back-btn"
+                >
+                                New User?
+                </button>
+</Link>,
+              <Link
+                onClick={[Function]}
+                replace={false}
+                to="login"
+>
+                <button
+                                className="btn next-btn"
+                >
+                                Login
+                </button>
+</Link>,
+            ],
+            "className": "panel-footer",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": <button
+                  className="btn back-btn"
+>
+                  New User?
+</button>,
+                "replace": false,
+                "to": "signup",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "New User?",
+                  "className": "btn back-btn",
+                },
+                "ref": null,
+                "rendered": "New User?",
+                "type": "button",
+              },
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": <button
+                  className="btn next-btn"
+>
+                  Login
+</button>,
+                "onClick": [Function],
+                "replace": false,
+                "to": "login",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Login",
+                  "className": "btn next-btn",
+                },
+                "ref": null,
+                "rendered": "Login",
+                "type": "button",
+              },
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
 exports[`Login Component should render initial layout 1`] = `
 Array [
   <div
