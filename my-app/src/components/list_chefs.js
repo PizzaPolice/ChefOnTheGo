@@ -1,37 +1,53 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 
+const const_chefs = [
+    {
+        name: 'Jae',
+        bio: 'Chef for 5 years',
+        rating: '5 stars'
+    },
+    {
+        name: 'Kevin',
+        bio: 'Chef for 6 years',
+        rating: '5 stars'
+    },
+    {
+        name: 'Audrey',
+        bio: 'Chef for 7 years',
+        rating: '5 stars'
+    }
+]
+
+function ChefList(props) {
+    const chefs = props.chefs;
+    console.log(chefs)
+    const listItems = chefs.map((chef) => 
+        <li key={chef.name}>
+            Name: {chef.name}
+            Bio: {chef.bio}
+            Rating: {chef.rating}
+        </li>
+    );
+    console.log(listItems);
+    return (<div className="radio-input">{listItems}</div>)
+}
+  
 class ListChefs extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            chefs: []
+            chefs: const_chefs
         };
-
-        this.retriveChefs();
     }
-
-    retriveChefs() {
-        var localStorage = window.localStorage;
-        var listOfChefs = JSON.parse(localStorage.getItem("chef"));
-        this.setState({chefs: listOfChefs})
-    }
-
-    ChefList(props) {
-        const chefs = props.list;
-        const listItems = chefs.map((chef) =>
-            <li>{chef}</li>
-        );
-        return (<ul>{listItems}</ul>);
-    }
-
+    
     render() {
         return (
         <div className="outer-panel">
             <div className="panel-body">
                 <h2 className="title">List of Chefs</h2>
                 <div className="input-fields">
-          {/*<ChefList list={this.state.chefs} />*/}
+                    <ChefList chefs={this.state.chefs}/>
                 </div>
             </div>
             <div className="panel-footer">
