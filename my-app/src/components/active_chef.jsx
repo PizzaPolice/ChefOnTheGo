@@ -5,49 +5,107 @@ class ActiveChef extends Component
   constructor(props)
   {
     super(props);
-    console.log(props);
-    var hour=this.props.location.state.hours;
+
+    //Hour and minute passed from inactive_chef
+    var hour= this.props.location.state.hours;
     var min = this.props.location.state.minutes;
-      this.state = 
+    this.state = 
       {
         hours:hour,
         minutes:min,
         seconds:"0"
       }; 
-    
+
   }
 
   render()
   {
     return(
-  <div>
+      <div>
 
-  <section className="timer">
-    <h2>You are currently inactive</h2>
-    <table className="timertable">
+      <section className="timer">
+      <h2>You are currently inactive</h2>
+      <table className="timertable">
       <tbody>
       <tr className="info">
-        <td colSpan="3">You will be active for: </td>
+      <td colSpan="3">You will be active for: </td>
       </tr>
       <tr>
-        <td id="hours">{this.state.hours}</td>
-        <td id="minutes">{this.state.minutes}</td>
-        <td id="seconds">{this.state.seconds}</td>
+      <td id="hours">{this.state.hours}</td>
+      <td id="minutes">{this.state.minutes}</td>
+      <td id="seconds">{this.state.seconds}</td>
       </tr>
       <tr>
-        <td>Hours</td>
-        <td>Minutes</td>
-        <td>Seconds</td>
+      <td>Hours</td>
+      <td>Minutes</td>
+      <td>Seconds</td>
       </tr>
       </tbody>
-    </table>
-  </section>
+      </table>
+      </section>
 
-  <form className="stopserve">
-    <Link to="/inactive_chef" value="Stop Serving">Stop Serving</Link>
-  </form>
-  </div>
+      <form className="stopserve">
+      <Link to="/inactive_chef" value="Stop Serving">Stop Serving</Link>
+      </form>
+      </div>
+    );
+  }
+
+  /* Mount a timer to the page ticking every second*/
+  componentDidMount()
+  {
+    this.timerID = setInterval(
+      () => this.tick(),1000
+    );
+  }
+
+  /* Cleans up timer at end of life*/
+  componentWillUnmount()
+  {
+    clearInterval(this.timerID);
+  }
+
+  tick()
+  {
+    /* Gets the hours, minutes, and seconds left on the timer*/
+    var hours = this.state.hours; 
+    var mins = this.state.minutes; 
+    var seconds = this.state.seconds; 
+
+    /* Decrement seconds every 1000 ms when this func is called*/
+    seconds = seconds - 1;
+
+    /* Handle when to remove a minute/hour and add more mins/secs*/
+    if (seconds === -1)
+    {
+      mins = mins - 1;
+      seconds = seconds + 60;
+    }
+
+    if (mins === -1)
+    {
+      hours = hours - 1;
+      mins = mins + 60;
+    }
+    /*Check if timer is done (0,0,0) */
+    if (hours === -1)
+    {
+      hours = 0;
+      mins = 0;
+      seconds = 0;
+    }
+    console.log(hours);
+
+    this.setState(function (){
+      return {
+        hours:hours,
+        minutes:mins,
+        seconds:seconds
+      }
+    }
     );
   }
 }
+
+
 export default ActiveChef
