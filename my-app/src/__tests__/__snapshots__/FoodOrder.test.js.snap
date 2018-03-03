@@ -2,52 +2,57 @@
 
 exports[`Login Component should render initial layout 1`] = `
 Array [
-  <div>
-    <form
-        action="checkout.html"
-        id="checkout_form"
-        method="POST"
-        onsubmit="return calculatePrice()"
+  <div
+    className="outer-panel"
+>
+    <div
+        className="panel-body"
     >
         <div
-            className="shopping-cart"
-            id="shopping_cart"
+            className="title"
         >
-            <div
-                className="title"
-            >
-                Food Order
-            </div>
-            <script
-                src="../js/food_order.js"
-            />
-            <div
-                className="panel-footer"
+            Food Order
+        </div>
+        <FoodList
+            foods={
+                Array [
+                    Object {
+                      "name": "food1",
+                      "price": "100",
+                    },
+                    Object {
+                      "name": "food2",
+                      "price": "101",
+                    },
+                  ]
+            }
+        />
+        <div
+            className="panel-footer"
+        >
+            <Link
+                replace={false}
+                to="list_chefs"
             >
                 <button
                     className="btn back-btn"
-                    form="list_chefs_form"
-                    type="submit"
-                    value="back"
                 >
                     Back
                 </button>
+            </Link>
+            <Link
+                onClick={[Function]}
+                replace={false}
+                to="checkout"
+            >
                 <button
                     className="btn next-btn"
-                    form="checkout_form"
-                    type="submit"
-                    value="submit_order"
                 >
                     Submit Order
                 </button>
-            </div>
+            </Link>
         </div>
-    </form>
-    <form
-        action="list_chefs.html"
-        id="list_chefs_form"
-        method="GET"
-    />
+    </div>
 </div>,
 ]
 `;
@@ -71,297 +76,109 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": Array [
-        <form
-          action="checkout.html"
-          id="checkout_form"
-          method="POST"
-          onsubmit="return calculatePrice()"
+      "children": <div
+        className="panel-body"
 >
-          <div
-                    className="shopping-cart"
-                    id="shopping_cart"
-          >
-                    <div
-                              className="title"
-                    >
-                              Food Order
-                    </div>
-                    <script
-                              src="../js/food_order.js"
-                    />
-                    <div
-                              className="panel-footer"
-                    >
-                              <button
-                                        className="btn back-btn"
-                                        form="list_chefs_form"
-                                        type="submit"
-                                        value="back"
-                              >
-                                        Back
-                              </button>
-                              <button
-                                        className="btn next-btn"
-                                        form="checkout_form"
-                                        type="submit"
-                                        value="submit_order"
-                              >
-                                        Submit Order
-                              </button>
-                    </div>
-          </div>
-</form>,
-        <form
-          action="list_chefs.html"
-          id="list_chefs_form"
-          method="GET"
-/>,
-      ],
+        <div
+                className="title"
+        >
+                Food Order
+        </div>
+        <FoodList
+                foods={
+                        Array [
+                                Object {
+                                  "name": "food1",
+                                  "price": "100",
+                                },
+                                Object {
+                                  "name": "food2",
+                                  "price": "101",
+                                },
+                              ]
+                }
+        />
+        <div
+                className="panel-footer"
+        >
+                <Link
+                        replace={false}
+                        to="list_chefs"
+                >
+                        <button
+                                className="btn back-btn"
+                        >
+                                Back
+                        </button>
+                </Link>
+                <Link
+                        onClick={[Function]}
+                        replace={false}
+                        to="checkout"
+                >
+                        <button
+                                className="btn next-btn"
+                        >
+                                Submit Order
+                        </button>
+                </Link>
+        </div>
+</div>,
+      "className": "outer-panel",
     },
     "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "action": "checkout.html",
-          "children": <div
-            className="shopping-cart"
-            id="shopping_cart"
->
-            <div
-                        className="title"
-            >
-                        Food Order
-            </div>
-            <script
-                        src="../js/food_order.js"
-            />
-            <div
-                        className="panel-footer"
-            >
-                        <button
-                                    className="btn back-btn"
-                                    form="list_chefs_form"
-                                    type="submit"
-                                    value="back"
-                        >
-                                    Back
-                        </button>
-                        <button
-                                    className="btn next-btn"
-                                    form="checkout_form"
-                                    type="submit"
-                                    value="submit_order"
-                        >
-                                    Submit Order
-                        </button>
-            </div>
-</div>,
-          "id": "checkout_form",
-          "method": "POST",
-          "onsubmit": "return calculatePrice()",
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <div
-                className="title"
->
-                Food Order
-</div>,
-              <script
-                src="../js/food_order.js"
-/>,
-              <div
-                className="panel-footer"
->
-                <button
-                                className="btn back-btn"
-                                form="list_chefs_form"
-                                type="submit"
-                                value="back"
-                >
-                                Back
-                </button>
-                <button
-                                className="btn next-btn"
-                                form="checkout_form"
-                                type="submit"
-                                value="submit_order"
-                >
-                                Submit Order
-                </button>
-</div>,
-            ],
-            "className": "shopping-cart",
-            "id": "shopping_cart",
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Food Order",
-                "className": "title",
-              },
-              "ref": null,
-              "rendered": "Food Order",
-              "type": "div",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "src": "../js/food_order.js",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "script",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <button
-                    className="btn back-btn"
-                    form="list_chefs_form"
-                    type="submit"
-                    value="back"
->
-                    Back
-</button>,
-                  <button
-                    className="btn next-btn"
-                    form="checkout_form"
-                    type="submit"
-                    value="submit_order"
->
-                    Submit Order
-</button>,
-                ],
-                "className": "panel-footer",
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "Back",
-                    "className": "btn back-btn",
-                    "form": "list_chefs_form",
-                    "type": "submit",
-                    "value": "back",
-                  },
-                  "ref": null,
-                  "rendered": "Back",
-                  "type": "button",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "Submit Order",
-                    "className": "btn next-btn",
-                    "form": "checkout_form",
-                    "type": "submit",
-                    "value": "submit_order",
-                  },
-                  "ref": null,
-                  "rendered": "Submit Order",
-                  "type": "button",
-                },
-              ],
-              "type": "div",
-            },
-          ],
-          "type": "div",
-        },
-        "type": "form",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "action": "list_chefs.html",
-          "id": "list_chefs_form",
-          "method": "GET",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "form",
-      },
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
+    "rendered": Object {
       "instance": null,
       "key": undefined,
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <form
-            action="checkout.html"
-            id="checkout_form"
-            method="POST"
-            onsubmit="return calculatePrice()"
+          <div
+            className="title"
 >
-            <div
-                        className="shopping-cart"
-                        id="shopping_cart"
-            >
-                        <div
-                                    className="title"
-                        >
-                                    Food Order
-                        </div>
-                        <script
-                                    src="../js/food_order.js"
-                        />
-                        <div
-                                    className="panel-footer"
-                        >
-                                    <button
-                                                className="btn back-btn"
-                                                form="list_chefs_form"
-                                                type="submit"
-                                                value="back"
-                                    >
-                                                Back
-                                    </button>
-                                    <button
-                                                className="btn next-btn"
-                                                form="checkout_form"
-                                                type="submit"
-                                                value="submit_order"
-                                    >
-                                                Submit Order
-                                    </button>
-                        </div>
-            </div>
-</form>,
-          <form
-            action="list_chefs.html"
-            id="list_chefs_form"
-            method="GET"
+            Food Order
+</div>,
+          <FoodList
+            foods={
+                        Array [
+                                    Object {
+                                      "name": "food1",
+                                      "price": "100",
+                                    },
+                                    Object {
+                                      "name": "food2",
+                                      "price": "101",
+                                    },
+                                  ]
+            }
 />,
+          <div
+            className="panel-footer"
+>
+            <Link
+                        replace={false}
+                        to="list_chefs"
+            >
+                        <button
+                                    className="btn back-btn"
+                        >
+                                    Back
+                        </button>
+            </Link>
+            <Link
+                        onClick={[Function]}
+                        replace={false}
+                        to="checkout"
+            >
+                        <button
+                                    className="btn next-btn"
+                        >
+                                    Submit Order
+                        </button>
+            </Link>
+</div>,
         ],
+        "className": "panel-body",
       },
       "ref": null,
       "rendered": Array [
@@ -370,187 +187,369 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "action": "checkout.html",
-            "children": <div
-              className="shopping-cart"
-              id="shopping_cart"
->
-              <div
-                            className="title"
-              >
-                            Food Order
-              </div>
-              <script
-                            src="../js/food_order.js"
-              />
-              <div
-                            className="panel-footer"
-              >
-                            <button
-                                          className="btn back-btn"
-                                          form="list_chefs_form"
-                                          type="submit"
-                                          value="back"
-                            >
-                                          Back
-                            </button>
-                            <button
-                                          className="btn next-btn"
-                                          form="checkout_form"
-                                          type="submit"
-                                          value="submit_order"
-                            >
-                                          Submit Order
-                            </button>
-              </div>
-</div>,
-            "id": "checkout_form",
-            "method": "POST",
-            "onsubmit": "return calculatePrice()",
+            "children": "Food Order",
+            "className": "title",
           },
           "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <div
-                  className="title"
->
-                  Food Order
-</div>,
-                <script
-                  src="../js/food_order.js"
-/>,
-                <div
-                  className="panel-footer"
->
-                  <button
-                                    className="btn back-btn"
-                                    form="list_chefs_form"
-                                    type="submit"
-                                    value="back"
-                  >
-                                    Back
-                  </button>
-                  <button
-                                    className="btn next-btn"
-                                    form="checkout_form"
-                                    type="submit"
-                                    value="submit_order"
-                  >
-                                    Submit Order
-                  </button>
-</div>,
-              ],
-              "className": "shopping-cart",
-              "id": "shopping_cart",
-            },
-            "ref": null,
-            "rendered": Array [
+          "rendered": "Food Order",
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "foods": Array [
               Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "Food Order",
-                  "className": "title",
-                },
-                "ref": null,
-                "rendered": "Food Order",
-                "type": "div",
+                "name": "food1",
+                "price": "100",
               },
               Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "src": "../js/food_order.js",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": "script",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [
-                    <button
-                      className="btn back-btn"
-                      form="list_chefs_form"
-                      type="submit"
-                      value="back"
->
-                      Back
-</button>,
-                    <button
-                      className="btn next-btn"
-                      form="checkout_form"
-                      type="submit"
-                      value="submit_order"
->
-                      Submit Order
-</button>,
-                  ],
-                  "className": "panel-footer",
-                },
-                "ref": null,
-                "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": "Back",
-                      "className": "btn back-btn",
-                      "form": "list_chefs_form",
-                      "type": "submit",
-                      "value": "back",
-                    },
-                    "ref": null,
-                    "rendered": "Back",
-                    "type": "button",
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": "Submit Order",
-                      "className": "btn next-btn",
-                      "form": "checkout_form",
-                      "type": "submit",
-                      "value": "submit_order",
-                    },
-                    "ref": null,
-                    "rendered": "Submit Order",
-                    "type": "button",
-                  },
-                ],
-                "type": "div",
+                "name": "food2",
+                "price": "101",
               },
             ],
-            "type": "div",
           },
-          "type": "form",
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
         },
         Object {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "action": "list_chefs.html",
-            "id": "list_chefs_form",
-            "method": "GET",
+            "children": Array [
+              <Link
+                replace={false}
+                to="list_chefs"
+>
+                <button
+                                className="btn back-btn"
+                >
+                                Back
+                </button>
+</Link>,
+              <Link
+                onClick={[Function]}
+                replace={false}
+                to="checkout"
+>
+                <button
+                                className="btn next-btn"
+                >
+                                Submit Order
+                </button>
+</Link>,
+            ],
+            "className": "panel-footer",
           },
           "ref": null,
-          "rendered": null,
-          "type": "form",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": <button
+                  className="btn back-btn"
+>
+                  Back
+</button>,
+                "replace": false,
+                "to": "list_chefs",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Back",
+                  "className": "btn back-btn",
+                },
+                "ref": null,
+                "rendered": "Back",
+                "type": "button",
+              },
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": <button
+                  className="btn next-btn"
+>
+                  Submit Order
+</button>,
+                "onClick": [Function],
+                "replace": false,
+                "to": "checkout",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Submit Order",
+                  "className": "btn next-btn",
+                },
+                "ref": null,
+                "rendered": "Submit Order",
+                "type": "button",
+              },
+              "type": [Function],
+            },
+          ],
+          "type": "div",
         },
       ],
+      "type": "div",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="panel-body"
+>
+          <div
+                    className="title"
+          >
+                    Food Order
+          </div>
+          <FoodList
+                    foods={
+                              Array [
+                                        Object {
+                                          "name": "food1",
+                                          "price": "100",
+                                        },
+                                        Object {
+                                          "name": "food2",
+                                          "price": "101",
+                                        },
+                                      ]
+                    }
+          />
+          <div
+                    className="panel-footer"
+          >
+                    <Link
+                              replace={false}
+                              to="list_chefs"
+                    >
+                              <button
+                                        className="btn back-btn"
+                              >
+                                        Back
+                              </button>
+                    </Link>
+                    <Link
+                              onClick={[Function]}
+                              replace={false}
+                              to="checkout"
+                    >
+                              <button
+                                        className="btn next-btn"
+                              >
+                                        Submit Order
+                              </button>
+                    </Link>
+          </div>
+</div>,
+        "className": "outer-panel",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="title"
+>
+              Food Order
+</div>,
+            <FoodList
+              foods={
+                            Array [
+                                          Object {
+                                            "name": "food1",
+                                            "price": "100",
+                                          },
+                                          Object {
+                                            "name": "food2",
+                                            "price": "101",
+                                          },
+                                        ]
+              }
+/>,
+            <div
+              className="panel-footer"
+>
+              <Link
+                            replace={false}
+                            to="list_chefs"
+              >
+                            <button
+                                          className="btn back-btn"
+                            >
+                                          Back
+                            </button>
+              </Link>
+              <Link
+                            onClick={[Function]}
+                            replace={false}
+                            to="checkout"
+              >
+                            <button
+                                          className="btn next-btn"
+                            >
+                                          Submit Order
+                            </button>
+              </Link>
+</div>,
+          ],
+          "className": "panel-body",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Food Order",
+              "className": "title",
+            },
+            "ref": null,
+            "rendered": "Food Order",
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "foods": Array [
+                Object {
+                  "name": "food1",
+                  "price": "100",
+                },
+                Object {
+                  "name": "food2",
+                  "price": "101",
+                },
+              ],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <Link
+                  replace={false}
+                  to="list_chefs"
+>
+                  <button
+                                    className="btn back-btn"
+                  >
+                                    Back
+                  </button>
+</Link>,
+                <Link
+                  onClick={[Function]}
+                  replace={false}
+                  to="checkout"
+>
+                  <button
+                                    className="btn next-btn"
+                  >
+                                    Submit Order
+                  </button>
+</Link>,
+              ],
+              "className": "panel-footer",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": <button
+                    className="btn back-btn"
+>
+                    Back
+</button>,
+                  "replace": false,
+                  "to": "list_chefs",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Back",
+                    "className": "btn back-btn",
+                  },
+                  "ref": null,
+                  "rendered": "Back",
+                  "type": "button",
+                },
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": <button
+                    className="btn next-btn"
+>
+                    Submit Order
+</button>,
+                  "onClick": [Function],
+                  "replace": false,
+                  "to": "checkout",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Submit Order",
+                    "className": "btn next-btn",
+                  },
+                  "ref": null,
+                  "rendered": "Submit Order",
+                  "type": "button",
+                },
+                "type": [Function],
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
       "type": "div",
     },
   ],

@@ -13,9 +13,7 @@ describe('Login Component', () => {
         expect(component.getElements()).toMatchSnapshot();
         })
     });
-
-
-
+    
     describe('Submit Button', () => {
         it('should be defined', () => {
           expect(ListChefs).toBeDefined();
