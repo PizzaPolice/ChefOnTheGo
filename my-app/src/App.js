@@ -41,6 +41,9 @@ class App extends Component {
               <Link to="/checkout">Checkout</Link>
             </li>
             <li>
+              <Link to="/edit_dishes">EDIT DISHES</Link>
+            </li>
+            <li>
               <Link to="/order_status">Order Status</Link>
             </li>
           </ul>
