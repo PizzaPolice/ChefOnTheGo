@@ -12,12 +12,6 @@ const const_foods = [
     }
 ];
 
-function decrementValue(id) {
-    console.log(id)
-    console.log(document.getElementById(id));
-    //document.getElementById(id).value = --curr_val;
-}
-
 function FoodList(props) {
     const foods = props.foods;
     const listItems = foods.map((food) => 
@@ -27,9 +21,7 @@ function FoodList(props) {
             </div>
             <div className="quantity">
                 <div className="container">
-                    <button onClick={decrementValue(food.name)}/>
-                    <button onClick={() => console.log('increment')}/>
-                    <input type="text" onChange={() => console.log("change")} defaultValue="1"/> 
+                    <input type="text" defaultValue="1"/> 
                 </div>
             </div>
             <div className="total-price">
@@ -68,16 +60,14 @@ class FoodOrder extends Component
                 <div className="title">
                     Food Order
                 </div>
-                <div className="shopping-cart" id="shopping_cart">
-                    <FoodList foods={this.state.foods}/>
-                    <div className="panel-footer">
-                        <Link to="list_chefs">
-                            <button className="btn back-btn">Back</button>
-                        </Link>
-                        <Link to="checkout">
-                            <button className="btn next-btn">Submit Order</button>
-                        </Link>
-                    </div>
+                <FoodList foods={this.state.foods}/>
+                <div className="panel-footer">
+                    <Link to="list_chefs">
+                        <button className="btn back-btn">Back</button>
+                    </Link>
+                    <Link to="checkout">
+                        <button className="btn next-btn">Submit Order</button>
+                    </Link>
                 </div>
             </div>
         </div>
