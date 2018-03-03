@@ -6,16 +6,14 @@ function DishList(props)
 
   const dishList = props.dish
   const dishes = dishList.map((dish) =>
-    <div key={dish.dish_name}>
+    <div key={dish.dish_name} id={dish.dish_name}>
     {dish.dish_name}<br/>
     {dish.dish_desc}<br/>
     Price: {dish.dish_price}<br/>
     Delete Dish
-    <input type="checkbox"></input>
+    <input type="checkbox" className="delete_box"></input>
     </div>
   );
-  console.log(dishList);
-  console.log(dishes);
   return (dishes);
 }
 
@@ -60,10 +58,6 @@ class EditDishes extends Component
     }
 
 
-      this.state =
-        {
-          dishes:[{chef_name:"CHEF",dish_name:"DISH",dish_desc:"DESC",dish_price:"0.01"}]
-        };
   }
   render()
   {
@@ -87,14 +81,42 @@ class EditDishes extends Component
 
       <input type="button" onClick={this.deleteDish.bind(this)} value="Delete selected dishes"></input>
       <DishList dish={this.state.dishes}></DishList>
-
       </div>
     );
   }
 
   deleteDish()
   {
-    alert("DELETING DISH!");
+    var chef_dishes = this.state.dishes;
+    //Get a list of all the check boxes
+    var checkBoxes = document.getElementsByClassName("delete_box");
+
+  for (var x = 0; x < checkBoxes.length; x ++)
+  {
+    //Check if theyre checked when delete is pressed. If so remove them from dishes
+    if (checkBoxes[x].checked === true)
+    {
+      var dishName = checkBoxes[x].parentNode.id;
+      for (var y = 0; y < chef_dishes.length; y ++)
+      {
+        if (chef_dishes[y]["dish_name"] === dishName)
+        {
+          chef_dishes.splice(y,1);
+          break;
+        }
+      }
+    }
+  }
+    //Update Local Storage
+    window.localStorage.setItem("dishes",JSON.stringify(chef_dishes));
+    //Update state
+
+    this.setState(function (){
+      return {
+        dishes:chef_dishes
+      }
+    }
+    );
   }
 
   newDish()
