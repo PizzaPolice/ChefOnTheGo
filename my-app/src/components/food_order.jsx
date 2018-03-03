@@ -4,11 +4,15 @@ import { Link } from "react-router-dom";
 const const_foods = [
     {
         name: "food1",
-        price: "100"
+        price: "32"
     },
     {
         name: "food2",
-        price: "101"
+        price: "15"
+    },
+    {
+        name: "food3",
+        price: "20"
     }
 ];
 
