@@ -19,16 +19,15 @@ function DishList(props)
 
 class EditDishes extends Component
 {
-  /* */
   constructor(props)
   {
     super(props);
-    var currUser = window.sessionStorage.getItem("currentUser");
 
     //Initialize dish list
     var store = window.localStorage;
     if (store !== undefined && store !== null)
     {
+      var currUser = window.sessionStorage.getItem("currentUser");
       var dishList = JSON.parse(store.getItem("dish_list"));
       if (dishList === null || dishList.length === 0)
       {
@@ -134,8 +133,7 @@ class EditDishes extends Component
     var dishDesc = document.getElementById("dish_desc").value;
     var dishPrice = document.getElementById("dish_price").value;
 
-    var currUser = window.sessionStorage.getItem("currentUser");
-
+    var currUser = this.state.chef;
 
 
     //Check for valid input (dish name and description are not blank
