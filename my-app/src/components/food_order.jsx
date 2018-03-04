@@ -18,7 +18,7 @@ function FoodList(props) {
     </div>
     <div className="quantity">
     <div className="container">
-    <input id={"quantity" + food.dish_name} type="text" defaultValue="1" onChange={changeQuantity}/> 
+    <input id={"quantity" + food.dish_name} type="number" defaultValue="1" onChange={changeQuantity}/> 
     </div>
     </div>
     <div className="total-price">
@@ -52,16 +52,6 @@ class FoodOrder extends Component
 
   }
 
-  componentDidMount() {
-    var storage = window.localStorage;
-    if (storage !== undefined && storage !== null) {
-      var foods = storage.getItem("foods");
-      var foodList = JSON.parse(foods);
-      if (foodList !== null && foodList !== undefined) {
-        this.setState({foods: foodList});
-      }
-    }
-  }
 
   findPrice() {
     var total_cost = 0;

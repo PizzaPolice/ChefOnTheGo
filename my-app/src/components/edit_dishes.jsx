@@ -112,7 +112,7 @@ class EditDishes extends Component
       }
     }
     //Update Local Storage
-    window.localStorage.setItem("dishes",JSON.stringify(chef_dishes));
+    window.localStorage.setItem("dish_list",JSON.stringify(chef_dishes));
     //Update state
 
     this.setState(function (){
