@@ -1,20 +1,7 @@
 import React,{Component} from 'react';
 import { Link } from "react-router-dom";
 
-const const_foods = [
-    {
-        name: "food1",
-        price: "32"
-    },
-    {
-        name: "food2",
-        price: "15"
-    },
-    {
-        name: "food3",
-        price: "20"
-    }
-];
+
 
 function changeQuantity(event) {
     const id = event.target.id;
@@ -25,17 +12,17 @@ function changeQuantity(event) {
 function FoodList(props) {
     const foods = props.foods;
     const listItems = foods.map((food) => 
-        <div key={food.name} className="item">
+        <div key={food.dish_name} className="item">
             <div className="description">
-                <span>{food.name}</span>
+                <span>{food.dish_name}</span>
             </div>
             <div className="quantity">
                 <div className="container">
-                    <input id={"quantity" + food.name} type="text" defaultValue="1" onChange={changeQuantity}/> 
+                    <input id={"quantity" + food.dish_name} type="text" defaultValue="1" onChange={changeQuantity}/> 
                 </div>
             </div>
             <div className="total-price">
-                <span id={"price" + food.name}>${food.price}</span>
+                <span id={"price" + food.dish_name}>${food.dish_price}</span>
             </div>
         </div>
     );
@@ -46,8 +33,9 @@ class FoodOrder extends Component
 {
     constructor(props) {
         super(props);
+        var dish_list = JSON.parse(window.localStorage.getItem("dish_list"));
         this.state = {
-            foods: const_foods
+            foods: dish_list
         };
         this.findPrice = this.findPrice.bind(this);
     }
