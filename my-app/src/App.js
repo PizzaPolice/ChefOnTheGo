@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { BrowserRouter, Route, Link } from "react-router-dom";
+import { Provider } from "react-redux"
 
 import Login from './components/login.js';
 import Signup from './components/signup.js'
@@ -17,37 +18,9 @@ import OrderStatus from './components/order_status.jsx';
 class App extends Component {
   render() {
     return (
+      <Provider store={[]}>
       <BrowserRouter>
-        <div>
-          <ul>
-            <li>
-              <Link to="/chat">Chat</Link>
-            </li>
-
-            <li>
-              <Link to="/inactive_chef">Inactive Chef</Link>
-            </li>
-            <li>
-              <Link to="/edit_dishes">Edit Dishes</Link>
-            </li>
-
-            <li>
-              <Link to="/food_order">Food Order</Link>
-            </li>
-            <li>
-              <Link to="/active_chef">Active Chef</Link>
-            </li>
-            <li>
-              <Link to="/checkout">Checkout</Link>
-            </li>
-            <li>
-              <Link to="/edit_dishes">EDIT DISHES</Link>
-            </li>
-            <li>
-              <Link to="/order_status">Order Status</Link>
-            </li>
-          </ul>
-          <hr/>
+      <div>
           <Route exact path="/" component={Login}/>
           <Route path="/login" component={Login}/>
           <Route path="/signup" component={Signup}/>
@@ -63,6 +36,7 @@ class App extends Component {
           <Route path="/order_status" component={OrderStatus}/>
       </div>
       </BrowserRouter>
+      </Provider>
     );
   }
 }
