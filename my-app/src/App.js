@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { BrowserRouter, Route, Link } from "react-router-dom";
+import { BrowserRouter, Route} from "react-router-dom";
 import { Provider } from "react-redux"
 
 import Login from './components/login.js';
@@ -16,9 +16,11 @@ import FoodOrder from './components/food_order.jsx';
 import Checkout from './components/checkout.jsx';
 import OrderStatus from './components/order_status.jsx';
 class App extends Component {
-  render() {
+  render(){
+
+    let store = [];
     return (
-      <Provider store={[]}>
+      <Provider store={store}>
       <BrowserRouter>
       <div>
           <Route exact path="/" component={Login}/>
