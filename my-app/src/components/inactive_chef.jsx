@@ -1,4 +1,5 @@
 import React,{Component} from 'react';
+import {Link} from "react-router-dom";
 class InactiveChef extends Component
 {
   constructor(props)
@@ -17,7 +18,6 @@ class InactiveChef extends Component
 
 <div>
   <title>Inactive Chef</title>
-
   <h2>You are currently inactive</h2>
   <form className="input" onSubmit={this.validateTime.bind(this)}>
     <h3>How long do you want to be active until</h3>
@@ -28,6 +28,10 @@ class InactiveChef extends Component
     <input type="submit" value="Start Serving!"></input>
   </form>
 
+  <h3>Or change your offered menu</h3>
+  <Link to="/edit_dishes">
+      <button>Edit Dishes</button>
+      </Link>
 
 </div>
       
