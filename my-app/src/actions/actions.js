@@ -5,7 +5,10 @@ export const DELETE_DISH = "DELETE_DISH"
 //Set the person who is currently logged in
 export const SET_LOGIN = "SET_LOGIN"
 
-export function addDish(dish)
-{
-  return {type:ADD_DISH,dish}
-}
+export function addDish(dish) {
+  console.log(dish);
+  return {
+    type: ADD_DISH,
+    payload: dish
+  }
+};
