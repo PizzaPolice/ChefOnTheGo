@@ -13,4 +13,5 @@ export default function addFood(state, action) {
     default:
       return state
   }
+
 }
