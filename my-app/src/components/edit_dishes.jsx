@@ -1,13 +1,13 @@
 import React,{Component} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import {addFood} from '../actions/actions.js';
+import {addFood} from '../actions/food_actions.js';
 
 
 //Creates a list of dishes (jsx)
 function FoodList(props)
 {
-  const foodList = props.food
+  const foodList = props.foods
   const foods = foodList.map((food) =>
     <div key={food.name} id={food.name}>
       {food.name}<br/>
@@ -70,7 +70,7 @@ class EditDishes extends Component
     return(
       <div>
         <title>Edit Dishes</title>
-        <p>Welcome {this.state.chef}</p>
+        <p>Welcome User</p>
         <h1>Create a new dish!</h1>
         <form className="new_dish">
           <h3>Dish name</h3>
@@ -96,7 +96,7 @@ class EditDishes extends Component
           onClick={this.deleteFood.bind(this)} 
           value="Delete selected dishes">
         </input>
-        <FoodList dish={this.props.foods}></FoodList>
+        <FoodList foods={this.props.foods}></FoodList>
       </div>
     );
   }
@@ -142,8 +142,6 @@ class EditDishes extends Component
     var foodDesc = document.getElementById("desc").value;
     var foodPrice = document.getElementById("price").value;
 
-    var currUser = this.state.chef;
-
     //Check for valid input (dish name and description are not blank
     if (foodName === "" || foodDesc === "")
     {
@@ -152,7 +150,6 @@ class EditDishes extends Component
     }
 
     var newFood = {
-      "chef_name": currUser, 
       "name": foodName, 
       "price": foodPrice, 
       "desc": foodDesc
@@ -184,7 +181,7 @@ function mapStateToProps(state) {
 }
 
 function matchDispatchToProps(dispatch) {
-  bindActionCreators({addFood: addFood}, dispatch);
+  return bindActionCreators({addFood: addFood}, dispatch);
 }
 
-export default connect(mapStateToProps, matchDispatchToProps)(EditDishes)
+export default connect(mapStateToProps, matchDispatchToProps)(EditDishes);

@@ -4,5 +4,9 @@ export const DELETE_FOOD = "DELETE_FOOD"
 
 export function addFood(food)
 {
-  return {type:ADD_FOOD,food}
+  console.log(food);
+  return {
+    type:ADD_FOOD,
+    payload: food
+  }
 }
