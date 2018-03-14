@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow, mount, render } from 'enzyme';
 import EditDishes from '../components/edit_dishes.jsx'
+import foodReducer from '../reducers/foodReducer';
 
 
 it('EditDishes component renders without crashing', () => {
@@ -20,3 +21,8 @@ describe('EditDishes Component', () => {
         expect(component.getElements()).toMatchSnapshot();
         })
     });
+
+    //Reducer tests
+        it('should return the initial state', () => {
+          expect(foodReducer(undefined, {})).toEqual({});
+        })

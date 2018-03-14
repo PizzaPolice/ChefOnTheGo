@@ -39,6 +39,17 @@ Array [
             value="Start Serving!"
         />
     </form>
+    <h3>
+        Or change your offered menu
+    </h3>
+    <Link
+        replace={false}
+        to="/edit_dishes"
+    >
+        <button>
+            Edit Dishes
+        </button>
+    </Link>
 </div>,
 ]
 `;
