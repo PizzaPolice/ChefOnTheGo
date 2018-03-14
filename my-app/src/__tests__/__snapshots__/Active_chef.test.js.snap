@@ -26,17 +26,17 @@ Array [
                     <td
                         id="hours"
                     >
-                        HOURS
+                        0
                     </td>
                     <td
                         id="minutes"
                     >
-                        MINUTES
+                        0
                     </td>
                     <td
                         id="seconds"
                     >
-                        SECONDS
+                        0
                     </td>
                 </tr>
                 <tr>
@@ -54,14 +54,16 @@ Array [
         </table>
     </section>
     <form
-        action="inactive_chef.html"
         className="stopserve"
-        method="post"
     >
-        <input
-            type="submit"
-            value="Stop Serving"
-        />
+        <Link
+            replace={false}
+            to="/inactive_chef"
+        >
+            <button>
+                Stop Serving
+            </button>
+        </Link>
     </form>
 </div>,
 ]
