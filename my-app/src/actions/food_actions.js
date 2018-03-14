@@ -13,9 +13,10 @@ export function addFood(food)
 
 export function deleteFood(food)
 {
-  console.log(food);
   return { 
-    type: DELETE_FOOD, food }
+    type: DELETE_FOOD, 
+    payload: food 
+  }
 }
 
 

@@ -1,7 +1,6 @@
 import { ADD_FOOD, DELETE_FOOD } from '../actions/food_actions.js'
 
-const initialState = { foods: [] }
-export default function addFood(state, action) {
+export default function food_reducer(state=[], action) {
   switch (action.type)
   {
     case ADD_FOOD:
@@ -13,5 +12,4 @@ export default function addFood(state, action) {
     default:
       return state
   }
-
 }
