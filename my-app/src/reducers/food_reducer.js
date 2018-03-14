@@ -1,4 +1,4 @@
-import { addDish, deleteDish } from './actions/food_reducer.js'
+import { addDish, deleteDish } from '../actions/food_actions.js'
 export default function() {
     return [
         {
