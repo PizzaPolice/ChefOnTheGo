@@ -1,13 +1,16 @@
-import { addDish, deleteDish } from '../actions/food_actions.js'
-export default function() {
-    return [
-        {
-            name: "food1",
-            price: "10"    
-        },
-        {
-            name: "food2",
-            price: "20"
-        }
-    ]
+import { ADD_FOOD, DELETE_FOOD } from '../actions/food_actions.js'
+
+const initialState = { foods: [] }
+export default function addFood(state, action) {
+  switch (action.type)
+  {
+    case ADD_FOOD:
+      return [
+      
+      ]
+    case DELETE_FOOD:
+      return []
+    default:
+      return state
+  }
 }
