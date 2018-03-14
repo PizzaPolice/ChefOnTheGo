@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import {addFood} from '../actions/food_actions.js';
+import {addFood,deleteFood} from '../actions/food_actions.js';
 
 
 //Creates a list of dishes (jsx)
@@ -22,49 +22,6 @@ function FoodList(props)
 
 class EditDishes extends Component
 {
-  constructor(props)
-  {
-    super(props);
-
-    //Initialize dish list
-    /*
-    var store = window.localStorage;
-    if (store !== undefined && store !== null)
-    {
-      var currUser = window.sessionStorage.getItem("currentUser");
-      var dishList = JSON.parse(store.getItem("dish_list"));
-      if (dishList === null || dishList.length === 0)
-      {
-        dishList = [];
-      }
-      //List of all dishes only from this chef
-      var chef_dishes = []
-      //Filter so that only those from this chef are displayed
-      for (var x = 0; x < dishList.length; x++)
-      {
-        if (dishList[x]["chef_name"] === currUser)
-        {
-          chef_dishes.push(dishList[x]);
-        }
-      }
-      //Set state to the list of dishes
-      this.state =
-        {
-          chef:currUser,
-          dishes:chef_dishes
-        }
-    }
-    //If storage doesnt work, have a non-null backup state
-    else
-    {
-      this.state =
-        {
-          chef:"ERROR NO USER LOGGED IN",
-          dishes:[]
-        };
-    }
-    */
-  }
   render()
   {
     return(
@@ -93,7 +50,7 @@ class EditDishes extends Component
         <h2>Check the checkbox below a dish to select it for deletion</h2>
 
         <input type="button" 
-          onClick={this.deleteFood.bind(this)} 
+          onClick={this.findToDeleteFood.bind(this)} 
           value="Delete selected dishes">
         </input>
         <FoodList foods={this.props.foods}></FoodList>
@@ -101,38 +58,26 @@ class EditDishes extends Component
     );
   }
 
-  deleteFood()
+  findToDeleteFood()
   {
-    var chef_dishes = this.state.dishes;
+    var foods = this.props.foods;
+    
     //Get a list of all the check boxes
     var checkBoxes = document.getElementsByClassName("delete_box");
-
-    for (var x = 0; x < checkBoxes.length; x ++)
+    for (var x = 0; x < checkBoxes.length; x++)
     {
       //Check if theyre checked when delete is pressed. If so remove them from dishes
       if (checkBoxes[x].checked === true)
       {
-        var dishName = checkBoxes[x].parentNode.id;
-        for (var y = 0; y < chef_dishes.length; y ++)
+        var foodName = checkBoxes[x].parentNode.id;
+        for (var y = 0; y < foods.length; y++)
         {
-          if (chef_dishes[y]["dish_name"] === dishName)
-          {
-            chef_dishes.splice(y,1);
-            break;
+          if (foods[y].name === foodName) {
+            this.props.deleteFood(foods[y]);
           }
         }
       }
     }
-    //Update Local Storage
-    window.localStorage.setItem("dish_list",JSON.stringify(chef_dishes));
-    //Update state
-
-    this.setState(function (){
-      return {
-        dishes:chef_dishes
-      }
-    }
-    );
   }
 
   newFood()
@@ -156,21 +101,6 @@ class EditDishes extends Component
     }
 
     this.props.addFood(newFood);
-    /*
-    //Add the dish to the state
-    chef_dishes.push({"chef_name":currUser, "dish_name": dishName, "dish_price": dishPrice, "dish_desc": dishDesc});
-
-    //Update the state
-    this.setState(function (){
-      return {
-        dishes:chef_dishes
-      }
-    }
-    );
-
-    //Update local storage
-    window.localStorage.setItem("dish_list",JSON.stringify(chef_dishes));
-    */
   }
 }
 
@@ -181,7 +111,7 @@ function mapStateToProps(state) {
 }
 
 function matchDispatchToProps(dispatch) {
-  return bindActionCreators({addFood: addFood}, dispatch);
+  return bindActionCreators({addFood: addFood, deleteFood: deleteFood}, dispatch);
 }
 
 export default connect(mapStateToProps, matchDispatchToProps)(EditDishes);
