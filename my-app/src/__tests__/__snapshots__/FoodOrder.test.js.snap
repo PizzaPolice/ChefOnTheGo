@@ -14,18 +14,7 @@ Array [
             Food Order
         </div>
         <FoodList
-            foods={
-                Array [
-                    Object {
-                      "name": "food1",
-                      "price": "100",
-                    },
-                    Object {
-                      "name": "food2",
-                      "price": "101",
-                    },
-                  ]
-            }
+            foods={Array []}
         />
         <div
             className="panel-footer"
@@ -85,18 +74,7 @@ ShallowWrapper {
                 Food Order
         </div>
         <FoodList
-                foods={
-                        Array [
-                                Object {
-                                  "name": "food1",
-                                  "price": "100",
-                                },
-                                Object {
-                                  "name": "food2",
-                                  "price": "101",
-                                },
-                              ]
-                }
+                foods={Array []}
         />
         <div
                 className="panel-footer"
@@ -139,18 +117,7 @@ ShallowWrapper {
             Food Order
 </div>,
           <FoodList
-            foods={
-                        Array [
-                                    Object {
-                                      "name": "food1",
-                                      "price": "100",
-                                    },
-                                    Object {
-                                      "name": "food2",
-                                      "price": "101",
-                                    },
-                                  ]
-            }
+            foods={Array []}
 />,
           <div
             className="panel-footer"
@@ -199,16 +166,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "foods": Array [
-              Object {
-                "name": "food1",
-                "price": "100",
-              },
-              Object {
-                "name": "food2",
-                "price": "101",
-              },
-            ],
+            "foods": Array [],
           },
           "ref": null,
           "rendered": null,
@@ -326,18 +284,7 @@ ShallowWrapper {
                     Food Order
           </div>
           <FoodList
-                    foods={
-                              Array [
-                                        Object {
-                                          "name": "food1",
-                                          "price": "100",
-                                        },
-                                        Object {
-                                          "name": "food2",
-                                          "price": "101",
-                                        },
-                                      ]
-                    }
+                    foods={Array []}
           />
           <div
                     className="panel-footer"
@@ -380,18 +327,7 @@ ShallowWrapper {
               Food Order
 </div>,
             <FoodList
-              foods={
-                            Array [
-                                          Object {
-                                            "name": "food1",
-                                            "price": "100",
-                                          },
-                                          Object {
-                                            "name": "food2",
-                                            "price": "101",
-                                          },
-                                        ]
-              }
+              foods={Array []}
 />,
             <div
               className="panel-footer"
@@ -440,16 +376,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "foods": Array [
-                Object {
-                  "name": "food1",
-                  "price": "100",
-                },
-                Object {
-                  "name": "food2",
-                  "price": "101",
-                },
-              ],
+              "foods": Array [],
             },
             "ref": null,
             "rendered": null,

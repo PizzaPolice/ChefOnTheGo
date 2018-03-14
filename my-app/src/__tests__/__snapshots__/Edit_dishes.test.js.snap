@@ -6,6 +6,10 @@ Array [
     <title>
         Edit Dishes
     </title>
+    <p>
+        Welcome 
+        ERROR NO USER LOGGED IN
+    </p>
     <h1>
         Create a new dish!
     </h1>
@@ -52,8 +56,8 @@ Array [
         type="button"
         value="Delete selected dishes"
     />
-    <div
-        id="current_dishes"
+    <DishList
+        dish={Array []}
     />
 </div>,
 ]
