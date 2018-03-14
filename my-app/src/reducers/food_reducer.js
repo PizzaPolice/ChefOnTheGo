@@ -4,9 +4,7 @@ export default function food_reducer(state=[], action) {
   switch (action.type)
   {
     case ADD_FOOD:
-      return [
-      
-      ]
+      return []
     case DELETE_FOOD:
       return []
     default:

@@ -30,26 +30,6 @@ function FoodList(props) {
 
 class FoodOrder extends Component
 {
-  constructor(props) {
-    super(props);
-    /*
-    var store = window.localStorage;
-    if (store !== undefined && store !== null)
-    {
-      var dish_list = JSON.parse(window.localStorage.getItem("dish_list"));
-      this.state = {
-        foods: dish_list
-      };
-    }
-    else
-    {
-      this.state = {
-        foods: []
-      };
-    }
-    */
-  }
-
   findPrice() {
     var total_cost = 0;
     for (var i = 0; i < this.props.foods.length; i++) {
