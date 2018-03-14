@@ -99,7 +99,6 @@ class EditDishes extends Component
       "price": foodPrice, 
       "desc": foodDesc
     }
-
     this.props.addFood(newFood);
   }
 }
