@@ -2,6 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow, mount, render } from 'enzyme';
 import EditDishes from '../components/edit_dishes.jsx'
+import foodReducer from '../reducers/food_reducer';
+
+
+/*
+let mockedStore = configureStore([])({});
+test('some test', () => {
+  const wrapper = mount(<EditDishes foo="bar" />, {
+    context: { store: mockedStore },
+    childContextTypes: { store: PropTypes.object.isRequired }
+  });
+  expect(component.getElements()).toMatchSnapshot();
+});
+*/
 
 
 it('EditDishes component renders without crashing', () => {
@@ -10,8 +23,10 @@ it('EditDishes component renders without crashing', () => {
     ReactDOM.unmountComponentAtNode(div);
   });
 
+  
+
 // This test is shallow rendering our EditDishes component
-describe('EditDishes Component', () => {
+describe('EditDishes Component', () => {    
     it('EditDishes should render without throwing an error', () => {
         expect(shallow(<EditDishes />).exists(<form className='EditDishes'></form>)).toBe(true)
       })
@@ -20,3 +35,8 @@ describe('EditDishes Component', () => {
         expect(component.getElements()).toMatchSnapshot();
         })
     });
+
+//Reducer tests
+      //   it('should return the initial state', () => {
+       //     expect(foodReducer(undefined, {})).toEqual({});
+       // })

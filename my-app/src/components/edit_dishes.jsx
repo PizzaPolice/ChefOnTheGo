@@ -2,11 +2,12 @@ import React,{Component} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as foodActions from '../actions/food_actions';
-
+import '../style.css';
 
 //Creates a list of dishes (jsx)
 function FoodList(props)
 {
+
   const foodList = props.foods
   const foods = foodList.map((food) =>
     <div key={food.name} id={food.name}>
@@ -20,19 +21,23 @@ function FoodList(props)
   return (foods);
 }
 
+
 class EditDishes extends Component
 {
   render()
   {
     return(
       <div>
+         <div className="style">
         <title>Edit Dishes</title>
-        <p>Welcome User</p>
-        <h1>Create a new dish!</h1>
+        <h2>Welcome User</h2>
+        <text>Create a new dish!</text>
         <form className="new_dish">
-          <h3>Dish name</h3>
-          <input id="name" type="text"></input>
-          <h3>Price</h3>
+          <text>Dish name</text>
+
+          <input id="name" type="text" class="box_style"></input>
+
+          <text>Price  </text>
           <input type="number" id="price"></input>
           <h3>Description</h3>
           <textarea id="desc" 
@@ -40,22 +45,29 @@ class EditDishes extends Component
             cols="70" 
             defaultValue="Enter a description of your dish">
           </textarea>
+
+          <div className="btn">
           <input type="button" 
             onClick={this.newFood.bind(this)}
             value="Create your dish!">
           </input>
+          </div>
         </form>
+       
 
-        <h1>Edit your offerings</h1>
-        <h2>Check the checkbox below a dish to select it for deletion</h2>
-
+        <text>Edit your offerings below</text>
+        <text>Mark checkbox below to delete (once dishes have been added)</text>
+        <div className="btn">
         <input type="button" 
           onClick={this.findToDeleteFood.bind(this)} 
-          value="Delete selected dishes">
+          value="Delete marked dishes">
         </input>
+        </div>
         <FoodList foods={this.props.foods}></FoodList>
       </div>
-    );
+      </div>
+    
+         );
   }
 
   findToDeleteFood()

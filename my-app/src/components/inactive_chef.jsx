@@ -1,5 +1,8 @@
 import React,{Component} from 'react';
 import {Link} from "react-router-dom";
+import '../style.css';
+
+
 class InactiveChef extends Component
 {
   constructor(props)
@@ -17,25 +20,33 @@ class InactiveChef extends Component
     return(
 
 <div>
+
+  <div className="style">
   <title>Inactive Chef</title>
-  <h2>You are currently inactive</h2>
+  
+  
   <form className="input" onSubmit={this.validateTime.bind(this)}>
-    <h3>How long do you want to be active until</h3>
+    <h4>Enter the amount of time you will be active:</h4>
     <input type="number" name="hour" onChange={this.updateHours.bind(this)}defaultValue="0"></input>
     <b>Hours</b>
-    <input type="number" name="minute" onChange={this.updateMinute.bind(this)} defaultValue ="0"></input>
+    <input
+     type="number" name="minute" onChange={this.updateMinute.bind(this)} defaultValue ="0"></input>
     <b>Minutes</b>
     <input type="submit" value="Start Serving!"></input>
   </form>
 
-  <h3>Or change your offered menu</h3>
+  <h4>Use Edit Dishes to change your menu</h4>
+ 
   <Link to="/edit_dishes">
-      <button>Edit Dishes</button>
+  
+      <input type="submit" value="Edit Dishes"></input>
+
       </Link>
 
-</div>
-      
-    );
+    </div>
+  </div>
+  );
+
   }
   /* Update the minutes state when it is modified*/
   updateMinute(e)
