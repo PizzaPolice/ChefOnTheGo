@@ -71,3 +71,23 @@
 .box_style{
     width: -20px;
 }
+
+
+
+
+
+.dishstyle {
+    
+    /*
+    font-family: 'Montserrat', sans-serif;
+ 
+    margin: 20px auto; 
+ */
+   
+    height: 100%;
+    margin-top: 20px;
+    box-sizing: content-box;    
+    padding: 1px;    
+    /*border: 2px solid rgb(44, 38, 38);*/
+
+  }

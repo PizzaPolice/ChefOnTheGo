@@ -47,25 +47,33 @@ class EditDishes extends Component
           </textarea>
 
           <div className="btn">
+         
           <input type="button" 
             onClick={this.newFood.bind(this)}
             value="Create your dish!">
           </input>
           </div>
+         
+          
         </form>
        
-
-        <text>Edit your offerings below</text>
-        <text>Mark checkbox below to delete (once dishes have been added)</text>
+       
+        <div class = "dishstyle">
+        <h3> Your Dish Offerings </h3>
+         
+        <FoodList foods={this.props.foods}></FoodList>
         <div className="btn">
         <input type="button" 
           onClick={this.findToDeleteFood.bind(this)} 
           value="Delete marked dishes">
         </input>
         </div>
-        <FoodList foods={this.props.foods}></FoodList>
+        </div>
       </div>
+      
       </div>
+    
+      
     
          );
   }
