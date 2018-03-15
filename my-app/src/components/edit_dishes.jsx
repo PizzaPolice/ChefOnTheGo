@@ -57,7 +57,9 @@ class EditDishes extends Component
        
         <div class = "dishstyle">
         <h3> Your Dish Offerings </h3>
+
         <FoodList foods={this.props.foods}></FoodList>
+        
         <div className="btn">
         <input type="button" 
           onClick={this.findToDeleteFood.bind(this)} 

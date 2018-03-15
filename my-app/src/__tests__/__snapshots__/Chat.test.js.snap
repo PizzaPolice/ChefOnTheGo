@@ -53,7 +53,7 @@ ShallowWrapper {
                         rows="10"
                 />
                 <div
-                        class="btn-group"
+                        className="btn-group"
                 >
                         <button
                                 onClick={[Function]}
@@ -102,7 +102,7 @@ ShallowWrapper {
                         rows="10"
             />
             <div
-                        class="btn-group"
+                        className="btn-group"
             >
                         <button
                                     onClick={[Function]}
@@ -203,7 +203,7 @@ ShallowWrapper {
                 rows="10"
 />,
               <div
-                class="btn-group"
+                className="btn-group"
 >
                 <button
                                 onClick={[Function]}
@@ -251,7 +251,7 @@ ShallowWrapper {
 >
                   Chat! 
 </button>,
-                "class": "btn-group",
+                "className": "btn-group",
               },
               "ref": null,
               "rendered": Object {
@@ -316,7 +316,7 @@ ShallowWrapper {
                               rows="10"
                     />
                     <div
-                              class="btn-group"
+                              className="btn-group"
                     >
                               <button
                                         onClick={[Function]}
@@ -365,7 +365,7 @@ ShallowWrapper {
                             rows="10"
               />
               <div
-                            class="btn-group"
+                            className="btn-group"
               >
                             <button
                                           onClick={[Function]}
@@ -466,7 +466,7 @@ ShallowWrapper {
                   rows="10"
 />,
                 <div
-                  class="btn-group"
+                  className="btn-group"
 >
                   <button
                                     onClick={[Function]}
@@ -514,7 +514,7 @@ ShallowWrapper {
 >
                     Chat! 
 </button>,
-                  "class": "btn-group",
+                  "className": "btn-group",
                 },
                 "ref": null,
                 "rendered": Object {
@@ -587,7 +587,7 @@ Array [
                 rows="10"
             />
             <div
-                class="btn-group"
+                className="btn-group"
             >
                 <button
                     onClick={[Function]}
