@@ -12,6 +12,7 @@ function changeQuantity(event) {
 
 function FoodList(props) {
   const foods = props.foods;
+  console.log(foods);
   const listItems = foods.map((food) => 
     <div key={food.name} className="item">
       <div className="description">

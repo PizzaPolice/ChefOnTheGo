@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route} from "react-router-dom";
-import {Provider} from 'react-redux'
 
 import Login from './components/login.js';
 import Signup from './components/signup.js'
@@ -17,20 +16,9 @@ import OrderStatus from './components/order_status.jsx';
 
 require('./App.css');
 
-/*added to create store
-const store = createStore(rootReducers);
-console.log(store.getState());
-store.subscribe(() => console.log('store',store.getState()))
-store.dispatch(addCharacterById(3));
-*/
-
 class App extends Component {  
   render(){
     return (
-
-      //added 
-   // <Provider store={store}> 
-
       <BrowserRouter>
       <div>
           <Route exact path="/" component={Login}/>
@@ -48,10 +36,6 @@ class App extends Component {
           <Route path="/order_status" component={OrderStatus}/>
       </div>
       </BrowserRouter>
- 
- //</Provider>
- // , document.getElementById('root')
-
     );
   }
 }

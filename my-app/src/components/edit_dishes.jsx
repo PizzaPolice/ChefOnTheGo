@@ -35,7 +35,7 @@ class EditDishes extends Component
         <form className="new_dish">
           <text>Dish name</text>
 
-          <input id="name" type="text" class="box_style"></input>
+          <input id="name" type="text" className="box_style"></input>
 
           <text>Price  </text>
           <input type="number" id="price"></input>
