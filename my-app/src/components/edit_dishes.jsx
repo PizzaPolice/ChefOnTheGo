@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import {connect} from 'react-redux';
+import { Link } from "react-router-dom";
 import {bindActionCreators} from 'redux';
 import * as foodActions from '../actions/food_actions';
 import '../style.css';
@@ -55,11 +56,14 @@ class EditDishes extends Component
           </div>   
         </form>
        
-        <div class = "dishstyle">
+        <div className= "dishstyle">
         <h3> Your Dish Offerings </h3>
 
         <FoodList foods={this.props.foods}></FoodList>
         
+        <Link to="food_order">
+            <button className="btn next-btn">Check out Available Foods</button>
+        </Link>
         <div className="btn">
         <input type="button" 
           onClick={this.findToDeleteFood.bind(this)} 
