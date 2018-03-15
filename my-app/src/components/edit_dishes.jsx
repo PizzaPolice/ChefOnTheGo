@@ -62,7 +62,7 @@ class EditDishes extends Component
         <FoodList foods={this.props.foods}></FoodList>
         
         <Link to="food_order">
-            <button className="btn next-btn">Check out Available Foods</button>
+            <button className="btn next-btn">View Menu</button>
         </Link>
         <div className="btn">
         <input type="button" 

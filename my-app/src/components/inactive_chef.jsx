@@ -25,7 +25,7 @@ class InactiveChef extends Component
   <title>Inactive Chef</title>
   
   
-  <form className="input" onSubumit={this.validateTime.bind(this)}>
+  <form className="input" onSubmit={this.validateTime.bind(this)}>
     <h4>Enter the amount of time you will be active:</h4>
     <input type="number" name="hour" onChange={this.updateHours.bind(this)}defaultValue="0"></input>
     <b>Hours</b>
