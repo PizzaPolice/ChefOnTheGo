@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow, mount, render } from 'enzyme';
 import EditDishes from '../components/edit_dishes.jsx'
-import foodReducer from '../reducers/food_reducer';
+import food_Reducer from '../reducers/food_reducer';
 import { createStore } from 'redux'
 
 /*
@@ -40,6 +40,7 @@ describe('EditDishes Component', () => {
 
     
 //Reducer tests
+
       it('should return the initial state', () => {
-            expect(foodReducer(undefined, {})).toEqual([]);
+            expect(food_Reducer(undefined, {})).toEqual([]);
         })
