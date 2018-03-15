@@ -1,5 +1,7 @@
 import React,{Component} from 'react';
 import {Link} from 'react-router-dom';
+import '../style.css';
+
 class ActiveChef extends Component
 {
   constructor(props)
@@ -29,32 +31,37 @@ class ActiveChef extends Component
       <div>
 
       <section className="timer">
-      <h2>You are currently inactive</h2>
+
+      <div className="style">
+    
+    <h4>You will be active for:</h4> 
       <table className="timertable">
       <tbody>
       <tr className="info">
-      <td colSpan="3">You will be active for: </td>
+      <td colSpan="3">  </td>
       </tr>
       <tr>
-      <td id="hours">{this.state.hours}</td>
-      <td id="minutes">{this.state.minutes}</td>
-      <td id="seconds">{this.state.seconds}</td>
+      <td id="hours">{this.state.hours}</td><td>Hours</td>
+      <td id="minutes">{this.state.minutes}</td><td>Minutes</td>
+      <td id="seconds">{this.state.seconds}</td><td>Seconds</td>
       </tr>
       <tr>
-      <td>Hours</td>
-      <td>Minutes</td>
-      <td>Seconds</td>
+     
+     
+
       </tr>
       </tbody>
       </table>
+      </div>
       </section>
 
       <form className="stopserve">
       <Link to="/inactive_chef">
-        <button>Stop Serving</button>
-      </Link>
+      <input type="submit" value="Stop Serving"></input>
+      </Link>      
       </form>
       </div>
+      
     );
   }
 

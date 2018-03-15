@@ -3,53 +3,57 @@
 exports[`InactiveChef Component should render initial layout 1`] = `
 Array [
   <div>
-    <title>
-        Inactive Chef
-    </title>
-    <h2>
-        You are currently inactive
-    </h2>
-    <form
-        className="input"
-        onSubmit={[Function]}
+    <div
+        className="style"
     >
-        <h3>
-            How long do you want to be active until
-        </h3>
-        <input
-            defaultValue="0"
-            name="hour"
-            onChange={[Function]}
-            type="number"
-        />
-        <b>
-            Hours
-        </b>
-        <input
-            defaultValue="0"
-            name="minute"
-            onChange={[Function]}
-            type="number"
-        />
-        <b>
-            Minutes
-        </b>
-        <input
-            type="submit"
-            value="Start Serving!"
-        />
-    </form>
-    <h3>
-        Or change your offered menu
-    </h3>
-    <Link
-        replace={false}
-        to="/edit_dishes"
-    >
-        <button>
-            Edit Dishes
-        </button>
-    </Link>
+        <title>
+            Inactive Chef
+        </title>
+        <h4>
+            You are currently inactive
+        </h4>
+        <form
+            className="input"
+            onSubmit={[Function]}
+        >
+            <h4>
+                Enter the amount of time you will be active:
+            </h4>
+            <input
+                defaultValue="0"
+                name="hour"
+                onChange={[Function]}
+                type="number"
+            />
+            <b>
+                Hours
+            </b>
+            <input
+                defaultValue="0"
+                name="minute"
+                onChange={[Function]}
+                type="number"
+            />
+            <b>
+                Minutes
+            </b>
+            <input
+                type="submit"
+                value="Start Serving!"
+            />
+        </form>
+        <h4>
+            Use Edit Dishes to change your menu
+        </h4>
+        <Link
+            replace={false}
+            to="/edit_dishes"
+        >
+            <button>
+                Edit Dishes
+            </button>
+        </Link>
+    </div>
 </div>,
 ]
 `;

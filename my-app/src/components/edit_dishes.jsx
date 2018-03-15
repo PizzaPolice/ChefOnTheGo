@@ -4,27 +4,9 @@ import {bindActionCreators} from 'redux';
 import {addFood,deleteFood} from '../actions/food_actions.js';
 import '../style.css';
 
-/*export default class MainPage extends React.Component{
-  constructor(props){
-      super(props);
-      this.state = {stylePath: '../style.css'};
-
-<link rel="stylesheet" type = "text/css" href={this.state.stylePath}/>
-
-
-  }
-*/
-
-
-//export default style;
-
-
 //Creates a list of dishes (jsx)
 function FoodList(props)
 {
-
-  //style
-  //this.state = {stylePath: '../style.css'};
 
   const foodList = props.foods
   const foods = foodList.map((food) =>
@@ -46,13 +28,15 @@ class EditDishes extends Component
   {
     return(
       <div>
-        <title>Edit Dishes</title>
          <div className="style">
+        <title>Edit Dishes</title>
         <h2>Welcome User</h2>
         <text>Create a new dish!</text>
         <form className="new_dish">
           <text>Dish name</text>
-          <input id="name" type="text"></input>
+
+          <input id="name" type="text" class="box_style"></input>
+
           <text>Price  </text>
           <input type="number" id="price"></input>
           <h3>Description</h3>
@@ -61,22 +45,28 @@ class EditDishes extends Component
             cols="70" 
             defaultValue="Enter a description of your dish">
           </textarea>
+
+          <div className="btn">
           <input type="button" 
             onClick={this.newFood.bind(this)} 
             value="Create your dish!">
           </input>
+          </div>
         </form>
+       
 
         <text>Edit your offerings below</text>
         <text>Mark checkbox below to delete (once dishes have been added)</text>
-
+        <div className="btn">
         <input type="button" 
           onClick={this.findToDeleteFood.bind(this)} 
-          value="Delete selected dishes">
+          value="Delete marked dishes">
         </input>
+        </div>
         <FoodList foods={this.props.foods}></FoodList>
       </div>
-    </div>
+      </div>
+    
          );
   }
 
