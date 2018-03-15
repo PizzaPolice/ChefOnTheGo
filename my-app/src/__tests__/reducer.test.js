@@ -12,9 +12,11 @@ import { combineReducers } from 'redux';
 it('should return the initial state', () => {
     expect(food_reducer(undefined, {})).toEqual([]);
 })
+
+
+
+
 /*
-
-
 const initialState = {
     foods: food_reducer,
     ajaxCallsInProgress: ajaxCallsInProgress
@@ -22,7 +24,7 @@ const initialState = {
 
 describe('all reducer test', () => {
     it('should have initial state', () => {
-      expect(allReducers()).toEqual(initialState);
+      expect(allReducers(undefined, {})).toEqual({});
     });
-});
-*/
+});*/
+

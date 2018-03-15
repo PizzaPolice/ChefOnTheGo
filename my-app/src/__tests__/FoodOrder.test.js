@@ -2,19 +2,23 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow, mount, render } from 'enzyme';
 import FoodOrder from '../components/food_order.jsx'
-import { createStore } from 'redux'
+import configureStore from '../store/configureStore';
+import {Provider} from 'react-redux';
 
 //Mock store
-store = createStore();
+const store = configureStore();
+
 
 it('EditDishes component renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(<Provider store={store}><FoodOrder /></Provider>, div);
     ReactDOM.unmountComponentAtNode(div);
-  });
+
+  
 
 
 describe('Login Component', () => {
+
     it('Login should render without throwing an error', () => {
         expect(shallow(<FoodOrder />).exists(<form className='Login'></form>)).toBe(true)
       })
@@ -24,6 +28,7 @@ describe('Login Component', () => {
         })
     });
 
+    
     describe('Submit Button', () => {
         it('should be defined', () => {
           expect(FoodOrder).toBeDefined();
@@ -36,3 +41,6 @@ describe('Login Component', () => {
           expect(button).toMatchSnapshot();
         });
     });
+
+  });
+ 
