@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import {addFood,deleteFood} from '../actions/food_actions.js';
+import * as foodActions from '../actions/food_actions';
 
 
 //Creates a list of dishes (jsx)
@@ -12,7 +12,7 @@ function FoodList(props)
     <div key={food.name} id={food.name}>
       {food.name}<br/>
       {food.desc}<br/>
-      Price: {food.price}<br/>
+      Price: {food.price} <br/>
       Delete Dish
       <input type="checkbox" className="delete_box"></input>
     </div>
@@ -41,7 +41,7 @@ class EditDishes extends Component
             defaultValue="Enter a description of your dish">
           </textarea>
           <input type="button" 
-            onClick={this.newFood.bind(this)} 
+            onClick={this.newFood.bind(this)}
             value="Create your dish!">
           </input>
         </form>
@@ -73,7 +73,7 @@ class EditDishes extends Component
         for (var y = 0; y < foods.length; y++)
         {
           if (foods[y].name === foodName) {
-            this.props.deleteFood(foods[y]);
+            this.props.actions.deleteFood(foods[y]);
           }
         }
       }
@@ -99,7 +99,7 @@ class EditDishes extends Component
       "price": foodPrice, 
       "desc": foodDesc
     }
-    this.props.addFood(newFood);
+    this.props.actions.saveFood(newFood);
   }
 }
 
@@ -110,7 +110,9 @@ function mapStateToProps(state) {
 }
 
 function matchDispatchToProps(dispatch) {
-  return bindActionCreators({addFood: addFood, deleteFood: deleteFood}, dispatch);
+  return {
+    actions: bindActionCreators(foodActions, dispatch)
+  };
 }
 
 export default connect(mapStateToProps, matchDispatchToProps)(EditDishes);

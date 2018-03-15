@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import {Provider} from 'react-redux';
-import {createStore} from 'redux';
-import allReducers from './reducers/allReducer.js';
+import configureStore from './store/configureStore';
+import {loadFoods} from './actions/food_actions';
 
-const store = createStore(allReducers);
+const store = configureStore();
+store.dispatch(loadFoods());
 
 ReactDOM.render(
     <Provider store={store}>

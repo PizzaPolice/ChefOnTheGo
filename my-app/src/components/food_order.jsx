@@ -1,6 +1,8 @@
 import React,{Component} from 'react';
 import { Link } from "react-router-dom";
 import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import * as foodActions from '../actions/food_actions';
 
 function changeQuantity(event) {
   const id = event.target.id;
@@ -78,4 +80,10 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps)(FoodOrder);
+function matchDispatchToProps(dispatch) {
+  return {
+    actions: bindActionCreators(foodActions, dispatch)
+  };
+} 
+
+export default connect(mapStateToProps, matchDispatchToProps)(FoodOrder);
