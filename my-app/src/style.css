@@ -91,3 +91,7 @@
     /*border: 2px solid rgb(44, 38, 38);*/
 
   }
+
+  input[type=checkbox] {
+    margin-bottom: 40px;
+}

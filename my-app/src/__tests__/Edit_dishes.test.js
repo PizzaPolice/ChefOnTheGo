@@ -36,7 +36,8 @@ describe('EditDishes Component', () => {
         })
     });
 
+    
 //Reducer tests
-      //   it('should return the initial state', () => {
-       //     expect(foodReducer(undefined, {})).toEqual({});
-       // })
+      it('should return the initial state', () => {
+            expect(foodReducer(undefined, {})).toEqual([]);
+        })

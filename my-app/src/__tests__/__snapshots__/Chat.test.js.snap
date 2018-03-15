@@ -19,188 +19,53 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": Array [
+      "children": <div
+        className="style"
+>
         <section
-          className="chatmessages"
->
-          <section
-                    className="chatboxright"
-          >
-                    <p
-                              className="name"
-                    >
-                              chef_name
-                    </p>
-                    <p
-                              className="message"
-                    >
-                              I am your chef today. What can i do for you
-                    </p>
-          </section>
-</section>,
+                className="chatmessages"
+        >
+                <section
+                        className="chatboxright"
+                >
+                        <p
+                                className="name"
+                        >
+                                chef_name
+                        </p>
+                        <p
+                                className="message"
+                        >
+                                I am your chef today. What can i do for you?
+                        </p>
+                </section>
+        </section>
         <div
-          className="chatinput"
-          name="chatinput"
->
-          <h3>
-                    Enter your chat message here
-          </h3>
-          <textarea
-                    className="chatbox"
-                    cols="100"
-                    rows="10"
-          />
-          <button
-                    onClick={[Function]}
-          >
-                    Chat!
-          </button>
+                className="chatinput"
+                name="chatinput"
+        >
+                <h4>
+                        Enter your message here
+                </h4>
+                <textarea
+                        className="chatbox"
+                        cols="100"
+                        rows="10"
+                />
+                <div
+                        className="btn-group"
+                >
+                        <button
+                                onClick={[Function]}
+                        >
+                                Chat! 
+                        </button>
+                </div>
+        </div>
 </div>,
-      ],
     },
     "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": <section
-            className="chatboxright"
->
-            <p
-                        className="name"
-            >
-                        chef_name
-            </p>
-            <p
-                        className="message"
-            >
-                        I am your chef today. What can i do for you
-            </p>
-</section>,
-          "className": "chatmessages",
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <p
-                className="name"
->
-                chef_name
-</p>,
-              <p
-                className="message"
->
-                I am your chef today. What can i do for you
-</p>,
-            ],
-            "className": "chatboxright",
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "chef_name",
-                "className": "name",
-              },
-              "ref": null,
-              "rendered": "chef_name",
-              "type": "p",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "I am your chef today. What can i do for you",
-                "className": "message",
-              },
-              "ref": null,
-              "rendered": "I am your chef today. What can i do for you",
-              "type": "p",
-            },
-          ],
-          "type": "section",
-        },
-        "type": "section",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <h3>
-              Enter your chat message here
-</h3>,
-            <textarea
-              className="chatbox"
-              cols="100"
-              rows="10"
-/>,
-            <button
-              onClick={[Function]}
->
-              Chat!
-</button>,
-          ],
-          "className": "chatinput",
-          "name": "chatinput",
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Enter your chat message here",
-            },
-            "ref": null,
-            "rendered": "Enter your chat message here",
-            "type": "h3",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "className": "chatbox",
-              "cols": "100",
-              "rows": "10",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "textarea",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Chat!",
-              "onClick": [Function],
-            },
-            "ref": null,
-            "rendered": "Chat!",
-            "type": "button",
-          },
-        ],
-        "type": "div",
-      },
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
+    "rendered": Object {
       "instance": null,
       "key": undefined,
       "nodeType": "host",
@@ -220,7 +85,7 @@ ShallowWrapper {
                         <p
                                     className="message"
                         >
-                                    I am your chef today. What can i do for you
+                                    I am your chef today. What can i do for you?
                         </p>
             </section>
 </section>,
@@ -228,21 +93,26 @@ ShallowWrapper {
             className="chatinput"
             name="chatinput"
 >
-            <h3>
-                        Enter your chat message here
-            </h3>
+            <h4>
+                        Enter your message here
+            </h4>
             <textarea
                         className="chatbox"
                         cols="100"
                         rows="10"
             />
-            <button
-                        onClick={[Function]}
+            <div
+                        className="btn-group"
             >
-                        Chat!
-            </button>
+                        <button
+                                    onClick={[Function]}
+                        >
+                                    Chat! 
+                        </button>
+            </div>
 </div>,
         ],
+        "className": "style",
       },
       "ref": null,
       "rendered": Array [
@@ -262,7 +132,7 @@ ShallowWrapper {
               <p
                             className="message"
               >
-                            I am your chef today. What can i do for you
+                            I am your chef today. What can i do for you?
               </p>
 </section>,
             "className": "chatmessages",
@@ -282,7 +152,7 @@ ShallowWrapper {
                 <p
                   className="message"
 >
-                  I am your chef today. What can i do for you
+                  I am your chef today. What can i do for you?
 </p>,
               ],
               "className": "chatboxright",
@@ -306,11 +176,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "I am your chef today. What can i do for you",
+                  "children": "I am your chef today. What can i do for you?",
                   "className": "message",
                 },
                 "ref": null,
-                "rendered": "I am your chef today. What can i do for you",
+                "rendered": "I am your chef today. What can i do for you?",
                 "type": "p",
               },
             ],
@@ -324,19 +194,23 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <h3>
-                Enter your chat message here
-</h3>,
+              <h4>
+                Enter your message here
+</h4>,
               <textarea
                 className="chatbox"
                 cols="100"
                 rows="10"
 />,
-              <button
-                onClick={[Function]}
+              <div
+                className="btn-group"
 >
-                Chat!
-</button>,
+                <button
+                                onClick={[Function]}
+                >
+                                Chat! 
+                </button>
+</div>,
             ],
             "className": "chatinput",
             "name": "chatinput",
@@ -348,11 +222,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "Enter your chat message here",
+                "children": "Enter your message here",
               },
               "ref": null,
-              "rendered": "Enter your chat message here",
-              "type": "h3",
+              "rendered": "Enter your message here",
+              "type": "h4",
             },
             Object {
               "instance": null,
@@ -372,17 +246,297 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "Chat!",
-                "onClick": [Function],
+                "children": <button
+                  onClick={[Function]}
+>
+                  Chat! 
+</button>,
+                "className": "btn-group",
               },
               "ref": null,
-              "rendered": "Chat!",
-              "type": "button",
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Chat! ",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Chat! ",
+                "type": "button",
+              },
+              "type": "div",
             },
           ],
           "type": "div",
         },
       ],
+      "type": "div",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="style"
+>
+          <section
+                    className="chatmessages"
+          >
+                    <section
+                              className="chatboxright"
+                    >
+                              <p
+                                        className="name"
+                              >
+                                        chef_name
+                              </p>
+                              <p
+                                        className="message"
+                              >
+                                        I am your chef today. What can i do for you?
+                              </p>
+                    </section>
+          </section>
+          <div
+                    className="chatinput"
+                    name="chatinput"
+          >
+                    <h4>
+                              Enter your message here
+                    </h4>
+                    <textarea
+                              className="chatbox"
+                              cols="100"
+                              rows="10"
+                    />
+                    <div
+                              className="btn-group"
+                    >
+                              <button
+                                        onClick={[Function]}
+                              >
+                                        Chat! 
+                              </button>
+                    </div>
+          </div>
+</div>,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <section
+              className="chatmessages"
+>
+              <section
+                            className="chatboxright"
+              >
+                            <p
+                                          className="name"
+                            >
+                                          chef_name
+                            </p>
+                            <p
+                                          className="message"
+                            >
+                                          I am your chef today. What can i do for you?
+                            </p>
+              </section>
+</section>,
+            <div
+              className="chatinput"
+              name="chatinput"
+>
+              <h4>
+                            Enter your message here
+              </h4>
+              <textarea
+                            className="chatbox"
+                            cols="100"
+                            rows="10"
+              />
+              <div
+                            className="btn-group"
+              >
+                            <button
+                                          onClick={[Function]}
+                            >
+                                          Chat! 
+                            </button>
+              </div>
+</div>,
+          ],
+          "className": "style",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <section
+                className="chatboxright"
+>
+                <p
+                                className="name"
+                >
+                                chef_name
+                </p>
+                <p
+                                className="message"
+                >
+                                I am your chef today. What can i do for you?
+                </p>
+</section>,
+              "className": "chatmessages",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <p
+                    className="name"
+>
+                    chef_name
+</p>,
+                  <p
+                    className="message"
+>
+                    I am your chef today. What can i do for you?
+</p>,
+                ],
+                "className": "chatboxright",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "chef_name",
+                    "className": "name",
+                  },
+                  "ref": null,
+                  "rendered": "chef_name",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "I am your chef today. What can i do for you?",
+                    "className": "message",
+                  },
+                  "ref": null,
+                  "rendered": "I am your chef today. What can i do for you?",
+                  "type": "p",
+                },
+              ],
+              "type": "section",
+            },
+            "type": "section",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h4>
+                  Enter your message here
+</h4>,
+                <textarea
+                  className="chatbox"
+                  cols="100"
+                  rows="10"
+/>,
+                <div
+                  className="btn-group"
+>
+                  <button
+                                    onClick={[Function]}
+                  >
+                                    Chat! 
+                  </button>
+</div>,
+              ],
+              "className": "chatinput",
+              "name": "chatinput",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Enter your message here",
+                },
+                "ref": null,
+                "rendered": "Enter your message here",
+                "type": "h4",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "chatbox",
+                  "cols": "100",
+                  "rows": "10",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "textarea",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <button
+                    onClick={[Function]}
+>
+                    Chat! 
+</button>,
+                  "className": "btn-group",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Chat! ",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "Chat! ",
+                  "type": "button",
+                },
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
       "type": "div",
     },
   ],
@@ -399,41 +553,49 @@ ShallowWrapper {
 exports[`Chat Component should render initial layout 1`] = `
 Array [
   <div>
-    <section
-        className="chatmessages"
+    <div
+        className="style"
     >
         <section
-            className="chatboxright"
+            className="chatmessages"
         >
-            <p
-                className="name"
+            <section
+                className="chatboxright"
             >
-                chef_name
-            </p>
-            <p
-                className="message"
-            >
-                I am your chef today. What can i do for you
-            </p>
+                <p
+                    className="name"
+                >
+                    chef_name
+                </p>
+                <p
+                    className="message"
+                >
+                    I am your chef today. What can i do for you?
+                </p>
+            </section>
         </section>
-    </section>
-    <div
-        className="chatinput"
-        name="chatinput"
-    >
-        <h3>
-            Enter your chat message here
-        </h3>
-        <textarea
-            className="chatbox"
-            cols="100"
-            rows="10"
-        />
-        <button
-            onClick={[Function]}
+        <div
+            className="chatinput"
+            name="chatinput"
         >
-            Chat!
-        </button>
+            <h4>
+                Enter your message here
+            </h4>
+            <textarea
+                className="chatbox"
+                cols="100"
+                rows="10"
+            />
+            <div
+                className="btn-group"
+            >
+                <button
+                    onClick={[Function]}
+                >
+                    Chat! 
+                </button>
+            </div>
+        </div>
     </div>
 </div>,
 ]

@@ -52,16 +52,14 @@ class EditDishes extends Component
             onClick={this.newFood.bind(this)}
             value="Create your dish!">
           </input>
-          </div>
-         
-          
+          </div>   
         </form>
-       
        
         <div class = "dishstyle">
         <h3> Your Dish Offerings </h3>
-         
+
         <FoodList foods={this.props.foods}></FoodList>
+        
         <div className="btn">
         <input type="button" 
           onClick={this.findToDeleteFood.bind(this)} 
@@ -70,11 +68,7 @@ class EditDishes extends Component
         </div>
         </div>
       </div>
-      
       </div>
-    
-      
-    
          );
   }
 
