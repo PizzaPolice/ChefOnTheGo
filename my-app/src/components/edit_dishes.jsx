@@ -2,11 +2,30 @@ import React,{Component} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {addFood,deleteFood} from '../actions/food_actions.js';
+import '../style.css';
+
+/*export default class MainPage extends React.Component{
+  constructor(props){
+      super(props);
+      this.state = {stylePath: '../style.css'};
+
+<link rel="stylesheet" type = "text/css" href={this.state.stylePath}/>
+
+
+  }
+*/
+
+
+//export default style;
 
 
 //Creates a list of dishes (jsx)
 function FoodList(props)
 {
+
+  //style
+  //this.state = {stylePath: '../style.css'};
+
   const foodList = props.foods
   const foods = foodList.map((food) =>
     <div key={food.name} id={food.name}>
@@ -20,6 +39,7 @@ function FoodList(props)
   return (foods);
 }
 
+
 class EditDishes extends Component
 {
   render()
@@ -27,12 +47,13 @@ class EditDishes extends Component
     return(
       <div>
         <title>Edit Dishes</title>
-        <p>Welcome User</p>
-        <h1>Create a new dish!</h1>
+         <div className="style">
+        <h2>Welcome User</h2>
+        <text>Create a new dish!</text>
         <form className="new_dish">
-          <h3>Dish name</h3>
+          <text>Dish name</text>
           <input id="name" type="text"></input>
-          <h3>Price</h3>
+          <text>Price  </text>
           <input type="number" id="price"></input>
           <h3>Description</h3>
           <textarea id="desc" 
@@ -46,8 +67,8 @@ class EditDishes extends Component
           </input>
         </form>
 
-        <h1>Edit your offerings</h1>
-        <h2>Check the checkbox below a dish to select it for deletion</h2>
+        <text>Edit your offerings below</text>
+        <text>Mark checkbox below to delete (once dishes have been added)</text>
 
         <input type="button" 
           onClick={this.findToDeleteFood.bind(this)} 
@@ -55,7 +76,8 @@ class EditDishes extends Component
         </input>
         <FoodList foods={this.props.foods}></FoodList>
       </div>
-    );
+    </div>
+         );
   }
 
   findToDeleteFood()

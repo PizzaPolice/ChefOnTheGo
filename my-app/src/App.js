@@ -17,19 +17,19 @@ import OrderStatus from './components/order_status.jsx';
 
 require('./App.css');
 
-//added to create store
+/*added to create store
 const store = createStore(rootReducers);
 console.log(store.getState());
 store.subscribe(() => console.log('store',store.getState()))
 store.dispatch(addCharacterById(3));
-
+*/
 
 class App extends Component {  
   render(){
     return (
 
       //added 
-    <Provider store={store}> 
+   // <Provider store={store}> 
 
       <BrowserRouter>
       <div>
@@ -49,8 +49,8 @@ class App extends Component {
       </div>
       </BrowserRouter>
  
- </Provider>
-  , document.getElementById('root')
+ //</Provider>
+ // , document.getElementById('root')
 
     );
   }
