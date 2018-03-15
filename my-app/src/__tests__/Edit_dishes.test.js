@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { shallow, mount, render } from 'enzyme';
 import EditDishes from '../components/edit_dishes.jsx'
 import foodReducer from '../reducers/food_reducer';
-
+import { createStore } from 'redux'
 
 /*
 let mockedStore = configureStore([])({});
@@ -16,10 +16,12 @@ test('some test', () => {
 });
 */
 
+//Mock store
+store = createStore();
 
 it('EditDishes component renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<EditDishes />, div);
+    ReactDOM.render(<Provider store={store}><EditDishes /></Provider>, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 
