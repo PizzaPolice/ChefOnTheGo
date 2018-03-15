@@ -11,7 +11,7 @@ Array [
         </title>
         <form
             className="input"
-            onSubumit={[Function]}
+            onSubmit={[Function]}
         >
             <h4>
                 Enter the amount of time you will be active:
