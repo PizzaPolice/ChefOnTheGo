@@ -5,6 +5,7 @@ import EditDishes from '../components/edit_dishes.jsx'
 import food_reducer from '../reducers/food_reducer';
 import configureStore from '../store/configureStore';
 import {Provider} from 'react-redux'
+
 /*
 let mockedStore = configureStore([])({});
 test('some test', () => {
