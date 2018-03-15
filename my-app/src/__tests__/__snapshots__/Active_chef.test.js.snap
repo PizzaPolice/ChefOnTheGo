@@ -6,52 +6,55 @@ Array [
     <section
         className="timer"
     >
-        <h2>
-            You are currently inactive
-        </h2>
-        <table
-            className="timertable"
+        <div
+            className="style"
         >
-            <tbody>
-                <tr
-                    className="info"
-                >
-                    <td
-                        colSpan="3"
+            <h4>
+                You will be active for:
+            </h4>
+            <table
+                className="timertable"
+            >
+                <tbody>
+                    <tr
+                        className="info"
                     >
-                        You will be active for: 
-                    </td>
-                </tr>
-                <tr>
-                    <td
-                        id="hours"
-                    >
-                        0
-                    </td>
-                    <td
-                        id="minutes"
-                    >
-                        0
-                    </td>
-                    <td
-                        id="seconds"
-                    >
-                        0
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Hours
-                    </td>
-                    <td>
-                        Minutes
-                    </td>
-                    <td>
-                        Seconds
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+                        <td
+                            colSpan="3"
+                        >
+                              
+                        </td>
+                    </tr>
+                    <tr>
+                        <td
+                            id="hours"
+                        >
+                            0
+                        </td>
+                        <td>
+                            Hours
+                        </td>
+                        <td
+                            id="minutes"
+                        >
+                            0
+                        </td>
+                        <td>
+                            Minutes
+                        </td>
+                        <td
+                            id="seconds"
+                        >
+                            0
+                        </td>
+                        <td>
+                            Seconds
+                        </td>
+                    </tr>
+                    <tr />
+                </tbody>
+            </table>
+        </div>
     </section>
     <form
         className="stopserve"
@@ -60,9 +63,10 @@ Array [
             replace={false}
             to="/inactive_chef"
         >
-            <button>
-                Stop Serving
-            </button>
+            <input
+                type="submit"
+                value="Stop Serving"
+            />
         </Link>
     </form>
 </div>,

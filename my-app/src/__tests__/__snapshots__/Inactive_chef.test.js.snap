@@ -9,12 +9,9 @@ Array [
         <title>
             Inactive Chef
         </title>
-        <h4>
-            You are currently inactive
-        </h4>
         <form
             className="input"
-            onSubmit={[Function]}
+            onSubumit={[Function]}
         >
             <h4>
                 Enter the amount of time you will be active:
@@ -49,9 +46,10 @@ Array [
             replace={false}
             to="/edit_dishes"
         >
-            <button>
-                Edit Dishes
-            </button>
+            <input
+                type="submit"
+                value="Edit Dishes"
+            />
         </Link>
     </div>
 </div>,
