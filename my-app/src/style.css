@@ -5,6 +5,7 @@
     box-sizing: border-box;
     height: 100%;
     padding: 10px; 
+    padding-left: 20px;
     line-height: 1.8;
     width: 100%;
     height: 100%;
@@ -23,6 +24,23 @@
     border: none;
   }
 
+
+  .btn-group button {
+    color: #fff;
+    background: #f62f5e;
+    border-radius: 23px;
+    position: relative;
+    font-size: 13px;
+    width: 188px;
+    height: 48px;
+    cursor: pointer;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin-left: 430px;
+    cursor: pointer;
+}
+
+
  
   input[type=button], input[type=submit] {
       color: #fff;
@@ -38,7 +56,7 @@
       cursor: pointer;
   }
 
-
+/*
   input[type=text] {
     width: 50%;
     padding: 12px 20px;
@@ -48,8 +66,28 @@
     border-radius: 4px;
    
 }
-
+*/
 
 .box_style{
     width: -20px;
 }
+
+
+
+
+
+.dishstyle {
+    
+    /*
+    font-family: 'Montserrat', sans-serif;
+ 
+    margin: 20px auto; 
+ */
+   
+    height: 100%;
+    margin-top: 20px;
+    box-sizing: content-box;    
+    padding: 1px;    
+    /*border: 2px solid rgb(44, 38, 38);*/
+
+  }
