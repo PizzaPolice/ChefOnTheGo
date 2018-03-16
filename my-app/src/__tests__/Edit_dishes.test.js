@@ -5,6 +5,7 @@ import EditDishes from '../components/edit_dishes.jsx'
 import food_reducer from '../reducers/food_reducer';
 import configureStore from '../store/configureStore';
 import {Provider} from 'react-redux';
+import { MemoryRouter } from 'react-router';
 
 /*
 let mockedStore = configureStore([])({});
@@ -23,7 +24,11 @@ test('some test', () => {
 it('EditDishes component renders without crashing', () => {
 
   const div = document.createElement('div');
-  ReactDOM.render(<Provider store={store}><EditDishes /></Provider>, div);
+  ReactDOM.render(<Provider store={store}>
+  <MemoryRouter>
+    <EditDishes />
+  </MemoryRouter>
+  </Provider>, div);
   ReactDOM.unmountComponentAtNode(div);
 });
 

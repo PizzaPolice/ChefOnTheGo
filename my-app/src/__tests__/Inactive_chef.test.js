@@ -2,11 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow, mount, render } from 'enzyme';
 import InactiveChef from '../components/inactive_chef.jsx'
-
+import { MemoryRouter } from 'react-router';
 
 it('InactiveChef component renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<InactiveChef />, div);
+    ReactDOM.render(
+        <MemoryRouter>
+            <InactiveChef />
+        </MemoryRouter>, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 

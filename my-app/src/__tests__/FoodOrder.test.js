@@ -4,6 +4,7 @@ import { shallow, mount, render } from 'enzyme';
 import FoodOrder from '../components/food_order.jsx'
 import configureStore from '../store/configureStore';
 import {Provider} from 'react-redux';
+import { MemoryRouter } from 'react-router'
 
 //Mock store
 const store = configureStore();
@@ -11,7 +12,11 @@ const store = configureStore();
 
 it('EditDishes component renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<Provider store={store}><FoodOrder /></Provider>, div);
+    ReactDOM.render(<Provider store={store}>
+      <MemoryRouter>
+        <FoodOrder />
+      </MemoryRouter>
+    </Provider>, div);
     ReactDOM.unmountComponentAtNode(div);
 
   
