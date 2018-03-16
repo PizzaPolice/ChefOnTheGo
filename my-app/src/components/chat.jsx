@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 import '../style.css';
+import styles from '../css/chat.css';
 
 function ChatMessages(props)
 {
-  console.log(props);
   const messages = props.chat.map((message) =>
     <div key={message.id} id={message.id}>
-      {message.body}<br/>
+      <p className="chatboxleft">{message.body}</p><br/>
     </div>
   );
   return(messages);
@@ -30,8 +30,8 @@ class Chat extends Component
       <div>
         <div className="style">
       <section className="chatmessages">	
-      <section className="chatboxright">
-      <p className="message">I am your chef today. What can i do for you?</p>
+      <section className="messages">
+      <p className="chatboxright">I am your chef today. What can i do for you?</p>
       </section>
       <ChatMessages chat={this.state.messages}></ChatMessages>
       </section>

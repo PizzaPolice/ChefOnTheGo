@@ -1,0 +1,29 @@
+.chatboxleft {
+  border: .2em solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 1em;
+  padding: 1em;
+  margin: 1em;
+  border-color: black;
+}
+
+.chatboxright {
+  border-color: #ccc;
+  border: .2em solid #dedede;
+  background-color: #ddd;
+  border-radius: 1em;
+  padding: 1em;
+  margin: 1em;
+  border-color: black;
+}
+
+.name{
+font-weight: bold;
+}
+.chatinput{
+  margin: 1em;
+}
+.chatbox{
+width: auto;
+}
+

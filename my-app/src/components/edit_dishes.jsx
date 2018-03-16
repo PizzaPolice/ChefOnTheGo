@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import {bindActionCreators} from 'redux';
 import * as foodActions from '../actions/food_actions';
 import '../style.css';
+import styles from '../css/chat.css';
 
 //Creates a list of dishes (jsx)
 function FoodList(props)
