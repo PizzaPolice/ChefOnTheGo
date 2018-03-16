@@ -20,6 +20,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "css-loader": "^0.28.10",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-15": "^1.0.5",
     "jest-enzyme": "^4.2.0",
