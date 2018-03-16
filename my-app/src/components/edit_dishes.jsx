@@ -32,13 +32,13 @@ class EditDishes extends Component
          <div className="style">
         <title>Edit Dishes</title>
         <h2>Welcome User</h2>
-        <text>Create a new dish!</text>
+        <h3>Create a new dish!</h3>
         <form className="new_dish">
-          <text>Dish name</text>
+          <h4>Dish name</h4>
 
           <input id="name" type="text" className="box_style"></input>
 
-          <text>Price  </text>
+          <h4>Price  </h4>
           <input type="number" id="price"></input>
           <h3>Description</h3>
           <textarea id="desc" 
